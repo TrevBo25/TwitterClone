@@ -19,5 +19,9 @@ massive(process.env.CONNECTION_STRING).then( db => {
 }).catch('err', err => console.log(err))
 
 
+app.post('/api/register', controller.registerUser);
+app.get('/api/login', controller.login);
+
+
 const PORT = 8008;
 app.listen(PORT, () => console.log('listening on port: ', PORT));
