@@ -3,8 +3,9 @@ module.exports = {
 
     registerUser(req, res){
         const db = req.app.get('db');
-        const {fname, lname, handle, email, password} = req.body;
-        db.check_handle([handle])
+        const {name, handle, email, password} = req.body;
+        console.log(name, handle, email, password);
+        db.check_user([handle])
         .then(response => {
             if(response.length != 0){
                 res.status(409).send('Handle already exists')
@@ -14,7 +15,7 @@ module.exports = {
                     if(response.length != 0){
                         res.status(409).send('Email already exists')
                     } else {
-                        db.register_user([name, handle, email])
+                        db.register_user([name, handle, email, password])
                         .then( response => {
                             res.status(200).send(response.data);
                         }).catch( err => console.log('register_user', err));
