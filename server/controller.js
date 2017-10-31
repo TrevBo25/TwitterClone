@@ -49,12 +49,33 @@ module.exports = {
             }).catch( err => console.log('login_email', err))
         }
     },
-    logout(req, res){
-        //kill the state in redux
-    },
     updateUser(req, res){
         const db = req.app.get('db');
-        const {id} = req.body
-    }
+        const {id, name, handle, email} = req.body;
+        if (req.body.avatar){
+            const {avatar} = req.body;
+        } else {
+            const avatar = null;
+        }
+        if (req.body.bio){
+            const {bio} = req.body;
+        } else {
+            const bio = null;
+        }
+        if (req.body.location){
+            const {location} = req.body;
+        } else {
+            const location = null;
+        }
+        if (req.body.cover){
+            const {cover} = req.body;
+        } else {
+            const cover = null;
+        }
+        db.edit_user([name, handle, email, avatar, bio, location, cover, id])
+        .then(response => {
+            res.status(200).send(response.data);
+        }).catch(err => console.log('edit_user', err))
+    },
 
 }
