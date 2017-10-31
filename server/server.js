@@ -19,7 +19,7 @@ massive(process.env.CONNECTION_STRING).then( db => {
 
 
 app.post('/api/register', controller.registerUser);
-app.get('/api/login', controller.login);
+app.post('/api/login', controller.login);
 app.put('/api/edit', controller.updateUser);
 app.delete('/api/deleteuser', controller.deleteUser);
 
