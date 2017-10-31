@@ -17,7 +17,10 @@ module.exports = {
                     } else {
                         db.register_user([name, handle, email, password])
                         .then( response => {
-                            res.status(200).send(response.data);
+                            db.login_handle([handle, password])
+                            .then(response => {
+                                res.status(200).json(response[0])
+                            })
                         }).catch( err => console.log('register_user', err));
                     }
                 }).catch(err => console.log('check_email', err));
