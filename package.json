@@ -2,6 +2,7 @@
   "name": "wpx1twitterclone",
   "version": "0.1.0",
   "private": true,
+  
   "dependencies": {
     "axios": "^0.17.0",
     "bcrypt": "^1.0.3",
