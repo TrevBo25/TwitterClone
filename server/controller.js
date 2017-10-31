@@ -19,7 +19,7 @@ module.exports = {
                         .then( response => {
                             db.login_handle([handle, password])
                             .then(response => {
-                                res.status(200).json(response[0])
+                                res.status(200).send(response[0])
                             })
                         }).catch( err => console.log('register_user', err));
                     }
