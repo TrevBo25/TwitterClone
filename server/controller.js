@@ -19,7 +19,7 @@ module.exports = {
                         .then( response => {
                             db.login_handle([handle, password])
                             .then(response => {
-                                res.status(200).send(response[0])
+                                res.status(200).json(response[0])
                             })
                         }).catch( err => console.log('register_user', err));
                     }
@@ -38,7 +38,7 @@ module.exports = {
                 if(response.length != 0){
                     res.status(404).send('User does not exists');
                 } else {
-                    res.status(200).send(response.data);
+                    res.status(200).json(response.data);
                 }
             }).catch( err => console.log('login_password', err))
         } else {
@@ -48,7 +48,7 @@ module.exports = {
                 if(response.length != 0){
                     res.status(404).send('User does not exists');
                 } else {
-                    res.status(200).send(response.data);
+                    res.status(200).json(response.data);
                 }
             }).catch( err => console.log('login_email', err))
         }
@@ -78,8 +78,16 @@ module.exports = {
         }
         db.edit_user([name, handle, email, avatar, bio, location, cover, id])
         .then(response => {
-            res.status(200).send(response.data);
+            res.status(200).json(response.data);
         }).catch(err => console.log('edit_user', err))
     },
+    deleteUser(req, res){
+        const db = req.app.get('db');
+        const {id, name, password} = req.body;
+        db.delete_user([id, name, password])
+        .then(response => {
+            res.status(204).end();
+        })
+    }
 
 }
