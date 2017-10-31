@@ -1,4 +1,3 @@
-
 require('dotenv').config();
 const express = require('express'),
       bodyParser = require('body-parser'),
@@ -19,6 +18,8 @@ massive(process.env.CONNECTION_STRING).then( db => {
 }).catch('err', err => console.log(err))
 
 
+app.post('/api/register', controller.registerUser);
+app.get('/api/login', controller.login);
 
 
 const PORT = 8008;
