@@ -120,44 +120,11 @@ module.exports = {
             })
         }).catch( err => { console.log("dislike_post", err);})
     },
-<<<<<<< HEAD
-    getFollowing(req, res){
-        const db = req.app.get('db');
-        const{id} = req.body;
-        db.get_following([id])
-        .then( response => {
-            console.log(response);
-        })
-    },
-    getFollowers(req, res){
-        const db = req.app.get('db');
-        const{id} = req.body;
-        db.get_followers([id])
-        .then( response => {
-            console.log(response);
-        })
-    },
-    follow(req, res){
-        const db = req.app.get('db');
-        const{id, otherid} = req.body;
-        db.follow([id, otherid])
-        .then( response => {
-            console.log(response);
-        })
-    },
-    unfollow(req, res){
-        const db = req.app.get('db');
-        const{id, otherid} = req.body;
-        db.unfollow([id, otherid])
-        .then( response => {
-            console.log(response);
-=======
     getPosts(req,res){
         const db = req.app.get('db');
         db.get_posts()
         .then(response => {
             res.status(200).json(response);
->>>>>>> 9207ac605ed88db794449e652847b4a6fd5a20d3
         })
     },
     getFollowing(req, res){

@@ -46,9 +46,16 @@ table {
   height: 50px;
   background-color: #8B8B8B; }
 
+.nav img {
+  height: 100%;
+  width: 50px; }
+
 .sidebar {
   background-color: blue;
   width: 20%; }
+
+img {
+  width: 100%; }
 
 .main-content {
   background-color: greenyellow;
@@ -64,3 +71,9 @@ table {
   justify-content: flex-start;
   align-items: stretch;
   align-content: stretch; }
+
+.post {
+  height: 100px;
+  width: 200px;
+  background-color: #CD8C32;
+  margin: 20px; }
