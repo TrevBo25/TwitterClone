@@ -22,6 +22,7 @@ app.post('/api/register', controller.registerUser);
 app.post('/api/login', controller.login);
 app.put('/api/edit', controller.updateUser);
 app.delete('/api/deleteuser', controller.deleteUser);
+app.post('/api/createpost', controller.createPost);
 
 
 const PORT = 8008;
