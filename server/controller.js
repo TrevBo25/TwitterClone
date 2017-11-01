@@ -83,7 +83,11 @@ module.exports = {
     },
     createPost(req, res){
         const db = req.app.get('db');
-        const {guts, reposts, image, category, tagged_user, user_id} = req.body;
+        const {guts, user_id} = req.body;
+        const reposts = req.body.reposts || null;
+        const image = req.body.image || null;
+        const category = req.body.category || null;
+        const tagged_user = req.body.taggesd_user || null
         db.create_post([guts, reposts, image, category, tagged_user, user_id])
         .then(response => {
             res.status(200).send('Post success!')
