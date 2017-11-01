@@ -25,8 +25,11 @@ class Login extends Component {
                 break;
 
             case 'password':
-            console.log('   Setting password state:', input)
+                console.log('   Setting password state:', input)
                 this.setState({password: input})
+
+            default:
+                console.log('error')
             
         }
     }

@@ -40,3 +40,27 @@ q:before, q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0; }
+
+.nav {
+  width: 100vw;
+  height: 50px;
+  background-color: #8B8B8B; }
+
+.sidebar {
+  background-color: blue;
+  width: 20%; }
+
+.main-content {
+  background-color: greenyellow;
+  width: 80%; }
+
+.frame {
+  height: 90vh;
+  width: 100vw;
+  background-color: #717171;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch; }
