@@ -4,11 +4,9 @@ module.exports = {
     registerUser(req, res){
         const db = req.app.get('db');
         const {name, handle, email, password} = req.body;
-        console.log(name, handle, email, password);
         db.check_email([email])
         .then(response => {
             if(response.length != 0){
-                console.log('hithere');
                 res.status(200).send("Email already exists")
             } else {
                 db.check_user([handle])
