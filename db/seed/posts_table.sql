@@ -1,6 +1,6 @@
 CREATE TABLE IF NOT EXISTS posts(
     id SERIAL PRIMARY KEY, 
-    body VARCHAR,
+    guts VARCHAR,
     likes INTEGER,
     dislikes INTEGER,
     repost VARCHAR,
