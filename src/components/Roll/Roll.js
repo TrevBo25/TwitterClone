@@ -13,23 +13,22 @@ class Roll extends Component {
 
     }
     componentDidMount() {
-        axios.get('api/getposts').then((response) => {
-            console.log('Getting posts... ', response.data)
-            this.setState({posts: response.data})
-        })
+        this.props.getPosts();
     }
-    
+
+
 
     render() {
-        // console.log(this.state.posts)
+        console.log('zzzz', this.props.posts)
         return (
             <div>
                 <ul>
 
-                    {this.state.posts.map(function(post, i){
+                    {this.props.posts.map(function(post, i){
                         return (
-                            <div className="post">
+                            <div key={i} className="post">
                                 <h3 key={i}>{post.guts}</h3>
+                                <img src={post.image} />
                                 <span>Likes: {post.likes + ""}</span>
                                 <br/>
                                 <span>Dislikes: {post.dislikes + ''}</span>

@@ -75,5 +75,9 @@ img {
 .post {
   height: 100px;
   width: 200px;
+  padding: 100px;
   background-color: #CD8C32;
-  margin: 20px; }
+  margin: 30px; }
+
+.post img {
+  height: 100%; }
