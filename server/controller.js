@@ -88,6 +88,69 @@ module.exports = {
         .then(response => {
             res.status(200).send('Post success!')
         }).catch( err => { console.log("create_post", err);})
+    },
+    deletePost(req, res){
+        const db = req.app.get('db');
+        const {id} = req.body;
+        db.delete_post([id])
+        .then(response => {
+            res.status(200).send("Post deleteted")
+        }).catch( err => { console.log("delete_post", err);})
+    },
+    likePost(req, res){
+        const db = req.app.get('db');
+        const{id} = req.body;
+        db.get_likes([id])
+        .then(response => {
+            let newLikes = response[0].likes + 1;
+            db.set_likes([id, newLikes]).then(response => {
+                res.status(200).send("liked")
+            })
+        }).catch( err => { console.log("like_post", err);})
+    },
+    dislikePost(req, res){
+        const db = req.app.get('db');
+        const{id} = req.body;
+        db.get_dislikes([id])
+        .then(response => {
+            let newDisLikes = response[0].dislikes + 1;
+            db.set_dislikes([id, newDisLikes])
+            .then(response => {
+                res.status(200).send("disliked")
+            })
+        }).catch( err => { console.log("dislike_post", err);})
+    },
+    getFollowing(req, res){
+        const db = req.app.get('db');
+        const{id} = req.body;
+        db.get_following([id])
+        .then( response => {
+            console.log(response);
+        })
+    },
+    getFollowers(req, res){
+        const db = req.app.get('db');
+        const{id} = req.body;
+        db.get_followers([id])
+        .then( response => {
+            console.log(response);
+        })
+    },
+    follow(req, res){
+        const db = req.app.get('db');
+        const{id, otherid} = req.body;
+        db.follow([id, otherid])
+        .then( response => {
+            console.log(response);
+        })
+    },
+    unfollow(req, res){
+        const db = req.app.get('db');
+        const{id, otherid} = req.body;
+        db.unfollow([id, otherid])
+        .then( response => {
+            console.log(response);
+        })
     }
 
 }
