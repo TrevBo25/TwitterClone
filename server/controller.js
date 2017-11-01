@@ -56,29 +56,21 @@ module.exports = {
     updateUser(req, res){
         const db = req.app.get('db');
         const {id, name, handle, email} = req.body;
-        if (req.body.avatar){
-            const {avatar} = req.body;
-        } else {
-            const avatar = null;
-        }
-        if (req.body.bio){
-            const {bio} = req.body;
-        } else {
-            const bio = null;
-        }
-        if (req.body.location){
-            const {location} = req.body;
-        } else {
-            const location = null;
-        }
-        if (req.body.cover){
-            const {cover} = req.body;
-        } else {
-            const cover = null;
-        }
-        db.edit_user([name, handle, email, avatar, bio, location, cover, id])
+        console.log(req.body);
+        const avatar = req.body.avatar || null;
+        const bio = req.body.bio || null;
+        const location = req.body.location || null;
+        const cover = req.body.cover || null;
+        db.edit_user([id, name, handle, email, avatar, bio, location, cover])
         .then(response => {
-            res.status(200).json(response.data);
+            db.get_user([handle])
+            .then(response => {
+                if(response.length === 0){
+                    res.status(404).send('User does not exist');
+                } else {
+                    res.status(200).json(response);
+                }
+            }).catch( err => console.log('get_user', err))
         }).catch(err => console.log('edit_user', err))
     },
     deleteUser(req, res){
@@ -87,6 +79,77 @@ module.exports = {
         db.delete_user([id, name, password])
         .then(response => {
             res.status(204).end();
+        }).catch(err => console.log('delete_user', err))
+    },
+    createPost(req, res){
+        const db = req.app.get('db');
+        const {guts, reposts, image, category, tagged_user, user_id} = req.body;
+        db.create_post([guts, reposts, image, category, tagged_user, user_id])
+        .then(response => {
+            res.status(200).send('Post success!')
+        }).catch( err => { console.log("create_post", err);})
+    },
+    deletePost(req, res){
+        const db = req.app.get('db');
+        const {id} = req.body;
+        db.delete_post([id])
+        .then(response => {
+            res.status(200).send("Post deleteted")
+        }).catch( err => { console.log("delete_post", err);})
+    },
+    likePost(req, res){
+        const db = req.app.get('db');
+        const{id} = req.body;
+        db.get_likes([id])
+        .then(response => {
+            let newLikes = response[0].likes + 1;
+            db.set_likes([id, newLikes]).then(response => {
+                res.status(200).send("liked")
+            })
+        }).catch( err => { console.log("like_post", err);})
+    },
+    dislikePost(req, res){
+        const db = req.app.get('db');
+        const{id} = req.body;
+        db.get_dislikes([id])
+        .then(response => {
+            let newDisLikes = response[0].dislikes + 1;
+            db.set_dislikes([id, newDisLikes])
+            .then(response => {
+                res.status(200).send("disliked")
+            })
+        }).catch( err => { console.log("dislike_post", err);})
+    },
+    getFollowing(req, res){
+        const db = req.app.get('db');
+        const{id} = req.body;
+        db.get_following([id])
+        .then( response => {
+            console.log(response);
+        })
+    },
+    getFollowers(req, res){
+        const db = req.app.get('db');
+        const{id} = req.body;
+        db.get_followers([id])
+        .then( response => {
+            console.log(response);
+        })
+    },
+    follow(req, res){
+        const db = req.app.get('db');
+        const{id, otherid} = req.body;
+        db.follow([id, otherid])
+        .then( response => {
+            console.log(response);
+        })
+    },
+    unfollow(req, res){
+        const db = req.app.get('db');
+        const{id, otherid} = req.body;
+        db.unfollow([id, otherid])
+        .then( response => {
+            console.log(response);
         })
     }
 

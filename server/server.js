@@ -23,6 +23,12 @@ app.post('/api/register', controller.registerUser);
 app.post('/api/login', controller.login);
 app.put('/api/edit', controller.updateUser);
 app.delete('/api/deleteuser', controller.deleteUser);
+app.post('/api/createpost', controller.createPost);
+app.delete('/api/deletepost', controller.deletePost);
+app.post('/api/likepost', controller.likePost);
+app.post('/api/dislikepost', controller.dislikePost);
+app.post('/api/getfollowing', controller.getFollowing);
+app.post('/api/getfollowers', controller.getFollowers);
 
 
 const PORT = 8008;
