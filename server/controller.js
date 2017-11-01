@@ -120,37 +120,52 @@ module.exports = {
             })
         }).catch( err => { console.log("dislike_post", err);})
     },
+    getPosts(req,res){
+        const db = req.app.get('db');
+        db.get_posts()
+        .then(response => {
+            res.status(200).json(response);
+        })
+    },
     getFollowing(req, res){
         const db = req.app.get('db');
         const{id} = req.body;
         db.get_following([id])
         .then( response => {
-            console.log(response);
-        })
+            let users = [];
+            response.forEach(function(e, i, a) {
+                users.push(e.following);
+            }, this);
+            res.status(200).send(users)
+        }).catch( err => { console.log("get_following", err);})
     },
     getFollowers(req, res){
         const db = req.app.get('db');
         const{id} = req.body;
         db.get_followers([id])
         .then( response => {
-            console.log(response);
-        })
+            let users = [];
+            response.forEach(function(e, i, a) {
+                users.push(e.user_id);
+            }, this);
+            res.status(200).send(users)
+        }).catch( err => { console.log("get_followers", err);})
     },
     follow(req, res){
         const db = req.app.get('db');
         const{id, otherid} = req.body;
         db.follow([id, otherid])
         .then( response => {
-            console.log(response);
-        })
+            res.status(200).send("followed")
+        }).catch( err => { console.log("follow", err);})
     },
     unfollow(req, res){
         const db = req.app.get('db');
         const{id, otherid} = req.body;
         db.unfollow([id, otherid])
         .then( response => {
-            console.log(response);
-        })
+            res.status(200).send("unfollowed")
+        }).catch( err => { console.log("unfollow", err);})
     }
 
 }

@@ -1,3 +1,3 @@
 SELECT user_id
-FROM  followers
+FROM followers
 WHERE following = $1
