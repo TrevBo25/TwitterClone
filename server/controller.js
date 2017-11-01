@@ -38,7 +38,7 @@ module.exports = {
                 if(response.length === 0){
                     res.status(404).send('User does not exist');
                 } else {
-                    res.status(200).json(response);
+                    res.status(200).json(response[0]);
                 }
             }).catch( err => console.log('login_password', err))
         } else {
