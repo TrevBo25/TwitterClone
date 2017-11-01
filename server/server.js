@@ -29,6 +29,9 @@ app.post('/api/likepost', controller.likePost);
 app.post('/api/dislikepost', controller.dislikePost);
 app.post('/api/getfollowing', controller.getFollowing);
 app.post('/api/getfollowers', controller.getFollowers);
+app.post('/api/follow', controller.follow);
+app.post('/api/unfollow', controller.unfollow);
+app.get('/api/getposts', controller.getPosts);
 
 
 const PORT = 8008;
