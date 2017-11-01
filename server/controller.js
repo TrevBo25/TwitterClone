@@ -8,12 +8,13 @@ module.exports = {
         db.check_email([email])
         .then(response => {
             if(response.length != 0){
-                res.status(204).send('Email already exists')
+                console.log('hithere');
+                res.status(200).send("Email already exists")
             } else {
                 db.check_user([handle])
                 .then(response => {
                     if(response.length != 0){
-                        res.status(204).send('Handle already exists')
+                        res.status(200).send("Handle already exists")
                     } else {
                         db.register_user([name, handle, email, password])
                         .then( response => {
