@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { withRouter } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { updateUser } from '../../ducks/reducer'
 
 class Login extends Component {
 
@@ -32,6 +35,9 @@ class Login extends Component {
         console.log( 'Submitting login with current state: ', userSubmission )
         axios.post('/api/login', userSubmission ).then((response) => {
             console.log(response);
+            this.props.updateUser(response.data);
+            console.log('User state updated!',this.props.user)
+            // this.props.history.push("/");
         })
     }
     render() {
@@ -58,4 +64,10 @@ class Login extends Component {
     }
 }
 
-export default Login;
+function mapStateToProps( state ) {
+    return { user: state }
+}
+
+
+
+export default withRouter(connect(mapStateToProps, {updateUser})(Login));

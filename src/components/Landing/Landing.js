@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+
+
 
 import Login from './../Login/Login'
+
+
 
 
 class Landing extends Component {
@@ -21,23 +26,23 @@ class Landing extends Component {
 
     render() {
         return (
+            
             <div>
+
                 <h1>Landing Page</h1>
 
                 <div>
-                    <a>
+  
                         <button onClick={() => {this.loginPopUp()}}>Login</button>
-                    </a>
-                    <a>
+
                         <button>
                             <Link to="/register">Register</Link>
                         </button>
-                    </a>
+
                 </div>
 
                 <div>
                     
-                    {this.state.loginRender}
                     {
                         (this.state.loginRender)
                         ? <div><Login /></div>
@@ -46,9 +51,21 @@ class Landing extends Component {
                     }
                 </div>
 
+                    <div>
+
+
+                    </div>
+
             </div>
         );
     }
 }
 
-export default Landing;
+function mapStateToProps( state ) {
+    console.log(state)
+    return { user: state.user }
+}
+
+
+
+export default (Landing);

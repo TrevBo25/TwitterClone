@@ -1,9 +1,9 @@
 UPDATE USERS
-SET NAME = $1,
-    HANDLE = $2,
-    EMAIL = $3,
-    AVATAR = $4,
-    BIO = $5,
-    LOCATION = $6,
-    COVER = $7,
-WHERE ID = $8
+SET NAME = $2,
+    HANDLE = $3,
+    EMAIL = $4,
+    AVATAR = $5,
+    BIO = $6,
+    LOCATION = $7,
+    COVER = $8
+WHERE ID = $1;

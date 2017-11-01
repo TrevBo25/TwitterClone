@@ -13,6 +13,7 @@ app.use(cors());
 app.use(bodyParser.json());
 const saltRounds = 5;
 
+
 massive(process.env.CONNECTION_STRING).then( db => {
     app.set('db', db);
 }).catch('err', err => console.log(err))
@@ -22,6 +23,7 @@ app.post('/api/register', controller.registerUser);
 app.post('/api/login', controller.login);
 app.put('/api/edit', controller.updateUser);
 app.delete('/api/deleteuser', controller.deleteUser);
+app.post('/api/createpost', controller.createPost);
 
 
 const PORT = 8008;

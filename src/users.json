@@ -1,0 +1,14 @@
+{
+    "Users":  {
+
+            "name": "Skyler Riley",
+            "handle": "rileyskyler",
+            "email": "riley.skyler@gmail.com",
+            "password": "password",
+            "avatar": "",
+            "bio": "",
+            "location": "Phoenix, Arizona",
+            "cover": ""
+
+    }
+}
