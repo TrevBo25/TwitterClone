@@ -1,4 +1,3 @@
-
 require('dotenv').config();
 const express = require('express'),
       bodyParser = require('body-parser'),
@@ -18,6 +17,12 @@ const saltRounds = 5;
 massive(process.env.CONNECTION_STRING).then( db => {
     app.set('db', db);
 }).catch('err', err => console.log(err))
+
+
+app.post('/api/register', controller.registerUser);
+app.post('/api/login', controller.login);
+app.put('/api/edit', controller.updateUser);
+app.delete('/api/deleteuser', controller.deleteUser);
 
 
 const PORT = 8008;
