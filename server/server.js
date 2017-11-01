@@ -13,6 +13,7 @@ app.use(cors());
 app.use(bodyParser.json());
 const saltRounds = 5;
 
+
 massive(process.env.CONNECTION_STRING).then( db => {
     app.set('db', db);
 }).catch('err', err => console.log(err))
