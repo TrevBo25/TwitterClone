@@ -8,6 +8,7 @@ class IdentityCard extends Component {
             <div className="IdentityCard">
                 IdentityCard
                 {this.props.user.name}
+                {this.props.user.handle}
                 <img src={this.props.user.cover} />
                 <img src={this.props.user.avatar} />
                 {this.props.user.bio}
