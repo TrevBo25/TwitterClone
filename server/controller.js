@@ -82,16 +82,36 @@ module.exports = {
         }).catch(err => console.log('delete_user', err))
     },
     createPost(req, res){
+        const findUsername = /@([a-z\d]+)/ig;
         const db = req.app.get('db');
         const {guts, user_id} = req.body;
         const reposts = req.body.reposts || null;
         const image = req.body.image || null;
         const category = req.body.category || null;
-        const tagged_user = req.body.taggesd_user || null
-        db.create_post([guts, reposts, image, category, tagged_user, user_id])
-        .then(response => {
-            res.status(200).send('Post success!')
-        }).catch( err => { console.log("create_post", err);})
+        const tagged_user = req.body.tagged_user || null
+        const tagged = findUsername.exec(guts) || null
+        if(tagged === null){
+            db.create_post([guts, reposts, image, category, tagged_user, user_id, null])
+            .then(response => {
+                res.status(200).send('Post success!')
+            }).catch( err => { console.log("create_post", err);})
+        } else {
+            var taggedHandle = tagged[1]
+            db.create_post([guts, reposts, image, category, taggedHandle, user_id, taggedHandle])
+            .then(response => {
+                var post_id = response[0].id;
+                db.get_user_id_from_handle([taggedHandle])
+                .then(response => {
+                    var taggedID = response[0].id;
+                    db.send_user_tagged_notification([user_id, taggedID, 'tagged', post_id])
+                    .then( response => {
+                        res.status(200).send('Post success, tagged user notified')
+                    })
+                })
+            }).catch( err => { console.log("create_post and send tagged user notification", err);})
+        }
+        
+
     },
     deletePost(req, res){
         const db = req.app.get('db');
