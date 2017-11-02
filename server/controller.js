@@ -103,7 +103,7 @@ module.exports = {
                 db.get_user_id_from_handle([taggedHandle])
                 .then(response => {
                     var taggedID = response[0].id;
-                    db.send_user_tagged_notification([user_id, taggedID, 'tagged', post_id])
+                    db.send_notification([user_id, taggedID, 'tagged', post_id])
                     .then( response => {
                         res.status(200).send('Post success, tagged user notified')
                     })
@@ -180,7 +180,10 @@ module.exports = {
         const{id, otherid} = req.body;
         db.follow([id, otherid])
         .then( response => {
-            res.status(200).send("followed")
+            db.send_notification([id, otherid, 'follow', null])
+            .then( response => {
+                res.status(200).send("followed and notified")
+            })
         }).catch( err => { console.log("follow", err);})
     },
     unfollow(req, res){
@@ -188,7 +191,10 @@ module.exports = {
         const{id, otherid} = req.body;
         db.unfollow([id, otherid])
         .then( response => {
-            res.status(200).send("unfollowed")
+            db.send_notification([id, otherid, 'unfollow', null])
+            .then( response => {
+                res.status(200).send("unfollowed and notified")
+            })
         }).catch( err => { console.log("unfollow", err);})
     }
 
