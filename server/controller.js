@@ -170,6 +170,18 @@ module.exports = {
         .then( response => {
             res.status(200).send("unfollowed")
         }).catch( err => { console.log("unfollow", err);})
+    }, 
+    // new stuff from Ian
+    getFollowersPosts(req, res){
+        console.log("hello");
+        const db = req.app.get('db');
+        const {id} = req.body;
+        db.get_followers_posts([id])
+        .then( response => { console.log(response);
+        res.status(200).json(response);
+        }).catch( err => {
+            console.log("getFollowersPosts", err)
+        })
     }
 
 }
