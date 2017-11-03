@@ -148,7 +148,6 @@ module.exports = {
         const db = req.app.get('db');
         db.get_posts()
         .then(response => {
-            console.log(response)
             res.status(200).json(response);
         })
     },
@@ -197,7 +196,16 @@ module.exports = {
                 res.status(200).send("unfollowed and notified")
             })
         }).catch( err => { console.log("unfollow", err);})
-    }, 
+    },
+    getUserFromHandle(req, res){
+        const db = req.app.get('db');
+        const {handle} = req.body;
+        db.get_user_from_handle([handle])
+        .then(response => {
+            console.log('herherherher', response[0]);
+            res.status(200).json(response[0]);
+        }).catch(err => console.log('getuserfromhandle', err))
+    },
     // new stuff from Ian
     getFollowersPosts(req, res){
         console.log("hello");
