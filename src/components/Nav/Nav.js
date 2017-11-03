@@ -6,6 +6,7 @@ class Nav extends Component {
     render() {
         return (
             <div className="nav">
+                
                 this is the nav
                 <img src={this.props.user.avatar} />
             </div>

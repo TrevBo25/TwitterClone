@@ -32,6 +32,8 @@ app.post('/api/getfollowers', controller.getFollowers);
 app.post('/api/follow', controller.follow);
 app.post('/api/unfollow', controller.unfollow);
 app.get('/api/getposts', controller.getPosts);
+// new stuff from Ian
+app.post('/api/fposts', controller.getFollowersPosts);
 
 
 const PORT = 8008;
