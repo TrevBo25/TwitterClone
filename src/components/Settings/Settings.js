@@ -3,7 +3,13 @@ import React, { Component } from 'react';
 export default class Settings extends Component {
     constructor(props) {
       super(props);
-      this.state = {value: ''};
+      this.state = {
+         value: '',
+         valueHandle: '',
+         valueEmail: '',
+         handle: this.props.user.handle,
+         email: this.props.user.email
+      };
   
       this.handleChange = this.handleChange.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
@@ -12,6 +18,15 @@ export default class Settings extends Component {
     handleChange(event) {
       this.setState({value: event.target.value});
     }
+
+    handleChangeEmail(event){
+      this.setState({valueEmail: event.target.value});
+    }
+
+    handleChangeHandle(event){
+      this.setState({valueHandle: event.target.value});
+    }
+  
   
     handleSubmit(event) {
       alert('A name was submitted: ' + this.state.value);
