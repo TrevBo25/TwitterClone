@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-class Settings extends Component {
+export default class Settings extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -74,6 +74,7 @@ class Settings extends Component {
     
       render() {
         return (
+          
           <form onSubmit={this.handleSubmit}>
           <button onClick={this.showUsername}>Change Username</button>
             <label style={{'display' : this.state.showUsername ? 'block' : 'none'}}>
