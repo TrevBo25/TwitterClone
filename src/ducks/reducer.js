@@ -1,3 +1,5 @@
+import axios from 'axios'
+
 const initialState = {
 
     user: {
@@ -21,7 +23,7 @@ function reducer(state=initialState, action) {
     switch(action.type) {
         case UPDATE_USER:
             return Object.assign({}, state , {user: action.payload})
-        case UPDATE_PAGE_DATA:
+        case UPDATE_PAGE_DATA + "_FULFILLED":
             return Object.assign({}, state , {pageData: action.payload})
         default:
         return state
@@ -35,10 +37,16 @@ export function updateUser(userData) {
     }
 }
 
-export function updatePageData(pageData) {
+export function updatePageData(handle) {
         
+        var request = axios.post('/api/getuserfromhandle', {"handle": handle})
+        .then( response => {
+            console.log('thishthisthist', response.data);
+            return response.data
+        })
+
         return {
             type: UPDATE_PAGE_DATA,
-            payload: pageData
+            payload: request
         }
 }
