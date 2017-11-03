@@ -62,22 +62,22 @@ class Settings extends Component {
             <br />
             <label>
               Current Email:
-              <input type="text" value={this.state.email} onChange={(e) => {this.userInput(e.target.value, 'email')}} />
+              <input type="text" onChange={(e) => {this.userInput(e.target.value, 'email')}} />
             </label>
             <br />
              <label>
               New Email:
-              <input type="text" value={this.state.newEmail} onChange={(e) => {this.userInput(e.target.value, 'newEmail')}} />
+              <input type="text" onChange={(e) => {this.userInput(e.target.value, 'newEmail')}} />
             </label>
             <br />
             <label>
               Current Password:
-              <input type="text" value={this.state.password} onChange={(e) => {this.userInput(e.target.value, 'password')}} />
+              <input type="text" onChange={(e) => {this.userInput(e.target.value, 'password')}} />
             </label>
             <br />
             <label>
               New Password:
-              <input type="text" value={this.state.newPassword} onChange={(e) => {this.userInput(e.target.value, 'newPassword')}} />
+              <input type="text" onChange={(e) => {this.userInput(e.target.value, 'newPassword')}} />
             </label>
             <br />
             <input type="submit" value="Submit" />
