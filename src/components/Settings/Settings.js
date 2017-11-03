@@ -1,4 +1,6 @@
-class NameForm extends React.Component {
+import React, { Component } from 'react';
+
+export default class Settings extends Component {
     constructor(props) {
       super(props);
       this.state = {value: ''};
@@ -18,6 +20,8 @@ class NameForm extends React.Component {
   
     render() {
       return (
+        <div>
+
         <form onSubmit={this.handleSubmit}>
           <label>
             New Username:
@@ -46,11 +50,7 @@ class NameForm extends React.Component {
           <br />
           <input type="submit" value="Submit" />
         </form>
+        </div>
       );
     }
   }
-  
-  ReactDOM.render(
-    <NameForm />,
-    document.getElementById('root')
-  );
