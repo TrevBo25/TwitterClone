@@ -54,7 +54,9 @@ export default class Settings extends Component {
     
       render() {
         return (
-          
+          <div className="settings-body">
+            <div className="settings-form">
+
           <form onSubmit={this.handleSubmit}>
             <label>
               New Username:
@@ -83,6 +85,8 @@ export default class Settings extends Component {
             <br />
             <input type="submit" value="Submit" />
           </form>
+          </div>
+          </div>
       );
     }
   }

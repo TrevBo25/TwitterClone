@@ -89,3 +89,19 @@ img {
 
 .composing {
   background-color: white; }
+
+.settings-body {
+  width: 100%;
+  background: #daf0ee;
+  align-items: center;
+  height: 100vh; }
+
+.settings-form {
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  height: 500px;
+  border: 2px solid black;
+  text-align: center; }
