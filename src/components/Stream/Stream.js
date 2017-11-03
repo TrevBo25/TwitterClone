@@ -15,13 +15,14 @@ class Stream extends Component {
 
         this.props.updatePageData(this.props.user)
         
-        console.log(this.props.pageData)
-        // if(this.props.match.params.handle) {
-            //     console.log('yess')
-            // }
-        }
-        
-        render() {
+        // console.log(this.props.pageData)
+        // // if(this.props.match.params.handle) {
+        // // }
+        // console.log(this.props.match.params.handle)
+    }
+    
+    render() {
+            
         return (
             <div>
                 <div>

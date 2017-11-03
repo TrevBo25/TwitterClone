@@ -1,11 +1,47 @@
 .post {
-    height: 100px;
-    width:200px;
-    padding: 100px;
+    height:200px;
+    width:80%;
     background-color: #CD8C32;
-    margin: 30px;
+    padding-top: 15px;
+    padding-left: 10px;
+    margin: 1px;
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: stretch;
+	align-content: stretch;
 }
 
 .post img {
     height: 100%;
+}
+
+.one {
+    height: 100%;
+    width: 80px;
+    background-color: #2F78FF;
+}
+.one .avatar {
+    width: 55px;
+    height: 55px;
+    margin-left: 10px;
+    border-radius: 50%;
+}
+
+.two {
+    height: 100%;
+    width: 90%;
+    background-color: peachpuff;
+}
+.two .title {
+    height: 30px;
+    text-decoration: none;
+    background-color: turquoise;
+}
+
+#link {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
 }
