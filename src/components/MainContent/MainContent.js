@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import Roll from './../Roll/Roll'
 import Compose from './../Compose/Compose'
+import { updateUser } from '../../ducks/reducer';
+
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 class MainContent extends Component {
     constructor() {
@@ -12,23 +16,38 @@ class MainContent extends Component {
         }
 
         this.getPosts = this.getPosts.bind(this);
+
+        
     }
+    
 
     getPosts() {
         axios.get('api/getposts').then((response) => {
-            console.log('Getting posts... ', response.data)
+            console.log('Getting posts... ', response)
             this.setState({posts: response.data})
         })
+
     }
+
+    
     render() {
+
         return (
             <div className="main-content">
                 Main Content
                 <Compose getPosts={this.getPosts}/>
-                <Roll getPosts={this.getPosts} posts={this.state.posts}  getp/>
+                <Link to={this.props.user.handle}
+                >{this.props.user.handle}
+                </Link>
+                <Roll getPosts={this.getPosts} posts={this.state.posts} />
             </div>
         );
     }
 }
 
-export default MainContent;
+function mapStateToProps( state ) {
+    console.log(state)
+    return { user: state.user}
+}
+
+export default connect(mapStateToProps, {updateUser})(MainContent);

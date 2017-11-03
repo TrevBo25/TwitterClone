@@ -1,3 +1,5 @@
-SELECT * FROM POSTS
-ORDER BY ID DESC
-LIMIT 3
+SELECT *
+FROM posts
+INNER JOIN users ON users.id=posts.user_id
+ORDER BY posts.id DESC
+LIMIT 5

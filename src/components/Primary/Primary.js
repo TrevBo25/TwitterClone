@@ -3,14 +3,23 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import Landing from './../Landing/Landing';
 import Stream from './../Stream/Stream';
-import { updateUser } from '../../ducks/reducer';
+import { updateUser, updatePageData } from '../../ducks/reducer';
+
+
 
 class Primary extends Component {
+
+
+    
     render() {
+        console.log(this.props.pageData)
+        console.log(this.props.match.params.handle)
         return (
             <div>
                 Primary
-
+                <Link to={this.props.user.handle}
+                >Link
+                </Link>
                 <div>
                     {
                         (this.props.user.handle)
@@ -25,9 +34,9 @@ class Primary extends Component {
 
 function mapStateToProps( state ) {
     console.log(state)
-    return { user: state.user }
+    return { user: state.user, pageData: state.pageData  }
 }
 
 
 
-export default connect(mapStateToProps, {updateUser})(Primary);
+export default connect(mapStateToProps, {updateUser, updatePageData})(Primary);

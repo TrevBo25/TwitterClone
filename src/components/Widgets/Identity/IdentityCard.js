@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { updateUser } from './../../../ducks/reducer'
+import { updateUser, updatePageData } from './../../../ducks/reducer'
 
 class IdentityCard extends Component {
     render() {
         return (
             <div className="IdentityCard">
                 IdentityCard
-                {this.props.user.name}
-                {this.props.user.handle}
-                <img src={this.props.user.cover} />
-                <img src={this.props.user.avatar} />
-                {this.props.user.bio}
-                {this.props.user.location}
+                {this.props.pageData.name}
+                {this.props.pageData.handle}
+                <img src={this.props.pageData.cover} />
+                <img src={this.props.pageData.avatar} />
+                {this.props.pageData.bio}
+                {this.props.pageData.location}
             </div>
         );
     }
@@ -22,7 +22,9 @@ class IdentityCard extends Component {
 
 function mapStateToProps( state ) {
     console.log(state)
-    return { user: state.user }
+    return { user: state.user, pageData: state.pageData  }
 }
 
-export default connect(mapStateToProps, {updateUser})(IdentityCard);
+
+
+export default connect(mapStateToProps, {updateUser, updatePageData})(IdentityCard);

@@ -128,6 +128,7 @@ module.exports = {
         const db = req.app.get('db');
         db.get_posts()
         .then(response => {
+            console.log(response)
             res.status(200).json(response);
         })
     },

@@ -81,3 +81,11 @@ img {
 
 .post img {
   height: 100%; }
+
+.compose-empty {
+  height: 20px;
+  width: 190px;
+  background-color: white; }
+
+.composing {
+  background-color: white; }

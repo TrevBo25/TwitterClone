@@ -8,11 +8,15 @@ class Compose extends Component {
         super();
 
         this.state = {
+            inputToggle: false,
             postBody: ''
         }
     }
 
-
+    toggleInput() {
+        console.log('toggling input box')
+        this.setState({inputToggle: !this.state.inputToggle})
+    }
 
     userInput(input) {
         console.log('input: ', input)
@@ -26,6 +30,10 @@ class Compose extends Component {
         }).then(() => {
             console.log('second one')
             this.props.getPosts();
+        }).then(() => {
+            if(this.state.inputToggle) {
+                this.toggleInput()
+            }
         })
     }
 
@@ -34,7 +42,12 @@ class Compose extends Component {
         return (
             <div>
 
-                <input type="" onChange={(e) => {this.userInput(e.target.value)}}/>
+                {
+                    (this.state.inputToggle)
+                    ? <input className="composing" type="text" onChange={(e) => {this.userInput(e.target.value)}}/>
+                    : <div onClick={() => {this.toggleInput()}} className="compose-empty">Enter text here.</div>
+                }
+
                 <button onClick={() => {this.submitPost()}}>Send Snip </button>
 
             </div>

@@ -1,4 +1,5 @@
 const initialState = {
+
     user: {
         name: 'Limone Resqueza',
         handle: 'fastgirl222',
@@ -7,10 +8,12 @@ const initialState = {
         bio: 'I love long walks on the beach and turtles.',
         location: 'Honolulu, Hawaii',
         cover: 'https://fb-hoverboard.s3.amazonaws.com/uploads/crazy-cover-photo-122113.jpg'
-    }
+    },
+    pageData: {}
 }
 
 const UPDATE_USER = "UPDATE_USER";
+const UPDATE_PAGE_DATA = "UPDATE_PAGE_DATA"
 
 export default
 function reducer(state=initialState, action) {
@@ -18,6 +21,8 @@ function reducer(state=initialState, action) {
     switch(action.type) {
         case UPDATE_USER:
             return Object.assign({}, state , {user: action.payload})
+        case UPDATE_PAGE_DATA:
+            return Object.assign({}, state , {pageData: action.payload})
         default:
         return state
     }
@@ -28,4 +33,12 @@ export function updateUser(userData) {
         type: UPDATE_USER,
         payload: userData
     }
+}
+
+export function updatePageData(pageData) {
+        
+        return {
+            type: UPDATE_PAGE_DATA,
+            payload: pageData
+        }
 }
