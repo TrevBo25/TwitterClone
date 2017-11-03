@@ -13,12 +13,13 @@ class Stream extends Component {
     componentDidMount(){
         console.log('Stream component did mount!')
 
-        this.props.updatePageData(this.props.user)
+        
         
         console.log(this.props.pageData)
-        // if(this.props.match.params.handle) {
-            //     console.log('yess')
-            // }
+        if(this.props.match) {
+                console.log(this.props.match.params.handle)
+                this.props.updatePageData(this.props.match.params.handle)
+            }
         }
         
         render() {
