@@ -9,7 +9,8 @@ export default class Settings extends Component {
             email: '',
             newEmail: '',
             password: '',
-            newPassword: '',
+            newPassword1: '',
+            newPassword2: '',
             showUsername: false,
             showEmail: false,
             showPassword: false
@@ -68,8 +69,25 @@ export default class Settings extends Component {
       }
     
       handleSubmit(event) {
-        alert('A name was submitted: ' + this.state.value);
-        event.preventDefault();
+        if(this.state.handle != ""){
+            axios.post('/api/changehandle', {"id": this.props.user.id, "newHandle": this.state.handle})
+            .then(response => {
+                return "cool"
+            })
+        }
+        if(this.state.email != "" && this.state.newEmail != ""){
+            axios.post('/api/changeemail', {"id": this.props.user.id, "email": this.state.email, "newEmail": this.state.newEmail})
+            .then( response => {
+                return 'radical'
+            })
+        }
+        if(this.state.password != "" && this.state.newPassword1 != "" && this.state.newPassword2 != ""){
+            axios.post('/api/changepassword', {"id": this.props.user.id, "password": this.state.password, "newPass1": this.state.newPassword1, "newPass2": this.state.newPassword2})
+            .then( response => {
+                return 'tubular'
+            })
+        }
+       
       }
     
       render() {
