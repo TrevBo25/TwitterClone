@@ -9,11 +9,31 @@ export default class Settings extends Component {
             email: '',
             newEmail: '',
             password: '',
-            newPassword: ''
+            newPassword: '',
+            showUsername: false,
+            showEmail: false,
+            showPassword: false
+            
           };
     
         this.userInput = this.userInput.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.showUsername = this.showUsername.bind(this);
+        this.showEmail = this.showEmail.bind(this);
+        this.showPassword = this.showPassword.bind(this);
+      }
+
+      showUsername(e) {
+          e.preventDefault();
+          this.setState({showUsername: !this.state.showUsername})
+      }
+      showEmail(e) {
+          e.preventDefault();
+          this.setState({showEmail: !this.state.showEmail})
+      }
+      showPassword(e) {
+          e.preventDefault();
+          this.setState({showPassword: !this.state.showPassword})
       }
     
       userInput(input, type) {
@@ -56,33 +76,32 @@ export default class Settings extends Component {
         return (
           
           <form onSubmit={this.handleSubmit}>
-            <label>
+          <button onClick={this.showUsername}>Change Username</button>
+            <label style={{'display' : this.state.showUsername ? 'block' : 'none'}}>
               New Username:
               <input type="text" onChange={(e) => {this.userInput(e.target.value, 'handle')}} />
             </label>
-            <br />
-            <label>
+            <button onClick={this.showEmail}>Change Email</button>
+            <label style={{'display' : this.state.showEmail ? 'block' : 'none'}} >
               Current Email:
               <input type="text" onChange={(e) => {this.userInput(e.target.value, 'email')}} />
             </label>
-            <br />
-             <label>
+             <label style={{'display' : this.state.showEmail ? 'block' : 'none'}}>
               New Email:
               <input type="text" onChange={(e) => {this.userInput(e.target.value, 'newEmail')}} />
             </label>
-            <br />
-            <label>
+            <button onClick={this.showPassword}>Change Password</button>
+            <label style={{'display' : this.state.showPassword ? 'block' : 'none'}}>
               Current Password:
               <input type="text" onChange={(e) => {this.userInput(e.target.value, 'password')}} />
             </label>
-            <br />
-            <label>
+            <label style={{'display' : this.state.showPassword ? 'block' : 'none'}}>
               New Password:
               <input type="text" onChange={(e) => {this.userInput(e.target.value, 'newPassword')}} />
             </label>
-            <br />
             <input type="submit" value="Submit" />
           </form>
       );
     }
   }
+
