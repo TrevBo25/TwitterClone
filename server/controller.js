@@ -156,11 +156,7 @@ module.exports = {
         const{id} = req.body;
         db.get_following([id])
         .then( response => {
-            let users = [];
-            response.forEach(function(e, i, a) {
-                users.push(e.following);
-            }, this);
-            res.status(200).send(users)
+            res.status(200).send(response)
         }).catch( err => { console.log("get_following", err);})
     },
     getFollowers(req, res){
@@ -168,11 +164,7 @@ module.exports = {
         const{id} = req.body;
         db.get_followers([id])
         .then( response => {
-            let users = [];
-            response.forEach(function(e, i, a) {
-                users.push(e.user_id);
-            }, this);
-            res.status(200).send(users)
+            res.status(200).send(response)
         }).catch( err => { console.log("get_followers", err);})
     },
     follow(req, res){
