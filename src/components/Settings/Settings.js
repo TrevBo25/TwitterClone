@@ -61,9 +61,14 @@ export default class Settings extends Component {
                   this.setState({password: input})
                   break;
   
-              case 'newPassword':
-                  console.log('   Setting newPassword state:', input)
-                  this.setState({newPassword: input})
+              case 'newPassword1':
+                  console.log('   Setting newPassword1 state:', input)
+                  this.setState({newPassword1: input})
+                  break;
+
+              case 'newPassword2':
+                  console.log('   Setting newPassword2 state:', input)
+                  this.setState({newPassword2: input})
                   break;
           }
       }
@@ -115,9 +120,13 @@ export default class Settings extends Component {
             </label>
             <label style={{'display' : this.state.showPassword ? 'block' : 'none'}}>
               New Password:
-              <input type="text" onChange={(e) => {this.userInput(e.target.value, 'newPassword')}} />
+              <input type="text" onChange={(e) => {this.userInput(e.target.value, 'newPassword1')}} />
             </label>
-            <input type="submit" value="Submit" />
+            <label style={{'display' : this.state.showPassword ? 'block' : 'none'}}>
+              Repeat New Password:
+              <input type="text" onChange={(e) => {this.userInput(e.target.value, 'newPassword2')}} />
+            </label>
+            <input type="submit" value="Submit" onClick={this.handleSubmit}/>
           </form>
       );
     }
