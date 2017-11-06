@@ -1,3 +1,4 @@
-SELECT user_id
+SELECT * 
 FROM followers
-WHERE following = $1
+JOIN users ON users.id = followers.user_id
+WHERE following = (select id from users WHERE handle = $1 );
