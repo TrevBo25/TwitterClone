@@ -16,10 +16,6 @@ class Primary extends Component {
         console.log(this.props.match.params.handle)
         return (
             <div>
-                Primary
-                <Link to={this.props.user.handle}
-                >Link
-                </Link>
                 <div>
                     {
                         (this.props.user.handle)
