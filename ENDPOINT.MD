@@ -58,22 +58,22 @@ app.get('/api/getposts', controller.getPosts);
 * nothing sent on body
 
 app.post('/api/fposts', controller.getFollowersPosts);
-id
+* id
 
 app.post('/api/getuserfromhandle', controller.getUserFromHandle);
-handle
+* handle
 
 app.post('/api/changehandle', controller.changeHandle);
-id
+* id
 newHandle
 
 app.post('/api/changeemail', controller.changeEmail);
-id
-email
-newEmail
+* id
+* email
+* newEmail
 
 app.post('/api/changepassword', controller.changePassword);
-id
-password
-newPass1
-newPass2
+* id
+* password
+* newPass1
+* newPass2

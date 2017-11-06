@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+@import url("https://fonts.googleapis.com/css?family=Fauna+One");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -41,14 +43,93 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+.nav-container {
+  width: 100vw;
+  height: 200px;
+  background: #68B0AB; }
+
 .nav {
   width: 100vw;
-  height: 50px;
-  background-color: #8B8B8B; }
+  height: 70px;
+  position: fixed;
+  color: #14171a;
+  background: -webkit-linear-gradient(white, #fdfbef);
+  border-bottom: 2px solid #4A7C59;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
 
-.nav img {
+.nav-logo {
+  margin-left: 7%;
+  margin-bottom: 0.5%;
+  width: 60px;
+  height: 60px;
+  -ms-transform: rotate(-15deg);
+  -webkit-transform: rotate(-15deg);
+  transform: rotate(-15deg); }
+
+.dropdown {
+  margin-top: 1%;
+  margin-right: 7%;
   height: 100%;
-  width: 50px; }
+  width: 60px; }
+
+.dropdown img {
+  border-radius: 50%; }
+
+.dropdown-container {
+  display: none; }
+
+.dropdown:hover .dropdown-container {
+  display: block; }
+
+.dropdown-content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: stretch; }
+
+.dropdown-content li {
+  text-decoration: none;
+  text-align: center;
+  width: 100px;
+  background: white;
+  border-bottom: 1px solid black;
+  padding: 12px 16px 12px 16px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.9); }
+
+.dropdown-content a {
+  text-decoration: none; }
+
+input {
+  background: white;
+  display: block;
+  font-size: 17px;
+  font-family: 'Rozha One', serif;
+  letter-spacing: 1px;
+  width: 360px;
+  margin: 2px auto;
+  padding: 5px 10px 5px 10px;
+  border-radius: 5px;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.8), 0px 1px 1px rgba(255, 255, 255, 0.8);
+  border: 1px solid #fdfbef; }
+
+input {
+  opacity: 0.9; }
+
+input:hover,
+input:focus {
+  opacity: .7;
+  color: black;
+  border: 1px solid #C8D5B9;
+  box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.25), inset 0px 3px 6px rgba(0, 0, 0, 0.25); }
+
+input[type="text"]:focus {
+  box-shadow: inset 0 1px 2px #8FC0A9, 0px 1px 15px #C8D5B9;
+  border: 1px solid #C8D5B9;
+  outline: none; }
 
 .sidebar {
   background-color: blue;
@@ -124,63 +205,677 @@ img {
 .composing {
   background-color: white; }
 
-.identity-card {
-  margin-top: 20px;
-  background-color: skyblue;
-  height: 200px; }
-
-.cover {
-  height: 50%;
-  background-color: salmon;
-  overflow: hidden; }
-
-.cover img {
-  position: center; }
-
-.avatar {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: stretch;
-  align-content: stretch; }
-
-.line {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: stretch;
-  align-content: stretch; }
-
-.avatar img {
-  height: 70px;
-  width: 70px;
-  border-radius: 50%;
-  margin-top: -20px;
-  margin-left: 10px; }
-
-.avatar #name {
-  font-weight: bold;
-  font-size: 20px; }
-
-.sime {
+.settings-body {
   width: 100%;
-  height: 40px;
-  background-color: chocolate;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: stretch;
-  align-content: stretch; }
+  background: #68B0AB;
+  align-items: center;
+  height: 100vh; }
 
-#cosd {
-  background: pink;
-  margin-left: 40px;
+.settings-form {
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  height: 500px;
+  border: 2px solid black;
+  text-align: center; }
+
+.papa {
+  width: 100%;
+  height: 100%;
+  background-color: #fdfbef;
+  position: relative;
+  font-family: "Roboto", sans-serif; }
+  .papa .postsholder {
+    height: 100vh;
+    width: 100%;
+    overflow: auto;
+    display: flex;
+    flex-wrap: wrap;
+    opacity: .6; }
+    .papa .postsholder .outterbox0 {
+      height: 180px;
+      width: 31%;
+      border: 1px darkgray solid;
+      padding: 7px;
+      margin: 1%;
+      display: flex;
+      flex-direction: column;
+      border-radius: 5px;
+      box-shadow: 5px 5px 15px darkgray;
+      background-color: white; }
+      .papa .postsholder .outterbox0 .toppart {
+        display: flex;
+        justify-content: flex-start;
+        padding: 10px; }
+        .papa .postsholder .outterbox0 .toppart .avatarholder img {
+          height: 70px;
+          width: 70px;
+          border-radius: 5px;
+          margin-right: 5px; }
+        .papa .postsholder .outterbox0 .toppart .names {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: center;
+          margin-left: 5px; }
+          .papa .postsholder .outterbox0 .toppart .names .name {
+            font-size: 30px;
+            font-family: "Fauna One", serif; }
+          .papa .postsholder .outterbox0 .toppart .names .handle {
+            margin-left: 5px;
+            color: #4A7C59; }
+      .papa .postsholder .outterbox0 .bottompart {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 10px; }
+        .papa .postsholder .outterbox0 .bottompart .gutsnoimage {
+          word-wrap: break-word;
+          width: 90%;
+          font-size: 20px; }
+        .papa .postsholder .outterbox0 .bottompart .guts {
+          word-wrap: break-word;
+          width: 50%;
+          font-size: 17px; }
+        .papa .postsholder .outterbox0 .bottompart .gutsimage {
+          margin-right: 10px; }
+          .papa .postsholder .outterbox0 .bottompart .gutsimage img {
+            height: 100px;
+            width: 200px;
+            float: right;
+            border-radius: 5px; }
+    .papa .postsholder .outterbox1 {
+      height: 180px;
+      width: 62%;
+      border: 1px darkgray solid;
+      padding: 7px;
+      margin: 1%;
+      display: flex;
+      flex-direction: column;
+      border-radius: 5px;
+      box-shadow: 5px 5px 15px darkgray;
+      background-color: white; }
+      .papa .postsholder .outterbox1 .toppart {
+        display: flex;
+        justify-content: flex-start;
+        padding: 10px; }
+        .papa .postsholder .outterbox1 .toppart .avatarholder img {
+          height: 70px;
+          width: 70px;
+          border-radius: 5px;
+          margin-right: 5px; }
+        .papa .postsholder .outterbox1 .toppart .names {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: center;
+          margin-left: 5px; }
+          .papa .postsholder .outterbox1 .toppart .names .name {
+            font-size: 30px;
+            font-family: "Fauna One", serif; }
+          .papa .postsholder .outterbox1 .toppart .names .handle {
+            margin-left: 5px;
+            color: #4A7C59; }
+      .papa .postsholder .outterbox1 .bottompart {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 10px; }
+        .papa .postsholder .outterbox1 .bottompart .gutsnoimage {
+          word-wrap: break-word;
+          width: 90%;
+          font-size: 20px; }
+        .papa .postsholder .outterbox1 .bottompart .guts {
+          word-wrap: break-word;
+          width: 50%;
+          font-size: 25px;
+          margin-top: 15px; }
+        .papa .postsholder .outterbox1 .bottompart .gutsimage {
+          margin-right: 10px; }
+          .papa .postsholder .outterbox1 .bottompart .gutsimage img {
+            height: 180px;
+            width: 320px;
+            float: right;
+            transform: translateY(-30px);
+            border-radius: 5px; }
+    .papa .postsholder .outterbox2 {
+      height: 180px;
+      width: 62%;
+      border: 1px darkgray solid;
+      padding: 7px;
+      margin: 1%;
+      display: flex;
+      flex-direction: column;
+      border-radius: 5px;
+      box-shadow: 5px 5px 15px darkgray;
+      background-color: white; }
+      .papa .postsholder .outterbox2 .toppart {
+        display: flex;
+        justify-content: flex-start;
+        padding: 10px; }
+        .papa .postsholder .outterbox2 .toppart .avatarholder img {
+          height: 70px;
+          width: 70px;
+          border-radius: 5px;
+          margin-right: 5px; }
+        .papa .postsholder .outterbox2 .toppart .names {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: center;
+          margin-left: 5px; }
+          .papa .postsholder .outterbox2 .toppart .names .name {
+            font-size: 30px;
+            font-family: "Fauna One", serif; }
+          .papa .postsholder .outterbox2 .toppart .names .handle {
+            margin-left: 5px;
+            color: #4A7C59; }
+      .papa .postsholder .outterbox2 .bottompart {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 10px; }
+        .papa .postsholder .outterbox2 .bottompart .gutsnoimage {
+          word-wrap: break-word;
+          width: 90%;
+          font-size: 20px; }
+        .papa .postsholder .outterbox2 .bottompart .guts {
+          word-wrap: break-word;
+          width: 50%;
+          font-size: 25px;
+          margin-top: 15px; }
+        .papa .postsholder .outterbox2 .bottompart .gutsimage {
+          margin-right: 10px; }
+          .papa .postsholder .outterbox2 .bottompart .gutsimage img {
+            height: 180px;
+            width: 300px;
+            float: right;
+            transform: translateY(-30px);
+            border-radius: 5px; }
+    .papa .postsholder .outterbox3 {
+      height: 180px;
+      width: 31%;
+      border: 1px darkgray solid;
+      padding: 7px;
+      margin: 1%;
+      display: flex;
+      flex-direction: column;
+      border-radius: 5px;
+      box-shadow: 5px 5px 15px darkgray;
+      background-color: white; }
+      .papa .postsholder .outterbox3 .toppart {
+        display: flex;
+        justify-content: flex-start;
+        padding: 10px; }
+        .papa .postsholder .outterbox3 .toppart .avatarholder img {
+          height: 70px;
+          width: 70px;
+          border-radius: 5px;
+          margin-right: 5px; }
+        .papa .postsholder .outterbox3 .toppart .names {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: center;
+          margin-left: 5px; }
+          .papa .postsholder .outterbox3 .toppart .names .name {
+            font-size: 30px;
+            font-family: "Fauna One", serif; }
+          .papa .postsholder .outterbox3 .toppart .names .handle {
+            margin-left: 5px;
+            color: #4A7C59; }
+      .papa .postsholder .outterbox3 .bottompart {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 10px; }
+        .papa .postsholder .outterbox3 .bottompart .gutsnoimage {
+          word-wrap: break-word;
+          width: 90%;
+          font-size: 20px; }
+        .papa .postsholder .outterbox3 .bottompart .guts {
+          word-wrap: break-word;
+          width: 50%;
+          font-size: 17px; }
+        .papa .postsholder .outterbox3 .bottompart .gutsimage {
+          margin-right: 10px; }
+          .papa .postsholder .outterbox3 .bottompart .gutsimage img {
+            height: 100px;
+            width: 200px;
+            float: right;
+            border-radius: 5px; }
+    .papa .postsholder .outterbox4 {
+      height: 180px;
+      width: 47%;
+      border: 1px darkgray solid;
+      padding: 7px;
+      margin: 1%;
+      display: flex;
+      flex-direction: column;
+      border-radius: 5px;
+      box-shadow: 5px 5px 15px darkgray;
+      background-color: white; }
+      .papa .postsholder .outterbox4 .toppart {
+        display: flex;
+        justify-content: flex-start;
+        padding: 10px; }
+        .papa .postsholder .outterbox4 .toppart .avatarholder img {
+          height: 70px;
+          width: 70px;
+          border-radius: 5px;
+          margin-right: 5px; }
+        .papa .postsholder .outterbox4 .toppart .names {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: center;
+          margin-left: 5px; }
+          .papa .postsholder .outterbox4 .toppart .names .name {
+            font-size: 30px;
+            font-family: "Fauna One", serif; }
+          .papa .postsholder .outterbox4 .toppart .names .handle {
+            margin-left: 5px;
+            color: #4A7C59; }
+      .papa .postsholder .outterbox4 .bottompart {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 10px; }
+        .papa .postsholder .outterbox4 .bottompart .gutsnoimage {
+          word-wrap: break-word;
+          width: 90%;
+          font-size: 20px; }
+        .papa .postsholder .outterbox4 .bottompart .guts {
+          word-wrap: break-word;
+          width: 50%;
+          font-size: 20px;
+          margin-top: 10px; }
+        .papa .postsholder .outterbox4 .bottompart .gutsimage {
+          margin-right: 10px; }
+          .papa .postsholder .outterbox4 .bottompart .gutsimage img {
+            height: 180px;
+            width: 290px;
+            float: right;
+            border-radius: 5px;
+            transform: translateY(-30px); }
+    .papa .postsholder .outterbox5 {
+      height: 180px;
+      width: 46%;
+      border: 1px darkgray solid;
+      padding: 7px;
+      margin: 1%;
+      display: flex;
+      flex-direction: column;
+      border-radius: 5px;
+      box-shadow: 5px 5px 15px darkgray;
+      background-color: white; }
+      .papa .postsholder .outterbox5 .toppart {
+        display: flex;
+        justify-content: flex-start;
+        padding: 10px; }
+        .papa .postsholder .outterbox5 .toppart .avatarholder img {
+          height: 70px;
+          width: 70px;
+          border-radius: 5px;
+          margin-right: 5px; }
+        .papa .postsholder .outterbox5 .toppart .names {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: center;
+          margin-left: 5px; }
+          .papa .postsholder .outterbox5 .toppart .names .name {
+            font-size: 30px;
+            font-family: "Fauna One", serif; }
+          .papa .postsholder .outterbox5 .toppart .names .handle {
+            margin-left: 5px;
+            color: #4A7C59; }
+      .papa .postsholder .outterbox5 .bottompart {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 10px; }
+        .papa .postsholder .outterbox5 .bottompart .gutsnoimage {
+          word-wrap: break-word;
+          width: 90%;
+          font-size: 22px; }
+        .papa .postsholder .outterbox5 .bottompart .guts {
+          word-wrap: break-word;
+          width: 50%;
+          font-size: 20px;
+          margin-top: 10px; }
+        .papa .postsholder .outterbox5 .bottompart .gutsimage {
+          margin-right: 10px; }
+          .papa .postsholder .outterbox5 .bottompart .gutsimage img {
+            height: 180px;
+            width: 290px;
+            float: right;
+            border-radius: 5px;
+            transform: translateY(-30px); }
+    .papa .postsholder .outterbox6 {
+      height: 180px;
+      width: 30%;
+      border: 1px darkgray solid;
+      padding: 7px;
+      margin: 1%;
+      display: flex;
+      flex-direction: column;
+      border-radius: 5px;
+      box-shadow: 5px 5px 15px darkgray;
+      background-color: white; }
+      .papa .postsholder .outterbox6 .toppart {
+        display: flex;
+        justify-content: flex-start;
+        padding: 10px; }
+        .papa .postsholder .outterbox6 .toppart .avatarholder img {
+          height: 70px;
+          width: 70px;
+          border-radius: 5px;
+          margin-right: 5px; }
+        .papa .postsholder .outterbox6 .toppart .names {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: center;
+          margin-left: 5px; }
+          .papa .postsholder .outterbox6 .toppart .names .name {
+            font-size: 30px;
+            font-family: "Fauna One", serif; }
+          .papa .postsholder .outterbox6 .toppart .names .handle {
+            margin-left: 5px;
+            color: #4A7C59; }
+      .papa .postsholder .outterbox6 .bottompart {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 10px; }
+        .papa .postsholder .outterbox6 .bottompart .gutsnoimage {
+          word-wrap: break-word;
+          width: 90%;
+          font-size: 19px; }
+        .papa .postsholder .outterbox6 .bottompart .guts {
+          word-wrap: break-word;
+          width: 50%;
+          font-size: 16px; }
+        .papa .postsholder .outterbox6 .bottompart .gutsimage {
+          margin-right: 10px; }
+          .papa .postsholder .outterbox6 .bottompart .gutsimage img {
+            height: 100px;
+            width: 170px;
+            float: right;
+            border-radius: 5px; }
+    .papa .postsholder .outterbox7 {
+      height: 180px;
+      width: 30%;
+      border: 1px darkgray solid;
+      padding: 7px;
+      margin: 1%;
+      display: flex;
+      flex-direction: column;
+      border-radius: 5px;
+      box-shadow: 5px 5px 15px darkgray;
+      background-color: white; }
+      .papa .postsholder .outterbox7 .toppart {
+        display: flex;
+        justify-content: flex-start;
+        padding: 10px; }
+        .papa .postsholder .outterbox7 .toppart .avatarholder img {
+          height: 70px;
+          width: 70px;
+          border-radius: 5px;
+          margin-right: 5px; }
+        .papa .postsholder .outterbox7 .toppart .names {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: center;
+          margin-left: 5px; }
+          .papa .postsholder .outterbox7 .toppart .names .name {
+            font-size: 30px;
+            font-family: "Fauna One", serif; }
+          .papa .postsholder .outterbox7 .toppart .names .handle {
+            margin-left: 5px;
+            color: #4A7C59; }
+      .papa .postsholder .outterbox7 .bottompart {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 10px; }
+        .papa .postsholder .outterbox7 .bottompart .gutsnoimage {
+          word-wrap: break-word;
+          width: 90%;
+          font-size: 19px; }
+        .papa .postsholder .outterbox7 .bottompart .guts {
+          word-wrap: break-word;
+          width: 50%;
+          font-size: 16px; }
+        .papa .postsholder .outterbox7 .bottompart .gutsimage {
+          margin-right: 10px; }
+          .papa .postsholder .outterbox7 .bottompart .gutsimage img {
+            height: 100px;
+            width: 170px;
+            float: right;
+            border-radius: 5px; }
+    .papa .postsholder .outterbox8 {
+      height: 180px;
+      width: 30%;
+      border: 1px darkgray solid;
+      padding: 7px;
+      margin: 1%;
+      display: flex;
+      flex-direction: column;
+      border-radius: 5px;
+      box-shadow: 5px 5px 15px darkgray;
+      background-color: white; }
+      .papa .postsholder .outterbox8 .toppart {
+        display: flex;
+        justify-content: flex-start;
+        padding: 10px; }
+        .papa .postsholder .outterbox8 .toppart .avatarholder img {
+          height: 70px;
+          width: 70px;
+          border-radius: 5px;
+          margin-right: 5px; }
+        .papa .postsholder .outterbox8 .toppart .names {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: center;
+          margin-left: 5px; }
+          .papa .postsholder .outterbox8 .toppart .names .name {
+            font-size: 30px;
+            font-family: "Fauna One", serif; }
+          .papa .postsholder .outterbox8 .toppart .names .handle {
+            margin-left: 5px;
+            color: #4A7C59; }
+      .papa .postsholder .outterbox8 .bottompart {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 10px; }
+        .papa .postsholder .outterbox8 .bottompart .gutsnoimage {
+          word-wrap: break-word;
+          width: 90%;
+          font-size: 19px; }
+        .papa .postsholder .outterbox8 .bottompart .guts {
+          word-wrap: break-word;
+          width: 50%;
+          font-size: 16px; }
+        .papa .postsholder .outterbox8 .bottompart .gutsimage {
+          margin-right: 10px; }
+          .papa .postsholder .outterbox8 .bottompart .gutsimage img {
+            height: 100px;
+            width: 170px;
+            float: right;
+            border-radius: 5px; }
+  .papa .fixedbox {
+    position: absolute;
+    height: 250px;
+    width: 400px;
+    background-color: white;
+    top: calc(50% - 125px);
+    left: calc(50% - 200px);
+    border-radius: 10px;
+    border: 1px darkgrey solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    color: #161925; }
+    .papa .fixedbox .wordsholder {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      .papa .fixedbox .wordsholder .title {
+        font-size: 40px;
+        margin-bottom: 10px;
+        font-weight: bold;
+        font-family: "Fauna One", serif; }
+      .papa .fixedbox .wordsholder .subtitle {
+        font-size: 20px;
+        transform: translateY(10px); }
+    .papa .fixedbox .buttonsholder {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center; }
+      .papa .fixedbox .buttonsholder .registerbutton {
+        height: 70px;
+        width: 160px;
+        background-color: #C8D5B9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 25px;
+        border-radius: 5px;
+        transition: all .5s ease;
+        font-family: "Fauna One", serif; }
+      .papa .fixedbox .buttonsholder .registerbutton:hover {
+        background-color: #8FC0A9;
+        cursor: pointer; }
+      .papa .fixedbox .buttonsholder .loginbutton {
+        height: 70px;
+        width: 160px;
+        background-color: #C8D5B9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 25px;
+        border-radius: 5px;
+        transition: all .5s ease;
+        font-family: "Fauna One", serif; }
+      .papa .fixedbox .buttonsholder .loginbutton:hover {
+        background-color: #8FC0A9;
+        cursor: pointer; }
+  .papa .loginbox {
+    position: absolute;
+    height: 250px;
+    width: 400px;
+    background-color: white;
+    top: calc(50% - 125px);
+    left: calc(50% - 200px);
+    border-radius: 10px;
+    border: 1px darkgrey solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    color: #161925; }
+    .papa .loginbox .gobackbutton {
+      margin-bottom: 5px;
+      font-size: 17px; }
+    .papa .loginbox .gobackbutton:hover {
+      color: darkgray;
+      cursor: pointer; }
+  .papa .registerbox {
+    position: absolute;
+    height: 450px;
+    width: 400px;
+    background-color: white;
+    top: calc(50% - 225px);
+    left: calc(50% - 200px);
+    border-radius: 10px;
+    border: 1px darkgrey solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    color: #161925; }
+    .papa .registerbox .gobackbutton {
+      margin-bottom: 5px;
+      font-size: 17px; }
+    .papa .registerbox .gobackbutton:hover {
+      color: darkgray;
+      cursor: pointer; }
+
+.bigbox {
+  height: 100%;
   display: flex;
   flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: stretch;
-  align-content: stretch; }
+  justify-content: space-around;
+  align-items: center;
+  color: #161925; }
+  .bigbox .logintitle {
+    font-size: 60px; }
+  .bigbox .loginotherbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 20px; }
+    .bigbox .loginotherbox .logininput {
+      height: 40px;
+      width: 300px;
+      font-size: 20px; }
+    .bigbox .loginotherbox .loginsubmit {
+      height: 40px;
+      width: 304px;
+      font-size: 20px; }
+
+.registerbigbox {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  color: #161925; }
+  .registerbigbox .registerwords {
+    height: 28%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center; }
+    .registerbigbox .registerwords .registertitle {
+      font-size: 40px; }
+    .registerbigbox .registerwords .registersubtitle {
+      font-size: 20px;
+      text-align: center;
+      margin: 0px 10px 0px 10px; }
+  .registerbigbox .registerotherbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 20px; }
+    .registerbigbox .registerotherbox .registerinputtitle {
+      font-size: 25px;
+      text-align: center;
+      margin-bottom: 5px; }
+    .registerbigbox .registerotherbox .registerinput {
+      height: 40px;
+      width: 300px;
+      font-size: 20px; }
+    .registerbigbox .registerotherbox .registersubmit {
+      height: 40px;
+      width: 304px;
+      font-size: 20px; }

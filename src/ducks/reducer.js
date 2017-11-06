@@ -3,8 +3,9 @@ import axios from 'axios'
 const initialState = {
 
     user: {
+        id: 13,
         name: 'Limone Resqueza',
-        handle: 'fastgirl222',
+        handle: '',
         email: 'l.resquesa@gmail.com',
         avatar: 'https://randomuser.me/api/portraits/women/43.jpg',
         bio: 'I love long walks on the beach and turtles.',

@@ -1,0 +1,27 @@
+.bigbox{
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: $color0;
+    .logintitle{
+        font-size: 60px;
+    }
+    .loginotherbox{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        font-size: 20px;
+        .logininput{
+            height: 40px;
+            width: 300px;
+            font-size: 20px;
+        }
+        .loginsubmit{
+            height: 40px;
+            width: 304px;
+            font-size: 20px;
+        }
+    }
+}
