@@ -69,42 +69,41 @@ class Register extends Component {
 
     render() {
         return (
-            <div>
-                <h1>Register</h1>
+            <div className="registerbigbox">
+                <div className="registerwords">
+                    <h1 className="registertitle">Introducing TALKO!</h1>
+                    <h4 className="registersubtitle">This is where a little bio will go when we think of one</h4>
+                </div>
 
-                <div>
+                <div className="registerotherbox">
 
-                    <span>Name</span>
-                    <input onChange={(e) => {this.userInput(e.target.value, 'name')}} type="text" />
+                    <h3 className="registerinputtitle">Join TALKO today!</h3>
 
-                    <span>Handle</span>
+                    <input className="registerinput" onChange={(e) => {this.userInput(e.target.value, 'name')}} type="text" placeholder="Enter your name"/>
+
                     {
                         (this.state.emailInvalid)
                         ? <div>Email already exists!</div>
                         : <div></div>
                     }
-                    <input onChange={(e) => {this.userInput(e.target.value, 'handle')}} type="text" />
+                    <input className="registerinput" onChange={(e) => {this.userInput(e.target.value, 'handle')}} type="text" placeholder="Choose a handle"/>
 
-                    <span>Email</span>
                     {
                         (this.state.handleInvalid)
                         ? <div>Handle already exists!</div>
                         : <div></div>
                     }
                     <span></span>
-                    <input onChange={(e) => {this.userInput(e.target.value, 'email')}} type="text" />
+                    <input className="registerinput" onChange={(e) => {this.userInput(e.target.value, 'email')}} type="text" placeholder="Enter your email"/>
          
-                    <span>Password</span>
-                    <input onChange={(e) => {this.userInput(e.target.value, 'password')}} type="password" />
+                    <input className="registerinput" onChange={(e) => {this.userInput(e.target.value, 'password')}} type="password" placeholder="Create a password"/>
 
                     
 
-                    <button onClick={() => this.submitRegistration(this.state)}>
-                        Submit
-                    </button>
+                    <button className="registersubmit" onClick={() => this.submitRegistration(this.state)}>Submit</button>
                     
-                    <span>{this.state.emailInvalid + ''}</span>
-                    <span>{this.state.handleInvalid + ''}</span>
+                    {/* <span>{this.state.emailInvalid + ''}</span>
+                    <span>{this.state.handleInvalid + ''}</span> */}
                 </div>
 
             </div>

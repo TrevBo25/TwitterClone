@@ -45,20 +45,16 @@ class Login extends Component {
     }
     render() {
         return (
-            <div>
-                <h1>Login</h1>
+            <div className="bigbox">
+                <h1 className="logintitle">Login</h1>
 
-                <div>
+                <div className="loginotherbox">
 
-                    <span>Email or Handle</span>
-                    <input onChange={(e) => {this.userInput(e.target.value, 'handle')}} type="text" />
+                    <input onChange={(e) => {this.userInput(e.target.value, 'handle')}} type="text" className="logininput" placeholder="Handle or Email"/>
 
-                    <span>Password</span>
-                    <input onChange={(e) => {this.userInput(e.target.value, 'password')}} type="password" />
+                    <input onChange={(e) => {this.userInput(e.target.value, 'password')}} type="password" className="logininput" placeholder="Password"/>
 
-                    <button onClick={() => this.submitLogin(this.state)}>
-                        Submit
-                    </button>
+                    <button onClick={() => this.submitLogin(this.state)} className="loginsubmit">Submit</button>
                     
                 </div>
 
