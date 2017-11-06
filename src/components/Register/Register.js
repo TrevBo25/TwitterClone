@@ -72,7 +72,7 @@ class Register extends Component {
             <div className="registerbigbox">
                 <div className="registerwords">
                     <h1 className="registertitle">Introducing TALKO!</h1>
-                    <h4 className="registersubtitle">This is where a little bio will go when we think of one</h4>
+                    <h4 className="registersubtitle">Let's give 'em something to TALKO 'bout!</h4>
                 </div>
 
                 <div className="registerotherbox">
