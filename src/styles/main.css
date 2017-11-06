@@ -54,7 +54,7 @@ table {
   position: fixed;
   color: #14171a;
   background: -webkit-linear-gradient(white, #fdfbef);
-  border-bottom: 2px solid #4A7C59;
+  border-bottom: 1px solid #a0a0a0;
   display: flex;
   justify-content: space-between;
   align-items: center; }
@@ -107,7 +107,7 @@ input {
   background: white;
   display: block;
   font-size: 17px;
-  font-family: 'Rozha One', serif;
+  font-family: 'Roboto';
   letter-spacing: 1px;
   width: 360px;
   margin: 2px auto;
@@ -124,7 +124,7 @@ input:focus {
   opacity: .7;
   color: black;
   border: 1px solid #C8D5B9;
-  box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.25), inset 0px 3px 6px rgba(0, 0, 0, 0.25); }
+  box-shadow: 2px 2px 2px #161925; }
 
 input[type="text"]:focus {
   box-shadow: inset 0 1px 2px #8FC0A9, 0px 1px 15px #C8D5B9;
@@ -145,6 +145,7 @@ img {
 .frame {
   height: 90vh;
   width: 100vw;
+  margin-left: 30px;
   background-color: #717171;
   display: flex;
   flex-direction: row;
@@ -219,6 +220,7 @@ img {
   height: 500px;
   border: 2px solid black;
   text-align: center; }
+
 .papa {
   width: 100%;
   height: 100%;
@@ -270,6 +272,10 @@ img {
         justify-content: space-between;
         width: 100%;
         padding: 10px; }
+        .papa .postsholder .outterbox0 .bottompart .gutsnoimage {
+          word-wrap: break-word;
+          width: 90%;
+          font-size: 20px; }
         .papa .postsholder .outterbox0 .bottompart .guts {
           word-wrap: break-word;
           width: 50%;
@@ -319,6 +325,10 @@ img {
         justify-content: space-between;
         width: 100%;
         padding: 10px; }
+        .papa .postsholder .outterbox1 .bottompart .gutsnoimage {
+          word-wrap: break-word;
+          width: 90%;
+          font-size: 20px; }
         .papa .postsholder .outterbox1 .bottompart .guts {
           word-wrap: break-word;
           width: 50%;
@@ -370,6 +380,10 @@ img {
         justify-content: space-between;
         width: 100%;
         padding: 10px; }
+        .papa .postsholder .outterbox2 .bottompart .gutsnoimage {
+          word-wrap: break-word;
+          width: 90%;
+          font-size: 20px; }
         .papa .postsholder .outterbox2 .bottompart .guts {
           word-wrap: break-word;
           width: 50%;
@@ -421,6 +435,10 @@ img {
         justify-content: space-between;
         width: 100%;
         padding: 10px; }
+        .papa .postsholder .outterbox3 .bottompart .gutsnoimage {
+          word-wrap: break-word;
+          width: 90%;
+          font-size: 20px; }
         .papa .postsholder .outterbox3 .bottompart .guts {
           word-wrap: break-word;
           width: 50%;
@@ -470,6 +488,10 @@ img {
         justify-content: space-between;
         width: 100%;
         padding: 10px; }
+        .papa .postsholder .outterbox4 .bottompart .gutsnoimage {
+          word-wrap: break-word;
+          width: 90%;
+          font-size: 20px; }
         .papa .postsholder .outterbox4 .bottompart .guts {
           word-wrap: break-word;
           width: 50%;
@@ -521,6 +543,10 @@ img {
         justify-content: space-between;
         width: 100%;
         padding: 10px; }
+        .papa .postsholder .outterbox5 .bottompart .gutsnoimage {
+          word-wrap: break-word;
+          width: 90%;
+          font-size: 22px; }
         .papa .postsholder .outterbox5 .bottompart .guts {
           word-wrap: break-word;
           width: 50%;
@@ -572,6 +598,10 @@ img {
         justify-content: space-between;
         width: 100%;
         padding: 10px; }
+        .papa .postsholder .outterbox6 .bottompart .gutsnoimage {
+          word-wrap: break-word;
+          width: 90%;
+          font-size: 19px; }
         .papa .postsholder .outterbox6 .bottompart .guts {
           word-wrap: break-word;
           width: 50%;
@@ -621,6 +651,10 @@ img {
         justify-content: space-between;
         width: 100%;
         padding: 10px; }
+        .papa .postsholder .outterbox7 .bottompart .gutsnoimage {
+          word-wrap: break-word;
+          width: 90%;
+          font-size: 19px; }
         .papa .postsholder .outterbox7 .bottompart .guts {
           word-wrap: break-word;
           width: 50%;
@@ -670,6 +704,10 @@ img {
         justify-content: space-between;
         width: 100%;
         padding: 10px; }
+        .papa .postsholder .outterbox8 .bottompart .gutsnoimage {
+          word-wrap: break-word;
+          width: 90%;
+          font-size: 19px; }
         .papa .postsholder .outterbox8 .bottompart .guts {
           word-wrap: break-word;
           width: 50%;
@@ -841,3 +879,64 @@ img {
       height: 40px;
       width: 304px;
       font-size: 20px; }
+
+.identity-card {
+  margin-top: 20px;
+  background-color: skyblue;
+  height: 200px; }
+
+.cover {
+  height: 50%;
+  background-color: salmon;
+  overflow: hidden; }
+
+.cover img {
+  position: center; }
+
+.avatar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch; }
+
+.line {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch; }
+
+.avatar img {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  margin-top: -20px;
+  margin-left: 10px; }
+
+.avatar #name {
+  font-weight: bold;
+  font-size: 20px; }
+
+.sime {
+  width: 100%;
+  height: 40px;
+  background-color: chocolate;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch; }
+
+#cosd {
+  background: pink;
+  margin-left: 40px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch; }

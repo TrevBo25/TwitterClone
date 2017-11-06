@@ -34,7 +34,7 @@ class MainContent extends Component {
 
         return (
             <div className="main-content">
-                Main Content
+
                 <Compose getPosts={this.getPosts}/>
                 <Link to={this.props.user.handle}
                 >{this.props.user.handle}
