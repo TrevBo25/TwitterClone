@@ -54,7 +54,7 @@ table {
   position: fixed;
   color: #14171a;
   background: -webkit-linear-gradient(white, #fdfbef);
-  border-bottom: 2px solid #4A7C59;
+  border-bottom: 1px solid #a0a0a0;
   display: flex;
   justify-content: space-between;
   align-items: center; }
@@ -107,7 +107,7 @@ input {
   background: white;
   display: block;
   font-size: 17px;
-  font-family: 'Rozha One', serif;
+  font-family: 'Roboto';
   letter-spacing: 1px;
   width: 360px;
   margin: 2px auto;
@@ -124,7 +124,7 @@ input:focus {
   opacity: .7;
   color: black;
   border: 1px solid #C8D5B9;
-  box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.25), inset 0px 3px 6px rgba(0, 0, 0, 0.25); }
+  box-shadow: 2px 2px 2px #161925; }
 
 input[type="text"]:focus {
   box-shadow: inset 0 1px 2px #8FC0A9, 0px 1px 15px #C8D5B9;
@@ -219,6 +219,7 @@ img {
   height: 500px;
   border: 2px solid black;
   text-align: center; }
+
 .papa {
   width: 100%;
   height: 100%;
