@@ -40,6 +40,8 @@ app.post('/api/changehandle', controller.changeHandle);
 app.post('/api/changeemail', controller.changeEmail);
 app.post('/api/changepassword', controller.changePassword);
 
+app.post('/api/alluserdata', controller.allUserData)
+
 const storage = multer.diskStorage({
     
      filename: function (req, file, cb) {

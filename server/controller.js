@@ -149,45 +149,11 @@ module.exports = {
             .then(response => {
                 res.status(200).json(response);
             })
-<<<<<<< HEAD
         },
         getFollowing(req, res){
             const db = req.app.get('db');
             const{id} = req.body;
             db.get_following([id])
-=======
-        }).catch( err => { console.log("dislike_post", err);})
-    },
-    getPosts(req,res){
-        const db = req.app.get('db');
-        db.get_posts()
-        .then(response => {
-            res.status(200).json(response);
-        })
-    },
-    getFollowing(req, res){
-        const db = req.app.get('db');
-        const{id} = req.body;
-        db.get_following([id])
-        .then( response => {
-            res.status(200).send(response)
-        }).catch( err => { console.log("get_following", err);})
-    },
-    getFollowers(req, res){
-        const db = req.app.get('db');
-        const{id} = req.body;
-        db.get_followers([id])
-        .then( response => {
-            res.status(200).send(response)
-        }).catch( err => { console.log("get_followers", err);})
-    },
-    follow(req, res){
-        const db = req.app.get('db');
-        const{id, otherid} = req.body;
-        db.follow([id, otherid])
-        .then( response => {
-            db.send_notification([id, otherid, 'follow', null])
->>>>>>> 875f25443101d88f10e2828fbe0dcd752f92c420
             .then( response => {
                 let users = [];
                 response.forEach(function(e, i, a) {
@@ -250,7 +216,6 @@ module.exports = {
             }).catch( err => {
                 console.log("getFollowersPosts", err)
             })
-<<<<<<< HEAD
         },
         changeHandle(req, res){
             const db = req.app.get('db');
@@ -291,71 +256,43 @@ module.exports = {
                     res.status(200).send("Current password is not correct")
                 }
             }).catch( err => console.log('check_password', err))
+        },
+        allUserData(req, res) {
+            console.log('getting all user data')
+            const db = req.app.get('db');
+            const {handle} = req.body;
+            var userData = db.get_user([handle])
+            .then(
+                 userData => {
+                    console.log(userData)
+                    return userData
+                }
+            )
+            var followers = db.get_followers([handle])
+            .then(
+                followers => {
+                    console.log(followers)
+                    return followers
+                }
+            )
+            var following = db.get_following([handle])
+            .then(
+                following => {
+                    console.log(following)
+                    return following
+                }
+            
+            )
+            Promise.all([userData, followers, following]).then(values => {
+                console.log(values)
+                var stuff = {
+                    userData: values[0][0],
+                    followers: values[1],
+                    following: values[2]
+                }
+                console.log(stuff)
+                res.status(200).send(stuff)
+            })
+            
         }
     }
-=======
-        }).catch( err => { console.log("unfollow", err);})
-    },
-    getUserFromHandle(req, res){
-        const db = req.app.get('db');
-        const {handle} = req.body;
-        db.get_user_from_handle([handle])
-        .then(response => {
-            console.log('herherherher', response[0]);
-            res.status(200).json(response[0]);
-        }).catch(err => console.log('getuserfromhandle', err))
-    },
-    // new stuff from Ian
-    getFollowersPosts(req, res){
-        console.log("hello");
-        const db = req.app.get('db');
-        const {id} = req.body;
-        db.get_followers_posts([id])
-        .then( response => { console.log(response);
-        res.status(200).json(response);
-        }).catch( err => {
-            console.log("getFollowersPosts", err)
-        })
-    },
-    changeHandle(req, res){
-        const db = req.app.get('db');
-        const {id, newHandle} = req.body;
-        db.change_handle([id, newHandle])
-        .then( response => {
-            res.status(200).send('Handle successfully changed!')
-        }).catch( err => console.log("change_handle", err))
-    },
-    changeEmail(req, res){
-        const db = req.app.get('db');
-        const {id, email, newEmail} = req.body;
-        db.check_user_email([id, email])
-        .then( response => {
-            if (response.length != 0){
-                db.change_email([id, newEmail])
-                .then( response => {
-                    res.status(200).send('Email successfull changed!')
-                }).catch( err => console.log("check_email", err))
-            }
-        }).catch( err => console.log("change_email", err))
-    },
-    changePassword(req, res){
-        const db = req.app.get('db');
-        const {id, password, newPass1, newPass2} = req.body;
-        db.check_password([id, password])
-        .then( response => {
-            if(response.length != 0){
-                if(newPass1 === newPass2){
-                    db.change_password([id, newPass1])
-                    .then( response => {
-                        res.status(200).send('Password successfully changed')
-                    }).catch( err => console.log('change_password', err))
-                } else {
-                    res.status(200).send('New passwords did not match')
-                }
-            } else {
-                res.status(200).send("Current password is not correct")
-            }
-        }).catch( err => console.log('check_password', err))
-    }
-}
->>>>>>> 875f25443101d88f10e2828fbe0dcd752f92c420
