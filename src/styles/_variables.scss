@@ -1,6 +1,14 @@
 //-- Main Color Scheme --//
-$color1: #94d1be;
-$color2: #daf0ee;
-$color3: #9db5b2;
-$color4: #3b413c;
-$color5: #ffffff;
+$color0: #161925;
+$color1: #8FC0A9;
+$color2: #8FC0A9;
+$color3: #8FC0A9;
+$color4: #C8D5B9;
+$color5: rgb(253, 251, 239);
+
+//--Font Families--//
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Fauna+One');
+$primaryfont: 'Fauna One', serif;
+$secondaryfont: 'Roboto', sans-serif;
+

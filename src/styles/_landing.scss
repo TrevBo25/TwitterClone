@@ -1,8 +1,9 @@
 .papa{
     width: 100%;
     height: 100%;
-    background-color: lightgray;
+    background-color: $color5;
     position: relative;
+    font-family: $secondaryfont;
     .postsholder{
         height:100vh;
         width:100%;
@@ -14,16 +15,17 @@
             height: 180px;
             width: 31%;
             border: 1px darkgray solid;
-            padding: 6px;
+            padding: 7px;
             margin: 1%;
             display: flex;
             flex-direction: column;
             border-radius: 5px;
-            box-shadow: 10px 10px 5px #888888;
+            box-shadow: 5px 5px 15px darkgray;
             background-color: white;
             .toppart{
                 display: flex;
                 justify-content: flex-start;
+                padding: 10px;
                 .avatarholder{
                     img{
                         height:70px;
@@ -34,25 +36,33 @@
                 }
                 .names{
                     display: flex;
-                    align-items: center;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: center;
                     margin-left: 5px;
                     .name{
                         font-size: 30px;
+                        font-family: $primaryfont;
                     }
                     .handle{
                         margin-left: 5px;
-                        color: darkgray;
+                        color: $color1
                     }
                 }
             }
             .bottompart{
                 display: flex;
                 align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                padding: 10px;
                 .guts{
-                    font-size: 22px;
+                    word-wrap: break-word;
+                    width: 50%;
+                    font-size: 17px;
                 }
                 .gutsimage{
-                    margin-left: 5px;
+                    margin-right: 10px;
                     img{
                         height:100px;
                         width:200px;
@@ -66,16 +76,17 @@
             height: 180px;
             width: 62%;
             border: 1px darkgray solid;
-            padding: 6px;
+            padding: 7px;
             margin: 1%;
             display: flex;
             flex-direction: column;
             border-radius: 5px;
-            box-shadow: 10px 10px 5px #888888;
+            box-shadow: 5px 5px 15px darkgray;
             background-color: white;
             .toppart{
                 display: flex;
                 justify-content: flex-start;
+                padding: 10px;
                 .avatarholder{
                     img{
                         height:70px;
@@ -86,30 +97,39 @@
                 }
                 .names{
                     display: flex;
-                    align-items: center;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: center;
                     margin-left: 5px;
                     .name{
                         font-size: 30px;
+                        font-family: $primaryfont;
                     }
                     .handle{
                         margin-left: 5px;
-                        color: darkgray;
+                        color: $color1;
                     }
                 }
             }
             .bottompart{
                 display: flex;
                 align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                padding: 10px;
                 .guts{
-                    font-size: 30px;
+                    word-wrap: break-word;
+                    width: 50%;
+                    font-size: 25px;
+                    margin-top: 15px;
                 }
                 .gutsimage{
-                    margin-left: 5px;
+                    margin-right: 10px;
                     img{
-                        height:170px;
+                        height:180px;
                         width:320px;
                         float: right;
-                        transform: translateY(-20px);
+                        transform: translateY(-30px);
                         border-radius: 5px;
                     }
                 }
@@ -119,16 +139,17 @@
             height: 180px;
             width: 62%;
             border: 1px darkgray solid;
-            padding: 6px;
+            padding: 7px;
             margin: 1%;
             display: flex;
             flex-direction: column;
             border-radius: 5px;
-            box-shadow: 10px 10px 5px #888888;
+            box-shadow: 5px 5px 15px darkgray;
             background-color: white;
             .toppart{
                 display: flex;
                 justify-content: flex-start;
+                padding: 10px;
                 .avatarholder{
                     img{
                         height:70px;
@@ -139,30 +160,39 @@
                 }
                 .names{
                     display: flex;
-                    align-items: center;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: center;
                     margin-left: 5px;
                     .name{
                         font-size: 30px;
+                        font-family: $primaryfont;
                     }
                     .handle{
                         margin-left: 5px;
-                        color: darkgray;
+                        color: $color1;
                     }
                 }
             }
             .bottompart{
                 display: flex;
                 align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                padding: 10px;
                 .guts{
-                    font-size: 30px;
+                    word-wrap: break-word;
+                    width: 50%;
+                    font-size: 25px;
+                    margin-top: 15px;
                 }
                 .gutsimage{
-                    margin-left: 5px;
+                    margin-right: 10px;
                     img{
-                        height:170px;
-                        width:320px;
+                        height:180px;
+                        width:300px;
                         float: right;
-                        transform: translateY(-20px);
+                        transform: translateY(-30px);
                         border-radius: 5px;
                     }
                 }
@@ -172,16 +202,17 @@
             height: 180px;
             width: 31%;
             border: 1px darkgray solid;
-            padding: 6px;
+            padding: 7px;
             margin: 1%;
             display: flex;
             flex-direction: column;
             border-radius: 5px;
-            box-shadow: 10px 10px 5px #888888;
+            box-shadow: 5px 5px 15px darkgray;
             background-color: white;
             .toppart{
                 display: flex;
                 justify-content: flex-start;
+                padding: 10px;
                 .avatarholder{
                     img{
                         height:70px;
@@ -192,25 +223,33 @@
                 }
                 .names{
                     display: flex;
-                    align-items: center;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: center;
                     margin-left: 5px;
                     .name{
                         font-size: 30px;
+                        font-family: $primaryfont;
                     }
                     .handle{
                         margin-left: 5px;
-                        color: darkgray;
+                        color: $color1;
                     }
                 }
             }
             .bottompart{
                 display: flex;
                 align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                padding: 10px;
                 .guts{
-                    font-size: 20px;
+                    word-wrap: break-word;
+                    width: 50%;
+                    font-size: 17px;
                 }
                 .gutsimage{
-                    margin-left: 5px;
+                    margin-right: 10px;
                     img{
                         height:100px;
                         width:200px;
@@ -224,16 +263,17 @@
             height: 180px;
             width: 47%;
             border: 1px darkgray solid;
-            padding: 6px;
+            padding: 7px;
             margin: 1%;
             display: flex;
             flex-direction: column;
             border-radius: 5px;
-            box-shadow: 10px 10px 5px #888888;
+            box-shadow: 5px 5px 15px darkgray;
             background-color: white;
             .toppart{
                 display: flex;
                 justify-content: flex-start;
+                padding: 10px;
                 .avatarholder{
                     img{
                         height:70px;
@@ -244,31 +284,40 @@
                 }
                 .names{
                     display: flex;
-                    align-items: center;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: center;
                     margin-left: 5px;
                     .name{
                         font-size: 30px;
+                        font-family: $primaryfont;
                     }
                     .handle{
                         margin-left: 5px;
-                        color: darkgray;
+                        color: $color1;
                     }
                 }
             }
             .bottompart{
                 display: flex;
                 align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                padding: 10px;
                 .guts{
-                    font-size: 27px;
+                    word-wrap: break-word;
+                    width: 50%;
+                    font-size: 20px;
+                    margin-top: 10px;
                 }
                 .gutsimage{
-                    margin-left: 5px;
+                    margin-right: 10px;
                     img{
-                        height:130px;
-                        width:250px;
+                        height:180px;
+                        width:290px;
                         float: right;
                         border-radius: 5px;
-                        transform: translateY(-10px);
+                        transform: translateY(-30px);
                     }
                 }
             }
@@ -277,16 +326,17 @@
             height: 180px;
             width: 46%;
             border: 1px darkgray solid;
-            padding: 6px;
+            padding: 7px;
             margin: 1%;
             display: flex;
             flex-direction: column;
             border-radius: 5px;
-            box-shadow: 10px 10px 5px #888888;
+            box-shadow: 5px 5px 15px darkgray;
             background-color: white;
             .toppart{
                 display: flex;
                 justify-content: flex-start;
+                padding: 10px;
                 .avatarholder{
                     img{
                         height:70px;
@@ -297,31 +347,40 @@
                 }
                 .names{
                     display: flex;
-                    align-items: center;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: center;
                     margin-left: 5px;
                     .name{
                         font-size: 30px;
+                        font-family: $primaryfont;
                     }
                     .handle{
                         margin-left: 5px;
-                        color: darkgray;
+                        color: $color1;
                     }
                 }
             }
             .bottompart{
                 display: flex;
                 align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                padding: 10px;
                 .guts{
-                    font-size: 27px;
+                    word-wrap: break-word;
+                    width: 50%;
+                    font-size: 20px;
+                    margin-top: 10px;
                 }
                 .gutsimage{
-                    margin-left: 5px;
+                    margin-right: 10px;
                     img{
-                        height:130px;
-                        width:250px;
+                        height:180px;
+                        width:290px;
                         float: right;
                         border-radius: 5px;
-                        transform: translateY(-10px);
+                        transform: translateY(-30px);
                     }
                 }
             }
@@ -330,16 +389,17 @@
             height: 180px;
             width: 30%;
             border: 1px darkgray solid;
-            padding: 6px;
+            padding: 7px;
             margin: 1%;
             display: flex;
             flex-direction: column;
             border-radius: 5px;
-            box-shadow: 10px 10px 5px #888888;
+            box-shadow: 5px 5px 15px darkgray;
             background-color: white;
             .toppart{
                 display: flex;
                 justify-content: flex-start;
+                padding: 10px;
                 .avatarholder{
                     img{
                         height:70px;
@@ -350,28 +410,36 @@
                 }
                 .names{
                     display: flex;
-                    align-items: center;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: center;
                     margin-left: 5px;
                     .name{
                         font-size: 30px;
+                        font-family: $primaryfont;
                     }
                     .handle{
                         margin-left: 5px;
-                        color: darkgray;
+                        color: $color1;
                     }
                 }
             }
             .bottompart{
                 display: flex;
                 align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                padding: 10px;
                 .guts{
-                    font-size: 20px;
+                    word-wrap: break-word;
+                    width: 50%;
+                    font-size: 16px;
                 }
                 .gutsimage{
-                    margin-left: 5px;
+                    margin-right: 10px;
                     img{
                         height:100px;
-                        width:200px;
+                        width:170px;
                         float: right;
                         border-radius: 5px;
                     }
@@ -382,16 +450,17 @@
             height: 180px;
             width: 30%;
             border: 1px darkgray solid;
-            padding: 6px;
+            padding: 7px;
             margin: 1%;
             display: flex;
             flex-direction: column;
             border-radius: 5px;
-            box-shadow: 10px 10px 5px #888888;
+            box-shadow: 5px 5px 15px darkgray;
             background-color: white;
             .toppart{
                 display: flex;
                 justify-content: flex-start;
+                padding: 10px;
                 .avatarholder{
                     img{
                         height:70px;
@@ -402,28 +471,36 @@
                 }
                 .names{
                     display: flex;
-                    align-items: center;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: center;
                     margin-left: 5px;
                     .name{
                         font-size: 30px;
+                        font-family: $primaryfont;
                     }
                     .handle{
                         margin-left: 5px;
-                        color: darkgray;
+                        color: $color1;
                     }
                 }
             }
             .bottompart{
                 display: flex;
                 align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                padding: 10px;
                 .guts{
-                    font-size: 20px;
+                    word-wrap: break-word;
+                    width: 50%;
+                    font-size: 16px;
                 }
                 .gutsimage{
-                    margin-left: 5px;
+                    margin-right: 10px;
                     img{
                         height:100px;
-                        width:200px;
+                        width:170px;
                         float: right;
                         border-radius: 5px;
                     }
@@ -434,16 +511,17 @@
             height: 180px;
             width: 30%;
             border: 1px darkgray solid;
-            padding: 6px;
+            padding: 7px;
             margin: 1%;
             display: flex;
             flex-direction: column;
             border-radius: 5px;
-            box-shadow: 10px 10px 5px #888888;
+            box-shadow: 5px 5px 15px darkgray;
             background-color: white;
             .toppart{
                 display: flex;
                 justify-content: flex-start;
+                padding: 10px;
                 .avatarholder{
                     img{
                         height:70px;
@@ -454,28 +532,36 @@
                 }
                 .names{
                     display: flex;
-                    align-items: center;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: center;
                     margin-left: 5px;
                     .name{
                         font-size: 30px;
+                        font-family: $primaryfont;
                     }
                     .handle{
                         margin-left: 5px;
-                        color: darkgray;
+                        color: $color1;
                     }
                 }
             }
             .bottompart{
                 display: flex;
                 align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                padding: 10px;
                 .guts{
-                    font-size: 20px;
+                    word-wrap: break-word;
+                    width: 50%;
+                    font-size: 16px;
                 }
                 .gutsimage{
-                    margin-left: 5px;
+                    margin-right: 10px;
                     img{
                         height:100px;
-                        width:200px;
+                        width:170px;
                         float: right;
                         border-radius: 5px;
                     }
@@ -496,6 +582,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
+        color: $color0;
         .wordsholder{
             display: flex;
             flex-direction: column;
@@ -505,9 +592,11 @@
                 font-size: 40px;
                 margin-bottom: 10px;
                 font-weight: bold;
+                font-family: $primaryfont
             }
             .subtitle{
                 font-size: 20px;
+                transform: translateY(10px)
             }
         }
         .buttonsholder{
@@ -518,29 +607,33 @@
             .registerbutton{
                 height:70px;
                 width: 160px;
-                background-color: lightgray;
+                background-color: $color4;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 font-size: 25px;
                 border-radius: 5px;
+                transition: all .5s ease;
+                font-family: $primaryfont
             }
             .registerbutton:hover{
-                background-color: darkgrey;
+                background-color: $color3;
                 cursor: pointer;
             }
             .loginbutton{
                 height:70px;
                 width: 160px;
-                background-color: lightgray;
+                background-color: $color4;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 font-size: 25px;
                 border-radius: 5px;
+                transition: all .5s ease;
+                font-family: $primaryfont
             }
             .loginbutton:hover{
-                background-color: darkgrey;
+                background-color: $color3;
                 cursor: pointer;
             }
         }
@@ -558,6 +651,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
+        color: $color0;
         .gobackbutton{
             margin-bottom: 5px;
             font-size: 17px;
@@ -580,6 +674,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
+        color: $color0;
         .gobackbutton{
             margin-bottom: 5px;
             font-size: 17px;

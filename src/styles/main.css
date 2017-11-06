@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+@import url("https://fonts.googleapis.com/css?family=Fauna+One");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -93,8 +95,9 @@ img {
 .papa {
   width: 100%;
   height: 100%;
-  background-color: lightgray;
-  position: relative; }
+  background-color: #fdfbef;
+  position: relative;
+  font-family: "Roboto", sans-serif; }
   .papa .postsholder {
     height: 100vh;
     width: 100%;
@@ -106,16 +109,17 @@ img {
       height: 180px;
       width: 31%;
       border: 1px darkgray solid;
-      padding: 6px;
+      padding: 7px;
       margin: 1%;
       display: flex;
       flex-direction: column;
       border-radius: 5px;
-      box-shadow: 10px 10px 5px #888888;
+      box-shadow: 5px 5px 15px darkgray;
       background-color: white; }
       .papa .postsholder .outterbox0 .toppart {
         display: flex;
-        justify-content: flex-start; }
+        justify-content: flex-start;
+        padding: 10px; }
         .papa .postsholder .outterbox0 .toppart .avatarholder img {
           height: 70px;
           width: 70px;
@@ -123,20 +127,28 @@ img {
           margin-right: 5px; }
         .papa .postsholder .outterbox0 .toppart .names {
           display: flex;
-          align-items: center;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: center;
           margin-left: 5px; }
           .papa .postsholder .outterbox0 .toppart .names .name {
-            font-size: 30px; }
+            font-size: 30px;
+            font-family: "Fauna One", serif; }
           .papa .postsholder .outterbox0 .toppart .names .handle {
             margin-left: 5px;
-            color: darkgray; }
+            color: #8FC0A9; }
       .papa .postsholder .outterbox0 .bottompart {
         display: flex;
-        align-items: center; }
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 10px; }
         .papa .postsholder .outterbox0 .bottompart .guts {
-          font-size: 22px; }
+          word-wrap: break-word;
+          width: 50%;
+          font-size: 17px; }
         .papa .postsholder .outterbox0 .bottompart .gutsimage {
-          margin-left: 5px; }
+          margin-right: 10px; }
           .papa .postsholder .outterbox0 .bottompart .gutsimage img {
             height: 100px;
             width: 200px;
@@ -146,16 +158,17 @@ img {
       height: 180px;
       width: 62%;
       border: 1px darkgray solid;
-      padding: 6px;
+      padding: 7px;
       margin: 1%;
       display: flex;
       flex-direction: column;
       border-radius: 5px;
-      box-shadow: 10px 10px 5px #888888;
+      box-shadow: 5px 5px 15px darkgray;
       background-color: white; }
       .papa .postsholder .outterbox1 .toppart {
         display: flex;
-        justify-content: flex-start; }
+        justify-content: flex-start;
+        padding: 10px; }
         .papa .postsholder .outterbox1 .toppart .avatarholder img {
           height: 70px;
           width: 70px;
@@ -163,40 +176,50 @@ img {
           margin-right: 5px; }
         .papa .postsholder .outterbox1 .toppart .names {
           display: flex;
-          align-items: center;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: center;
           margin-left: 5px; }
           .papa .postsholder .outterbox1 .toppart .names .name {
-            font-size: 30px; }
+            font-size: 30px;
+            font-family: "Fauna One", serif; }
           .papa .postsholder .outterbox1 .toppart .names .handle {
             margin-left: 5px;
-            color: darkgray; }
+            color: #8FC0A9; }
       .papa .postsholder .outterbox1 .bottompart {
         display: flex;
-        align-items: center; }
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 10px; }
         .papa .postsholder .outterbox1 .bottompart .guts {
-          font-size: 30px; }
+          word-wrap: break-word;
+          width: 50%;
+          font-size: 25px;
+          margin-top: 15px; }
         .papa .postsholder .outterbox1 .bottompart .gutsimage {
-          margin-left: 5px; }
+          margin-right: 10px; }
           .papa .postsholder .outterbox1 .bottompart .gutsimage img {
-            height: 170px;
+            height: 180px;
             width: 320px;
             float: right;
-            transform: translateY(-20px);
+            transform: translateY(-30px);
             border-radius: 5px; }
     .papa .postsholder .outterbox2 {
       height: 180px;
       width: 62%;
       border: 1px darkgray solid;
-      padding: 6px;
+      padding: 7px;
       margin: 1%;
       display: flex;
       flex-direction: column;
       border-radius: 5px;
-      box-shadow: 10px 10px 5px #888888;
+      box-shadow: 5px 5px 15px darkgray;
       background-color: white; }
       .papa .postsholder .outterbox2 .toppart {
         display: flex;
-        justify-content: flex-start; }
+        justify-content: flex-start;
+        padding: 10px; }
         .papa .postsholder .outterbox2 .toppart .avatarholder img {
           height: 70px;
           width: 70px;
@@ -204,40 +227,50 @@ img {
           margin-right: 5px; }
         .papa .postsholder .outterbox2 .toppart .names {
           display: flex;
-          align-items: center;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: center;
           margin-left: 5px; }
           .papa .postsholder .outterbox2 .toppart .names .name {
-            font-size: 30px; }
+            font-size: 30px;
+            font-family: "Fauna One", serif; }
           .papa .postsholder .outterbox2 .toppart .names .handle {
             margin-left: 5px;
-            color: darkgray; }
+            color: #8FC0A9; }
       .papa .postsholder .outterbox2 .bottompart {
         display: flex;
-        align-items: center; }
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 10px; }
         .papa .postsholder .outterbox2 .bottompart .guts {
-          font-size: 30px; }
+          word-wrap: break-word;
+          width: 50%;
+          font-size: 25px;
+          margin-top: 15px; }
         .papa .postsholder .outterbox2 .bottompart .gutsimage {
-          margin-left: 5px; }
+          margin-right: 10px; }
           .papa .postsholder .outterbox2 .bottompart .gutsimage img {
-            height: 170px;
-            width: 320px;
+            height: 180px;
+            width: 300px;
             float: right;
-            transform: translateY(-20px);
+            transform: translateY(-30px);
             border-radius: 5px; }
     .papa .postsholder .outterbox3 {
       height: 180px;
       width: 31%;
       border: 1px darkgray solid;
-      padding: 6px;
+      padding: 7px;
       margin: 1%;
       display: flex;
       flex-direction: column;
       border-radius: 5px;
-      box-shadow: 10px 10px 5px #888888;
+      box-shadow: 5px 5px 15px darkgray;
       background-color: white; }
       .papa .postsholder .outterbox3 .toppart {
         display: flex;
-        justify-content: flex-start; }
+        justify-content: flex-start;
+        padding: 10px; }
         .papa .postsholder .outterbox3 .toppart .avatarholder img {
           height: 70px;
           width: 70px;
@@ -245,20 +278,28 @@ img {
           margin-right: 5px; }
         .papa .postsholder .outterbox3 .toppart .names {
           display: flex;
-          align-items: center;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: center;
           margin-left: 5px; }
           .papa .postsholder .outterbox3 .toppart .names .name {
-            font-size: 30px; }
+            font-size: 30px;
+            font-family: "Fauna One", serif; }
           .papa .postsholder .outterbox3 .toppart .names .handle {
             margin-left: 5px;
-            color: darkgray; }
+            color: #8FC0A9; }
       .papa .postsholder .outterbox3 .bottompart {
         display: flex;
-        align-items: center; }
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 10px; }
         .papa .postsholder .outterbox3 .bottompart .guts {
-          font-size: 20px; }
+          word-wrap: break-word;
+          width: 50%;
+          font-size: 17px; }
         .papa .postsholder .outterbox3 .bottompart .gutsimage {
-          margin-left: 5px; }
+          margin-right: 10px; }
           .papa .postsholder .outterbox3 .bottompart .gutsimage img {
             height: 100px;
             width: 200px;
@@ -268,16 +309,17 @@ img {
       height: 180px;
       width: 47%;
       border: 1px darkgray solid;
-      padding: 6px;
+      padding: 7px;
       margin: 1%;
       display: flex;
       flex-direction: column;
       border-radius: 5px;
-      box-shadow: 10px 10px 5px #888888;
+      box-shadow: 5px 5px 15px darkgray;
       background-color: white; }
       .papa .postsholder .outterbox4 .toppart {
         display: flex;
-        justify-content: flex-start; }
+        justify-content: flex-start;
+        padding: 10px; }
         .papa .postsholder .outterbox4 .toppart .avatarholder img {
           height: 70px;
           width: 70px;
@@ -285,40 +327,50 @@ img {
           margin-right: 5px; }
         .papa .postsholder .outterbox4 .toppart .names {
           display: flex;
-          align-items: center;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: center;
           margin-left: 5px; }
           .papa .postsholder .outterbox4 .toppart .names .name {
-            font-size: 30px; }
+            font-size: 30px;
+            font-family: "Fauna One", serif; }
           .papa .postsholder .outterbox4 .toppart .names .handle {
             margin-left: 5px;
-            color: darkgray; }
+            color: #8FC0A9; }
       .papa .postsholder .outterbox4 .bottompart {
         display: flex;
-        align-items: center; }
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 10px; }
         .papa .postsholder .outterbox4 .bottompart .guts {
-          font-size: 27px; }
+          word-wrap: break-word;
+          width: 50%;
+          font-size: 20px;
+          margin-top: 10px; }
         .papa .postsholder .outterbox4 .bottompart .gutsimage {
-          margin-left: 5px; }
+          margin-right: 10px; }
           .papa .postsholder .outterbox4 .bottompart .gutsimage img {
-            height: 130px;
-            width: 250px;
+            height: 180px;
+            width: 290px;
             float: right;
             border-radius: 5px;
-            transform: translateY(-10px); }
+            transform: translateY(-30px); }
     .papa .postsholder .outterbox5 {
       height: 180px;
       width: 46%;
       border: 1px darkgray solid;
-      padding: 6px;
+      padding: 7px;
       margin: 1%;
       display: flex;
       flex-direction: column;
       border-radius: 5px;
-      box-shadow: 10px 10px 5px #888888;
+      box-shadow: 5px 5px 15px darkgray;
       background-color: white; }
       .papa .postsholder .outterbox5 .toppart {
         display: flex;
-        justify-content: flex-start; }
+        justify-content: flex-start;
+        padding: 10px; }
         .papa .postsholder .outterbox5 .toppart .avatarholder img {
           height: 70px;
           width: 70px;
@@ -326,40 +378,50 @@ img {
           margin-right: 5px; }
         .papa .postsholder .outterbox5 .toppart .names {
           display: flex;
-          align-items: center;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: center;
           margin-left: 5px; }
           .papa .postsholder .outterbox5 .toppart .names .name {
-            font-size: 30px; }
+            font-size: 30px;
+            font-family: "Fauna One", serif; }
           .papa .postsholder .outterbox5 .toppart .names .handle {
             margin-left: 5px;
-            color: darkgray; }
+            color: #8FC0A9; }
       .papa .postsholder .outterbox5 .bottompart {
         display: flex;
-        align-items: center; }
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 10px; }
         .papa .postsholder .outterbox5 .bottompart .guts {
-          font-size: 27px; }
+          word-wrap: break-word;
+          width: 50%;
+          font-size: 20px;
+          margin-top: 10px; }
         .papa .postsholder .outterbox5 .bottompart .gutsimage {
-          margin-left: 5px; }
+          margin-right: 10px; }
           .papa .postsholder .outterbox5 .bottompart .gutsimage img {
-            height: 130px;
-            width: 250px;
+            height: 180px;
+            width: 290px;
             float: right;
             border-radius: 5px;
-            transform: translateY(-10px); }
+            transform: translateY(-30px); }
     .papa .postsholder .outterbox6 {
       height: 180px;
       width: 30%;
       border: 1px darkgray solid;
-      padding: 6px;
+      padding: 7px;
       margin: 1%;
       display: flex;
       flex-direction: column;
       border-radius: 5px;
-      box-shadow: 10px 10px 5px #888888;
+      box-shadow: 5px 5px 15px darkgray;
       background-color: white; }
       .papa .postsholder .outterbox6 .toppart {
         display: flex;
-        justify-content: flex-start; }
+        justify-content: flex-start;
+        padding: 10px; }
         .papa .postsholder .outterbox6 .toppart .avatarholder img {
           height: 70px;
           width: 70px;
@@ -367,39 +429,48 @@ img {
           margin-right: 5px; }
         .papa .postsholder .outterbox6 .toppart .names {
           display: flex;
-          align-items: center;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: center;
           margin-left: 5px; }
           .papa .postsholder .outterbox6 .toppart .names .name {
-            font-size: 30px; }
+            font-size: 30px;
+            font-family: "Fauna One", serif; }
           .papa .postsholder .outterbox6 .toppart .names .handle {
             margin-left: 5px;
-            color: darkgray; }
+            color: #8FC0A9; }
       .papa .postsholder .outterbox6 .bottompart {
         display: flex;
-        align-items: center; }
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 10px; }
         .papa .postsholder .outterbox6 .bottompart .guts {
-          font-size: 20px; }
+          word-wrap: break-word;
+          width: 50%;
+          font-size: 16px; }
         .papa .postsholder .outterbox6 .bottompart .gutsimage {
-          margin-left: 5px; }
+          margin-right: 10px; }
           .papa .postsholder .outterbox6 .bottompart .gutsimage img {
             height: 100px;
-            width: 200px;
+            width: 170px;
             float: right;
             border-radius: 5px; }
     .papa .postsholder .outterbox7 {
       height: 180px;
       width: 30%;
       border: 1px darkgray solid;
-      padding: 6px;
+      padding: 7px;
       margin: 1%;
       display: flex;
       flex-direction: column;
       border-radius: 5px;
-      box-shadow: 10px 10px 5px #888888;
+      box-shadow: 5px 5px 15px darkgray;
       background-color: white; }
       .papa .postsholder .outterbox7 .toppart {
         display: flex;
-        justify-content: flex-start; }
+        justify-content: flex-start;
+        padding: 10px; }
         .papa .postsholder .outterbox7 .toppart .avatarholder img {
           height: 70px;
           width: 70px;
@@ -407,39 +478,48 @@ img {
           margin-right: 5px; }
         .papa .postsholder .outterbox7 .toppart .names {
           display: flex;
-          align-items: center;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: center;
           margin-left: 5px; }
           .papa .postsholder .outterbox7 .toppart .names .name {
-            font-size: 30px; }
+            font-size: 30px;
+            font-family: "Fauna One", serif; }
           .papa .postsholder .outterbox7 .toppart .names .handle {
             margin-left: 5px;
-            color: darkgray; }
+            color: #8FC0A9; }
       .papa .postsholder .outterbox7 .bottompart {
         display: flex;
-        align-items: center; }
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 10px; }
         .papa .postsholder .outterbox7 .bottompart .guts {
-          font-size: 20px; }
+          word-wrap: break-word;
+          width: 50%;
+          font-size: 16px; }
         .papa .postsholder .outterbox7 .bottompart .gutsimage {
-          margin-left: 5px; }
+          margin-right: 10px; }
           .papa .postsholder .outterbox7 .bottompart .gutsimage img {
             height: 100px;
-            width: 200px;
+            width: 170px;
             float: right;
             border-radius: 5px; }
     .papa .postsholder .outterbox8 {
       height: 180px;
       width: 30%;
       border: 1px darkgray solid;
-      padding: 6px;
+      padding: 7px;
       margin: 1%;
       display: flex;
       flex-direction: column;
       border-radius: 5px;
-      box-shadow: 10px 10px 5px #888888;
+      box-shadow: 5px 5px 15px darkgray;
       background-color: white; }
       .papa .postsholder .outterbox8 .toppart {
         display: flex;
-        justify-content: flex-start; }
+        justify-content: flex-start;
+        padding: 10px; }
         .papa .postsholder .outterbox8 .toppart .avatarholder img {
           height: 70px;
           width: 70px;
@@ -447,23 +527,31 @@ img {
           margin-right: 5px; }
         .papa .postsholder .outterbox8 .toppart .names {
           display: flex;
-          align-items: center;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: center;
           margin-left: 5px; }
           .papa .postsholder .outterbox8 .toppart .names .name {
-            font-size: 30px; }
+            font-size: 30px;
+            font-family: "Fauna One", serif; }
           .papa .postsholder .outterbox8 .toppart .names .handle {
             margin-left: 5px;
-            color: darkgray; }
+            color: #8FC0A9; }
       .papa .postsholder .outterbox8 .bottompart {
         display: flex;
-        align-items: center; }
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 10px; }
         .papa .postsholder .outterbox8 .bottompart .guts {
-          font-size: 20px; }
+          word-wrap: break-word;
+          width: 50%;
+          font-size: 16px; }
         .papa .postsholder .outterbox8 .bottompart .gutsimage {
-          margin-left: 5px; }
+          margin-right: 10px; }
           .papa .postsholder .outterbox8 .bottompart .gutsimage img {
             height: 100px;
-            width: 200px;
+            width: 170px;
             float: right;
             border-radius: 5px; }
   .papa .fixedbox {
@@ -478,7 +566,8 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around; }
+    justify-content: space-around;
+    color: #161925; }
     .papa .fixedbox .wordsholder {
       display: flex;
       flex-direction: column;
@@ -487,9 +576,11 @@ img {
       .papa .fixedbox .wordsholder .title {
         font-size: 40px;
         margin-bottom: 10px;
-        font-weight: bold; }
+        font-weight: bold;
+        font-family: "Fauna One", serif; }
       .papa .fixedbox .wordsholder .subtitle {
-        font-size: 20px; }
+        font-size: 20px;
+        transform: translateY(10px); }
     .papa .fixedbox .buttonsholder {
       width: 100%;
       display: flex;
@@ -498,26 +589,30 @@ img {
       .papa .fixedbox .buttonsholder .registerbutton {
         height: 70px;
         width: 160px;
-        background-color: lightgray;
+        background-color: #C8D5B9;
         display: flex;
         justify-content: center;
         align-items: center;
         font-size: 25px;
-        border-radius: 5px; }
+        border-radius: 5px;
+        transition: all .5s ease;
+        font-family: "Fauna One", serif; }
       .papa .fixedbox .buttonsholder .registerbutton:hover {
-        background-color: darkgrey;
+        background-color: #8FC0A9;
         cursor: pointer; }
       .papa .fixedbox .buttonsholder .loginbutton {
         height: 70px;
         width: 160px;
-        background-color: lightgray;
+        background-color: #C8D5B9;
         display: flex;
         justify-content: center;
         align-items: center;
         font-size: 25px;
-        border-radius: 5px; }
+        border-radius: 5px;
+        transition: all .5s ease;
+        font-family: "Fauna One", serif; }
       .papa .fixedbox .buttonsholder .loginbutton:hover {
-        background-color: darkgrey;
+        background-color: #8FC0A9;
         cursor: pointer; }
   .papa .loginbox {
     position: absolute;
@@ -531,7 +626,8 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around; }
+    justify-content: space-around;
+    color: #161925; }
     .papa .loginbox .gobackbutton {
       margin-bottom: 5px;
       font-size: 17px; }
@@ -550,7 +646,8 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around; }
+    justify-content: space-around;
+    color: #161925; }
     .papa .registerbox .gobackbutton {
       margin-bottom: 5px;
       font-size: 17px; }
@@ -563,7 +660,8 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  align-items: center; }
+  align-items: center;
+  color: #161925; }
   .bigbox .logintitle {
     font-size: 60px; }
   .bigbox .loginotherbox {
@@ -585,7 +683,8 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  align-items: center; }
+  align-items: center;
+  color: #161925; }
   .registerbigbox .registerwords {
     height: 28%;
     display: flex;

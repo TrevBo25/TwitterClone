@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import axios from 'axios';
+import InfiniteScroll from 'react-infinite-scroller';
 
 
 
@@ -373,7 +374,7 @@ class Landing extends Component {
                         </div>
                     </div>
                     <div className="bottompart">
-                        <div className="guts">{e.guts}123456789 3 sdfr s w 432 fb</div>
+                        <div className="guts">09876543210987654321098765432109876543210987654321098765432109876543210987654321</div>
                         {e.image ? <div className="gutsimage">
                             <img alt="" src={e.image} />
                         </div> : null}
