@@ -97,17 +97,14 @@ export default class Settings extends Component {
     
       render() {
         return (
-<<<<<<< HEAD
           
           <div>
           <button class="btn-group" onClick={this.showUsername}>Change Username</button>
-=======
           <div className="settings-body">
             <div className="settings-form">
 
           <form onSubmit={this.handleSubmit}>
           <button onClick={this.showUsername}>Change Username</button>
->>>>>>> 4a1fcac3da95265358892c6ca39a63e5a2ab91c2
             <label style={{'display' : this.state.showUsername ? 'block' : 'none'}}>
               <h1>New Username:</h1> 
               <input type="text" onChange={(e) => {this.userInput(e.target.value, 'handle')}} />
@@ -134,13 +131,10 @@ export default class Settings extends Component {
               <h1>Repeat New Password:</h1> 
               <input type="password" onChange={(e) => {this.userInput(e.target.value, 'newPassword2')}} />
             </label>
-<<<<<<< HEAD
             <input class="btn-group" id="save" type="submit" value="Save" onClick={this.handleSubmit}/>
-=======
             <input type="submit" value="Submit" onClick={this.handleSubmit}/>
           </form>
           </div>
->>>>>>> 4a1fcac3da95265358892c6ca39a63e5a2ab91c2
           </div>
       );
     }

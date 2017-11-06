@@ -12,12 +12,9 @@ export default function() {
     return (
         <Switch>
             <Route component={ Primary } exact path="/"/>
-<<<<<<< HEAD
             <Route component={ Register } path="/register"/>
             {/* <Route component={ Stream } path='/:handle' /> */}
-=======
             <Route component={ Stream } path='/:handle' />
->>>>>>> 4a1fcac3da95265358892c6ca39a63e5a2ab91c2
             <Route component={ Settings } path='/settings'/>
         </Switch>
     )
