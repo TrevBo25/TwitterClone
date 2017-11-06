@@ -1,3 +1,4 @@
-SELECT following
+SELECT *
 FROM followers
-WHERE user_id = $1
+INNER JOIN USERS on users.id = followers.following
+WHERE user_id = (select id from users WHERE handle = $1)

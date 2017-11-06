@@ -13,7 +13,7 @@ class Stream extends Component {
     componentDidMount(){
         console.log('Stream component did mount!')
 
-        
+        console.log('I like pizza');
         
         console.log(this.props.pageData)
         if(this.props.match) {
