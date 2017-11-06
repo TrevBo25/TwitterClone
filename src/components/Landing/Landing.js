@@ -84,7 +84,7 @@ class Landing extends Component {
                         </div>
                     </div>
                     <div className="bottompart">
-                        <div className={e.image != "picture hsdfsfdfsere" ? "guts" : "gutsnoimage"} >09876543210987654321098765432109876543210987654321098765432109876543210987654321</div>
+                        <div className={e.image != "picture hsdfsfdfsere" ? "guts" : "gutsnoimage"} >{e.guts}</div>
                         {e.image ? <div className="gutsimage">
                             <img alt="" src={e.image} />
                         </div> : null}
