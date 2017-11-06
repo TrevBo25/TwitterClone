@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+@import url("https://fonts.googleapis.com/css?family=Fauna+One");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -41,14 +43,93 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+.nav-container {
+  width: 100vw;
+  height: 200px;
+  background: #68B0AB; }
+
 .nav {
   width: 100vw;
-  height: 50px;
-  background-color: #8B8B8B; }
+  height: 70px;
+  position: fixed;
+  color: #14171a;
+  background: -webkit-linear-gradient(white, #fdfbef);
+  border-bottom: 2px solid #4A7C59;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
 
-.nav img {
+.nav-logo {
+  margin-left: 7%;
+  margin-bottom: 0.5%;
+  width: 60px;
+  height: 60px;
+  -ms-transform: rotate(-15deg);
+  -webkit-transform: rotate(-15deg);
+  transform: rotate(-15deg); }
+
+.dropdown {
+  margin-top: 1%;
+  margin-right: 7%;
   height: 100%;
-  width: 50px; }
+  width: 60px; }
+
+.dropdown img {
+  border-radius: 50%; }
+
+.dropdown-container {
+  display: none; }
+
+.dropdown:hover .dropdown-container {
+  display: block; }
+
+.dropdown-content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: stretch; }
+
+.dropdown-content li {
+  text-decoration: none;
+  text-align: center;
+  width: 100px;
+  background: white;
+  border-bottom: 1px solid black;
+  padding: 12px 16px 12px 16px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.9); }
+
+.dropdown-content a {
+  text-decoration: none; }
+
+input {
+  background: white;
+  display: block;
+  font-size: 17px;
+  font-family: 'Rozha One', serif;
+  letter-spacing: 1px;
+  width: 360px;
+  margin: 2px auto;
+  padding: 5px 10px 5px 10px;
+  border-radius: 5px;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.8), 0px 1px 1px rgba(255, 255, 255, 0.8);
+  border: 1px solid #fdfbef; }
+
+input {
+  opacity: 0.9; }
+
+input:hover,
+input:focus {
+  opacity: .7;
+  color: black;
+  border: 1px solid #C8D5B9;
+  box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.25), inset 0px 3px 6px rgba(0, 0, 0, 0.25); }
+
+input[type="text"]:focus {
+  box-shadow: inset 0 1px 2px #8FC0A9, 0px 1px 15px #C8D5B9;
+  border: 1px solid #C8D5B9;
+  outline: none; }
 
 .sidebar {
   background-color: blue;
@@ -92,7 +173,7 @@ img {
 
 .settings-body {
   width: 100%;
-  background: #daf0ee;
+  background: #68B0AB;
   align-items: center;
   height: 100vh; }
 
