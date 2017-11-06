@@ -97,7 +97,9 @@ export default class Settings extends Component {
     
       render() {
         return (
-          
+          <div className="settings-body">
+            <div className="settings-form">
+
           <form onSubmit={this.handleSubmit}>
           <button onClick={this.showUsername}>Change Username</button>
             <label style={{'display' : this.state.showUsername ? 'block' : 'none'}}>
@@ -128,6 +130,8 @@ export default class Settings extends Component {
             </label>
             <input type="submit" value="Submit" onClick={this.handleSubmit}/>
           </form>
+          </div>
+          </div>
       );
     }
   }
