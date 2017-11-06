@@ -16,6 +16,10 @@ class Primary extends Component {
         console.log(this.props.match.params.handle)
         return (
             <div>
+<<<<<<< HEAD
+=======
+            
+>>>>>>> ee0447b69e3eaf860097361eb4c45430a47c8997
                 <div>
                     {
                         (this.props.user.handle)

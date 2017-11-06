@@ -40,7 +40,7 @@ export function updateUser(userData) {
 
 export function updatePageData(handle) {
         
-        var request = axios.post('/api/getuserfromhandle', {"handle": handle})
+        var request = axios.post('/api/alluserdata', {handle:"peter"})
         .then( response => {
             console.log('thishthisthist', response.data);
             return response.data
