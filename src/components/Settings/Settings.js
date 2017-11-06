@@ -9,11 +9,32 @@ export default class Settings extends Component {
             email: '',
             newEmail: '',
             password: '',
-            newPassword: ''
+            newPassword1: '',
+            newPassword2: '',
+            showUsername: false,
+            showEmail: false,
+            showPassword: false
+            
           };
     
         this.userInput = this.userInput.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.showUsername = this.showUsername.bind(this);
+        this.showEmail = this.showEmail.bind(this);
+        this.showPassword = this.showPassword.bind(this);
+      }
+
+      showUsername(e) {
+          e.preventDefault();
+          this.setState({showUsername: !this.state.showUsername})
+      }
+      showEmail(e) {
+          e.preventDefault();
+          this.setState({showEmail: !this.state.showEmail})
+      }
+      showPassword(e) {
+          e.preventDefault();
+          this.setState({showPassword: !this.state.showPassword})
       }
     
       userInput(input, type) {
@@ -40,16 +61,38 @@ export default class Settings extends Component {
                   this.setState({password: input})
                   break;
   
-              case 'newPassword':
-                  console.log('   Setting newPassword state:', input)
-                  this.setState({newPassword: input})
+              case 'newPassword1':
+                  console.log('   Setting newPassword1 state:', input)
+                  this.setState({newPassword1: input})
+                  break;
+
+              case 'newPassword2':
+                  console.log('   Setting newPassword2 state:', input)
+                  this.setState({newPassword2: input})
                   break;
           }
       }
     
       handleSubmit(event) {
-        alert('A name was submitted: ' + this.state.value);
-        event.preventDefault();
+        if(this.state.handle != ""){
+            axios.post('/api/changehandle', {"id": this.props.user.id, "newHandle": this.state.handle})
+            .then(response => {
+                return "cool"
+            })
+        }
+        if(this.state.email != "" && this.state.newEmail != ""){
+            axios.post('/api/changeemail', {"id": this.props.user.id, "email": this.state.email, "newEmail": this.state.newEmail})
+            .then( response => {
+                return 'radical'
+            })
+        }
+        if(this.state.password != "" && this.state.newPassword1 != "" && this.state.newPassword2 != ""){
+            axios.post('/api/changepassword', {"id": this.props.user.id, "password": this.state.password, "newPass1": this.state.newPassword1, "newPass2": this.state.newPassword2})
+            .then( response => {
+                return 'tubular'
+            })
+        }
+       
       }
     
       render() {
@@ -58,35 +101,38 @@ export default class Settings extends Component {
             <div className="settings-form">
 
           <form onSubmit={this.handleSubmit}>
-            <label>
+          <button onClick={this.showUsername}>Change Username</button>
+            <label style={{'display' : this.state.showUsername ? 'block' : 'none'}}>
               New Username:
               <input type="text" onChange={(e) => {this.userInput(e.target.value, 'handle')}} />
             </label>
-            <br />
-            <label>
+            <button onClick={this.showEmail}>Change Email</button>
+            <label style={{'display' : this.state.showEmail ? 'block' : 'none'}} >
               Current Email:
               <input type="text" onChange={(e) => {this.userInput(e.target.value, 'email')}} />
             </label>
-            <br />
-             <label>
+             <label style={{'display' : this.state.showEmail ? 'block' : 'none'}}>
               New Email:
               <input type="text" onChange={(e) => {this.userInput(e.target.value, 'newEmail')}} />
             </label>
-            <br />
-            <label>
+            <button onClick={this.showPassword}>Change Password</button>
+            <label style={{'display' : this.state.showPassword ? 'block' : 'none'}}>
               Current Password:
               <input type="text" onChange={(e) => {this.userInput(e.target.value, 'password')}} />
             </label>
-            <br />
-            <label>
+            <label style={{'display' : this.state.showPassword ? 'block' : 'none'}}>
               New Password:
-              <input type="text" onChange={(e) => {this.userInput(e.target.value, 'newPassword')}} />
+              <input type="text" onChange={(e) => {this.userInput(e.target.value, 'newPassword1')}} />
             </label>
-            <br />
-            <input type="submit" value="Submit" />
+            <label style={{'display' : this.state.showPassword ? 'block' : 'none'}}>
+              Repeat New Password:
+              <input type="text" onChange={(e) => {this.userInput(e.target.value, 'newPassword2')}} />
+            </label>
+            <input type="submit" value="Submit" onClick={this.handleSubmit}/>
           </form>
           </div>
           </div>
       );
     }
   }
+
