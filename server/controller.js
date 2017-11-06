@@ -156,11 +156,7 @@ module.exports = {
         const{id} = req.body;
         db.get_following([id])
         .then( response => {
-            let users = [];
-            response.forEach(function(e, i, a) {
-                users.push(e.following);
-            }, this);
-            res.status(200).send(users)
+            res.status(200).send(response)
         }).catch( err => { console.log("get_following", err);})
     },
     getFollowers(req, res){
@@ -168,11 +164,7 @@ module.exports = {
         const{id} = req.body;
         db.get_followers([id])
         .then( response => {
-            let users = [];
-            response.forEach(function(e, i, a) {
-                users.push(e.user_id);
-            }, this);
-            res.status(200).send(users)
+            res.status(200).send(response)
         }).catch( err => { console.log("get_followers", err);})
     },
     follow(req, res){
@@ -217,6 +209,45 @@ module.exports = {
         }).catch( err => {
             console.log("getFollowersPosts", err)
         })
+    },
+    changeHandle(req, res){
+        const db = req.app.get('db');
+        const {id, newHandle} = req.body;
+        db.change_handle([id, newHandle])
+        .then( response => {
+            res.status(200).send('Handle successfully changed!')
+        }).catch( err => console.log("change_handle", err))
+    },
+    changeEmail(req, res){
+        const db = req.app.get('db');
+        const {id, email, newEmail} = req.body;
+        db.check_user_email([id, email])
+        .then( response => {
+            if (response.length != 0){
+                db.change_email([id, newEmail])
+                .then( response => {
+                    res.status(200).send('Email successfull changed!')
+                }).catch( err => console.log("check_email", err))
+            }
+        }).catch( err => console.log("change_email", err))
+    },
+    changePassword(req, res){
+        const db = req.app.get('db');
+        const {id, password, newPass1, newPass2} = req.body;
+        db.check_password([id, password])
+        .then( response => {
+            if(response.length != 0){
+                if(newPass1 === newPass2){
+                    db.change_password([id, newPass1])
+                    .then( response => {
+                        res.status(200).send('Password successfully changed')
+                    }).catch( err => console.log('change_password', err))
+                } else {
+                    res.status(200).send('New passwords did not match')
+                }
+            } else {
+                res.status(200).send("Current password is not correct")
+            }
+        }).catch( err => console.log('check_password', err))
     }
-
 }
