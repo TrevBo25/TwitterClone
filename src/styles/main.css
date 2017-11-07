@@ -152,7 +152,8 @@ img {
   background-color: #eaf2e2;
   width: 80%;
   height: calc(100vh);
-  overflow: auto; }
+  overflow: auto;
+  height: 100%; }
 
 .frame {
   height: 100%;
@@ -162,15 +163,16 @@ img {
   flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: stretch;
-  align-content: stretch; }
+  align-content: stretch;
+  background-color: #eaf2e2; }
 
-.postsholder {
+.postsholders {
   margin-top: 20px; }
 
 a {
   text-decoration: none; }
 
-.outterbox1 {
+.out {
   width: 65%;
   border: 1px darkgray solid;
   padding: 7px;
@@ -179,45 +181,45 @@ a {
   background-color: white;
   margin-left: 1%;
   color: #161925; }
-  .outterbox1 .toppart {
+  .out .toppart {
     display: flex;
     justify-content: flex-start;
     padding-top: 10px;
     padding-left: 10px;
     padding-right: 10px; }
-    .outterbox1 .toppart .avatarholder img {
+    .out .toppart .avatarholder img {
       height: 55px;
       width: 55px;
       border-radius: 5px;
       margin-right: 5px; }
-    .outterbox1 .toppart .names {
+    .out .toppart .names {
       display: flex;
       align-items: center;
       justify-content: center;
       margin-left: 5px; }
-      .outterbox1 .toppart .names .name {
+      .out .toppart .names .name {
         font-size: 20px;
         font-family: "Fauna One", serif;
         color: #161925; }
-      .outterbox1 .toppart .names .handle {
+      .out .toppart .names .handle {
         margin-left: 5px;
         color: #4A7C59; }
-  .outterbox1 .middlepart .guts {
+  .out .middlepart .guts {
     word-wrap: break-word;
     width: 85%;
     font-size: 17px;
     margin-left: 80px; }
-  .outterbox1 .bottompart {
+  .out .bottompart {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     padding: 10px; }
-    .outterbox1 .bottompart .gutsimage {
+    .out .bottompart .gutsimage {
       display: flex;
       justify-content: flex-start;
       margin-left: 65px; }
-      .outterbox1 .bottompart .gutsimage img {
+      .out .bottompart .gutsimage img {
         max-width: 80%;
         height: 100%;
         border-radius: 5px; }
@@ -1052,15 +1054,15 @@ a {
   color: #161925;
   position: relative;
   font-family: "Fauna One", serif; }
-  .profiledad .papa {
+  .profiledad .papaa {
     background-color: #eaf2e2;
     width: 100%;
     top: 0; }
-    .profiledad .papa .top {
+    .profiledad .papaa .topp {
       width: 100%;
       height: 400px;
       overflow: hidden; }
-      .profiledad .papa .top .coverimg {
+      .profiledad .papaa .topp .coverimg {
         transform: translateY(10px);
         height: 430px;
         width: 100%;
@@ -1070,22 +1072,42 @@ a {
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover; }
-    .profiledad .papa .bottombar {
+    .profiledad .papaa .bottombar {
       display: flex;
       justify-content: flex-end;
       align-items: center;
       background-color: white;
       border-bottom: 1px #4A7C59 solid;
-      box-shadow: 5px 5px 5px darkgray; }
-      .profiledad .papa .bottombar .holderthing {
+      box-shadow: 5px 5px 5px darkgray;
+      font-family: "Fauna One", serif; }
+      .profiledad .papaa .bottombar .holderthing {
         width: 75%;
-        height: 60px;
+        height: 70px;
         display: flex;
         justify-content: flex-start; }
-        .profiledad .papa .bottombar .holderthing .posts {
+        .profiledad .papaa .bottombar .holderthing .posts {
           margin-left: 25px;
           margin-right: 25px;
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: center; }
+          .profiledad .papaa .bottombar .holderthing .posts .postsnumber {
+            font-size: 20px;
+            margin-top: 5px;
+            color: #4A7C59; }
+    .profiledad .papaa .frame {
+      height: 100%;
+      background-color: #FAF3DD;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: stretch;
+      align-content: stretch;
+      background-color: #eaf2e2; }
+      .profiledad .papaa .frame .main-content {
+        background-color: #eaf2e2;
+        width: 80%;
+        height: calc(100vh);
+        height: 100%; }

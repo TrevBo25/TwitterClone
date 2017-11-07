@@ -6,7 +6,7 @@ class Sidebar extends Component {
     render() {
         return (
             <div className="sidebar">
-                {!this.props.profile ? <IdentityCard/> : null}
+                {!this.props.profile ? <IdentityCard/> : <IdentityCard/>}
             </div>
         );
     }

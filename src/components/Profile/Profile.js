@@ -34,11 +34,11 @@ class Profile extends Component {
             <div className="profiledad">
                 
                 {this.props.pageData.userData ? 
-                <div className="papa" >
+                <div className="papaa" >
                     <div>
                         <Nav />
                     </div>  
-                    <div className="top">
+                    <div className="topp">
                         <img alt="" src={this.props.pageData.userData.cover} className="coverimg" />
                     </div>
                     <div className="bottombar">
@@ -57,11 +57,9 @@ class Profile extends Component {
                             </div>
                         </div>
                     </div>
-                    <div className="bottom">
-                        <div className="sidebar">
-                            <Sidebar />
-                        </div>
-                        <div className="mainbar">
+                    <div className="frame">
+                        <Sidebar />
+                        <div className="main-content">
                             <Roll />
                         </div>
                     </div>
