@@ -13,7 +13,7 @@ class Nav extends Component {
             //-- Work in Progress, added over weekend -- //
             <div className="nav-container">
                 <div className="nav">
-                    <div className="nav-logo"><img src={logo}/></div>
+                    <div className="nav-logo"><a href="/"><img src={logo}/></a></div>
                     <div className="input-container">
                         <input type="text" placeholder="Let's Talko Bout It"/>
                     </div>
