@@ -12,6 +12,7 @@ export default function() {
     return (
         <Switch>
             <Route component={ Primary } exact path="/"/>
+            <Route component={ Register } path="/register"/>
             <Route component={ Stream } path='/:handle' />
             <Route component={ Settings } path='/settings'/>
         </Switch>

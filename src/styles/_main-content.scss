@@ -1,4 +1,6 @@
 .main-content {
-    background-color: greenyellow;
+    background-color: $color4;
     width: 80%;
+    height: calc(100vh) ;
+    overflow: auto;
 }

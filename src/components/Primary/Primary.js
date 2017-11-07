@@ -16,7 +16,6 @@ class Primary extends Component {
         console.log(this.props.match.params.handle)
         return (
             <div>
-            
                 <div>
                     {
                         (this.props.user.handle)

@@ -97,42 +97,46 @@ export default class Settings extends Component {
     
       render() {
         return (
+          
+          <div>
+          <button class="btn-group" onClick={this.showUsername}>Change Username</button>
           <div className="settings-body">
             <div className="settings-form">
 
           <form onSubmit={this.handleSubmit}>
           <button onClick={this.showUsername}>Change Username</button>
             <label style={{'display' : this.state.showUsername ? 'block' : 'none'}}>
-              New Username:
+              <h1>New Username:</h1> 
               <input type="text" onChange={(e) => {this.userInput(e.target.value, 'handle')}} />
             </label>
-            <button onClick={this.showEmail}>Change Email</button>
+            <button class="btn-group" onClick={this.showEmail}>Change Email</button>
             <label style={{'display' : this.state.showEmail ? 'block' : 'none'}} >
-              Current Email:
+              <h1>Current Email:</h1> 
               <input type="text" onChange={(e) => {this.userInput(e.target.value, 'email')}} />
             </label>
              <label style={{'display' : this.state.showEmail ? 'block' : 'none'}}>
-              New Email:
+              <h1>New Email:</h1> 
               <input type="text" onChange={(e) => {this.userInput(e.target.value, 'newEmail')}} />
             </label>
-            <button onClick={this.showPassword}>Change Password</button>
+            <button class="btn-group" onClick={this.showPassword}>Change Password</button>
             <label style={{'display' : this.state.showPassword ? 'block' : 'none'}}>
-              Current Password:
-              <input type="text" onChange={(e) => {this.userInput(e.target.value, 'password')}} />
+              <h1>Current Password:</h1> 
+              <input type="password" onChange={(e) => {this.userInput(e.target.value, 'password')}} />
             </label>
             <label style={{'display' : this.state.showPassword ? 'block' : 'none'}}>
-              New Password:
-              <input type="text" onChange={(e) => {this.userInput(e.target.value, 'newPassword1')}} />
+              <h1>New Password:</h1> 
+              <input type="password" onChange={(e) => {this.userInput(e.target.value, 'newPassword1')}} />
             </label>
             <label style={{'display' : this.state.showPassword ? 'block' : 'none'}}>
-              Repeat New Password:
-              <input type="text" onChange={(e) => {this.userInput(e.target.value, 'newPassword2')}} />
+              <h1>Repeat New Password:</h1> 
+              <input type="password" onChange={(e) => {this.userInput(e.target.value, 'newPassword2')}} />
             </label>
+            <input class="btn-group" id="save" type="submit" value="Save" onClick={this.handleSubmit}/>
             <input type="submit" value="Submit" onClick={this.handleSubmit}/>
           </form>
           </div>
           </div>
-      );
+          </div>
+      )
     }
   }
-
