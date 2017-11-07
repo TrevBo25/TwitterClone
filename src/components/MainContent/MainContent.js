@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Roll from './../Roll/Roll'
 import Compose from './../Compose/Compose'
-import { updateUser } from '../../ducks/reducer';
+import { updateUser, viewProfile } from '../../ducks/reducer';
 
 import axios from 'axios';
 import { Link } from 'react-router-dom';
@@ -16,17 +16,17 @@ class MainContent extends Component {
         }
 
         this.getPosts = this.getPosts.bind(this);
-
-        
     }
     
+    componentWillMount(){
+        this.props.viewProfile(false);
+    }
 
     getPosts() {
         axios.get('api/getposts', 'peter').then((response) => {
             console.log('Getting posts... ', response)
             this.setState({posts: response.data})
         })
-
     }
 
     
@@ -39,7 +39,7 @@ class MainContent extends Component {
                 <Link to={this.props.user.handle}
                 >{this.props.user.handle}
                 </Link>
-                <Roll getPosts={this.getPosts} posts={this.state.posts} />
+                <Roll />
             </div>
         );
     }
@@ -50,4 +50,4 @@ function mapStateToProps( state ) {
     return { user: state.user}
 }
 
-export default connect(mapStateToProps, {updateUser})(MainContent);
+export default connect(mapStateToProps, {updateUser, viewProfile})(MainContent);

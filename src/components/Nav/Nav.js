@@ -15,7 +15,7 @@ class Nav extends Component {
                 <div className="nav">
                     <div className="nav-logo"><img src={logo}/></div>
                     <div className="input-container">
-                        <input type="text" placeholder="Let's Talko Bout It"/>
+                        <input type="text" placeholder={this.props.profile.toString()}/>
                     </div>
                     <div className="dropdown"><img src={this.props.user.avatar}/>
                     <div className="dropdown-container">
@@ -35,7 +35,7 @@ class Nav extends Component {
 
 function mapStateToProps(state) {
     console.log(state)
-    return {user: state.user}
+    return {user: state.user, profile: state.profile}
 }
 
 export default connect(mapStateToProps, {updateUser})(Nav);

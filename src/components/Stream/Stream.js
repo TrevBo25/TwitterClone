@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import Sidebar from './../Sidebar/Sidebar';
 import MainContent from './../MainContent/MainContent'
 import { updateUser, updatePageData } from '../../ducks/reducer';
+import Profile from '../Profile/Profile'
 
 
 class Stream extends Component {
@@ -28,12 +29,14 @@ class Stream extends Component {
                 <div>
                     <Nav />
                 </div>
-     
-
+                {this.props.match ? 
                 <div className="frame">
+                    <Profile />
+                </div>
+                : <div className="frame">
                     <Sidebar />
                     <MainContent />
-                </div>
+                </div>}
             </div>
         );
     }
