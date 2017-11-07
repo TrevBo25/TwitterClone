@@ -1,7 +1,3 @@
-.nav-container {
-    @include width-height(100vw, 200px);
-    background: $color2;
-}
 
 .nav {
     width: 100vw;
@@ -11,6 +7,7 @@
     background: -webkit-linear-gradient(white, $color5);
     border-bottom: 2px solid $color1;
     @include flexSetUp(space-between, center, row);
+    z-index: 2;
 }
 
 .nav-logo {

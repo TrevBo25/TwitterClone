@@ -1,47 +1,70 @@
-.post {
-    height:200px;
-    width:80%;
-    background-color: #CD8C32;
-    padding-top: 15px;
-    padding-left: 10px;
-    margin: 1px;
+.postsholder{
+    margin-top: 20px;
+}
+a{text-decoration: none}
+.outterbox1{
+    width: 65%;
+    border: 1px darkgray solid;
+    padding: 7px;
     display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: flex-start;
-	align-items: stretch;
-	align-content: stretch;
-}
-
-.post img {
-    height: 100%;
-}
-
-.one {
-    height: 100%;
-    width: 80px;
-    background-color: #2F78FF;
-}
-.one .avatar {
-    width: 55px;
-    height: 55px;
-    margin-left: 10px;
-    border-radius: 50%;
-}
-
-.two {
-    height: 100%;
-    width: 90%;
-    background-color: peachpuff;
-}
-.two .title {
-    height: 30px;
-    text-decoration: none;
-    background-color: turquoise;
-}
-
-#link {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
+    flex-direction: column;
+    background-color: white;
+    margin-left: 1%;
+    color: $color0;
+    .toppart{
+        display: flex;
+        justify-content: flex-start;
+        padding-top: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        .avatarholder{
+            img{
+                height:55px;
+                width:55px;
+                border-radius: 5px;
+                margin-right: 5px;
+            }
+        }
+        .names{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 5px;
+            .name{
+                font-size: 20px;
+                font-family: $primaryfont;
+                color: $color0
+            }
+            .handle{
+                margin-left: 5px;
+                color: $color1;
+            }
+        }
+        
+    }
+    .middlepart{
+        .guts{
+            word-wrap: break-word;
+            width: 85%;
+            font-size: 17px;
+            margin-left: 80px;
+        }
+    }
+    .bottompart{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 10px;
+        .gutsimage{
+            display: flex;
+            justify-content: flex-start;
+            margin-left: 65px;
+            img{
+                max-width: 80%;
+                height: 100%;
+                border-radius: 5px;
+            }
+        }
+    }
 }
