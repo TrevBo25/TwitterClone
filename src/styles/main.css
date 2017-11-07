@@ -91,17 +91,19 @@ table {
   align-items: center;
   align-content: stretch; }
 
+.handle {
+  padding-bottom: 15px; }
+
 .dropdown-content li {
   text-decoration: none;
   text-align: center;
   width: 100px;
-  background: white;
-  border-bottom: 1px solid black;
-  padding: 12px 16px 12px 16px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.9); }
+  background: #fdfbef;
+  padding: 12px 16px 12px 16px; }
 
 .dropdown-content a {
-  text-decoration: none; }
+  text-decoration: none;
+  color: #161925; }
 
 input {
   background: white;
