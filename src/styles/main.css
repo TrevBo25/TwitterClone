@@ -929,18 +929,12 @@ h1 {
       font-size: 20px; }
 
 .identity-card {
-<<<<<<< HEAD
-  margin-top: 20px;
-  background-color: #39ADDB;
-  height: 200px; }
-=======
   margin-top: 80px;
   margin-left: 40px;
   background-color: white;
   height: 260px;
   color: #161925;
   font-family: "Fauna One", serif; }
->>>>>>> 7f54d604c6a5d6b059dc61be13136718d5cdb0f4
 
 .cover {
   height: 50%;
@@ -964,47 +958,14 @@ h1 {
   flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: stretch;
-<<<<<<< HEAD
-  align-content: stretch; }
-=======
   align-content: stretch;
   margin-left: 10px;
   margin-top: 5px; }
->>>>>>> 7f54d604c6a5d6b059dc61be13136718d5cdb0f4
 
 .avatar img {
   height: 70px;
   width: 70px;
   border-radius: 50%;
-<<<<<<< HEAD
-  margin-top: -20px;
-  margin-left: 10px; }
-
-.avatar #name {
-  font-weight: bold;
-  font-size: 20px; }
-
-.sime {
-  width: 100%;
-  height: 40px;
-  background-color: chocolate;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: stretch;
-  align-content: stretch; }
-
-#cosd {
-  background: pink;
-  margin-left: 40px;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: stretch;
-  align-content: stretch; }
-=======
   margin-top: -25px;
   margin-left: 10px;
   border: 3px white solid; }
@@ -1039,4 +1000,3 @@ h1 {
   font-family: "Roboto", sans-serif;
   font-size: 22px;
   color: #4A7C59; }
->>>>>>> 7f54d604c6a5d6b059dc61be13136718d5cdb0f4
