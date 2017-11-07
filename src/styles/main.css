@@ -64,13 +64,47 @@ table {
   -webkit-transform: rotate(-15deg);
   transform: rotate(-15deg); }
 
+@-webkit-keyframes nav-logo {
+  50% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg); }
+  100% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg); } }
+
+@keyframes nav-logo {
+  50% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg); }
+  100% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg); } }
+
+.nav-logo {
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent; }
+
+.nav-logo:hover, .nav-logo:focus, .nav-logo:active {
+  -webkit-animation-name: nav-logo;
+  animation-name: nav-logo;
+  -webkit-animation-duration: 0.25s;
+  animation-duration: 0.25s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite; }
+
 .dropdown {
   margin-top: 1%;
   margin-right: 7%;
-  height: 100%;
-  width: 60px; }
+  height: 100%; }
 
 .dropdown img {
+  position: absolute;
+  height: 60px;
+  width: 60px;
   border-radius: 50%; }
 
 .dropdown-container {
@@ -80,8 +114,6 @@ table {
   display: block; }
 
 .dropdown-content {
-  width: relative;
-  height: relative;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -108,7 +140,7 @@ textarea {
   font-family: 'Roboto';
   letter-spacing: 1px;
   width: 400px;
-  margin-top: 25px;
+  margin-top: 0px;
   padding: 5px 10px 5px 10px;
   border-radius: 5px;
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.8), 0px 1px 1px rgba(255, 255, 255, 0.8);
@@ -127,7 +159,7 @@ textarea:focus {
   color: black;
   border: 1px solid #C8D5B9;
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.8);
-  margin-top: 76px;
+  margin-top: 56px;
   padding-bottom: 62px; }
 
 textarea[type="text"]:focus {
