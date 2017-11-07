@@ -5,6 +5,8 @@ import logo from '../../assets/tacoLogo/taco.svg';
 
 class Nav extends Component {
 
+    
+
     render() {
         return (
 
@@ -18,8 +20,8 @@ class Nav extends Component {
                     <div className="dropdown"><img src={this.props.user.avatar}/>
                     <div className="dropdown-container">
                       <ul className="dropdown-content">
-                        <li><a href="#">Handle</a></li>
-                        <li><a href="#">Profile</a></li>
+                        <li className="name"><a href={`/#/${this.props.user.handle}`}>{this.props.user.name}</a></li>
+                        <li className="handle"><a href={`/#/${this.props.user.handle}`}>{this.props.user.handle}</a></li>
                         <li><a href="#">Settings</a></li>
                         <li><a href="#">Logout</a></li>
                       </ul>
@@ -37,3 +39,5 @@ function mapStateToProps(state) {
 }
 
 export default connect(mapStateToProps, {updateUser})(Nav);
+
+
