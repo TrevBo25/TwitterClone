@@ -15,13 +15,16 @@ class Nav extends Component {
                 <div className="nav">
                     <div className="nav-logo"><img src={logo}/></div>
                     <div className="input-container">
-                        <input type="text" placeholder="Let's Talko Bout It"/>
+                        <textarea rows="1" cols="30" wrap="hard" maxlength="80" type="text" placeholder="Let's Talko Bout It"/>
                     </div>
                     <div className="dropdown"><img src={this.props.user.avatar}/>
                     <div className="dropdown-container">
                       <ul className="dropdown-content">
-                        <li className="name"><a href={`/#/${this.props.user.handle}`}>{this.props.user.name}</a></li>
-                        <li className="handle"><a href={`/#/${this.props.user.handle}`}>{this.props.user.handle}</a></li>
+                        <li className="user-info">
+                            <a href={`/#/${this.props.user.handle}`}>{this.props.user.name}</a><br/>
+                            <a href={`/#/${this.props.user.handle}`}>{this.props.user.handle}</a>
+                        </li>
+                        {/* <li className="handle"><a href={`/#/${this.props.user.handle}`}>{this.props.user.handle}</a></li> */}
                         <li><a href="#">Settings</a></li>
                         <li><a href="#">Logout</a></li>
                       </ul>
