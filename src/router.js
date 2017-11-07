@@ -14,13 +14,10 @@ export default function() {
         <Switch>
             <Route component={ Primary } exact path="/"/>
             <Route component={ Register } path="/register"/>
-<<<<<<< HEAD
             <Route component={ Settings } exact path='/settings'/>
             <Route component={ Stream } path='/:handle' />
-=======
             <Route component={ Profile } path='/:handle' />
             <Route component={ Settings } path='/settings'/>
->>>>>>> 4eaed64e5b233562d79d898e63c76e101c89dfad
         </Switch>
     )
 }
