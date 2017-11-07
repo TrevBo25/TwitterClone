@@ -219,57 +219,53 @@ a {
 .composing {
   background-color: white; }
 
-.btn-group {
-  background-color: #4CAF50;
-  /* Green background */
-  border: 1px solid green;
-  /* Green border */
-  color: white;
-  /* White text */
-  padding: 10px 24px;
-  /* Some padding */
-  cursor: pointer;
-  /* Pointer/hand icon */
-  width: 100%;
-  /* Set a width if needed */
-  display: block;
-  /* Make the buttons appear below each other */
-  margin: 10px; }
-
-#save {
-  width: 33.333%; }
-
-/* Add a background color on hover */
-.btn-group:hover {
-  background-color: #3e8e41; }
-
-input[type=text], [type=password], select {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 10px 10px;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box; }
-
-h1 {
-  padding-left: 20px; }
-
-.settings-body {
-  width: 100%;
-  background: #68B0AB;
-  align-items: center;
-  height: 100vh; }
-
-.settings-form {
-  transform: translate(-50%, -50%);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 50%;
-  height: 500px;
-  border: 2px solid black;
-  text-align: center; }
+.settingsdad {
+  max-width: 20%;
+  /* Add a background color on hover */ }
+  .settingsdad .btn-group {
+    background-color: #4CAF50;
+    /* Green background */
+    border: 1px solid green;
+    /* Green border */
+    color: white;
+    /* White text */
+    padding: 10px 24px;
+    /* Some padding */
+    cursor: pointer;
+    /* Pointer/hand icon */
+    width: 100%;
+    /* Set a width if needed */
+    display: block;
+    /* Make the buttons appear below each other */
+    margin: 10px; }
+  .settingsdad #save {
+    width: 33.333%; }
+  .settingsdad .btn-group:hover {
+    background-color: #3e8e41; }
+  .settingsdad input[type=text], .settingsdad [type=password], .settingsdad select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 10px 10px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; }
+  .settingsdad h1 {
+    padding-left: 20px; }
+  .settingsdad .settings-body {
+    width: 100%;
+    background: #68B0AB;
+    align-items: center;
+    height: 100vh; }
+  .settingsdad .settings-form {
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    height: 500px;
+    border: 2px solid black;
+    text-align: center; }
 
 .papa {
   width: 100%;
