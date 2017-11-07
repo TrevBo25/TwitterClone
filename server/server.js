@@ -34,6 +34,7 @@ app.post('/api/getfollowers', controller.getFollowers);
 app.post('/api/follow', controller.follow);
 app.post('/api/unfollow', controller.unfollow);
 app.get('/api/getposts', controller.getPosts);
+app.get('/api/getpostslanding', controller.getPostsLanding);
 app.post('/api/fposts', controller.getFollowersPosts);
 app.post('/api/getuserfromhandle', controller.getUserFromHandle);
 app.post('/api/changehandle', controller.changeHandle);

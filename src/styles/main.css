@@ -310,7 +310,10 @@ h1 {
           margin-left: 5px; }
           .papa .postsholder .outterbox0 .toppart .names .name {
             font-size: 30px;
-            font-family: "Fauna One", serif; }
+            font-family: "Fauna One", serif;
+            transform: translateX(-15px);
+            margin-bottom: 7px;
+            margin-top: -4px; }
           .papa .postsholder .outterbox0 .toppart .names .handle {
             margin-left: 5px;
             color: #4A7C59; }
@@ -331,10 +334,11 @@ h1 {
         .papa .postsholder .outterbox0 .bottompart .gutsimage {
           margin-right: 10px; }
           .papa .postsholder .outterbox0 .bottompart .gutsimage img {
-            height: 100px;
+            height: 140px;
             width: 200px;
             float: right;
-            border-radius: 5px; }
+            border-radius: 5px;
+            transform: translateY(-17px); }
     .papa .postsholder .outterbox1 {
       height: 180px;
       width: 62%;
@@ -363,7 +367,10 @@ h1 {
           margin-left: 5px; }
           .papa .postsholder .outterbox1 .toppart .names .name {
             font-size: 30px;
-            font-family: "Fauna One", serif; }
+            font-family: "Fauna One", serif;
+            transform: translateX(-15px);
+            margin-bottom: 7px;
+            margin-top: 12px; }
           .papa .postsholder .outterbox1 .toppart .names .handle {
             margin-left: 5px;
             color: #4A7C59; }
@@ -383,10 +390,12 @@ h1 {
           font-size: 25px;
           margin-top: 15px; }
         .papa .postsholder .outterbox1 .bottompart .gutsimage {
+          display: flex;
+          justify-content: flex-end;
           margin-right: 10px; }
           .papa .postsholder .outterbox1 .bottompart .gutsimage img {
-            height: 180px;
-            width: 320px;
+            max-height: 180px;
+            width: auto;
             float: right;
             transform: translateY(-30px);
             border-radius: 5px; }
@@ -418,7 +427,10 @@ h1 {
           margin-left: 5px; }
           .papa .postsholder .outterbox2 .toppart .names .name {
             font-size: 30px;
-            font-family: "Fauna One", serif; }
+            font-family: "Fauna One", serif;
+            transform: translateX(-15px);
+            margin-bottom: 7px;
+            margin-top: 15px; }
           .papa .postsholder .outterbox2 .toppart .names .handle {
             margin-left: 5px;
             color: #4A7C59; }
@@ -473,7 +485,10 @@ h1 {
           margin-left: 5px; }
           .papa .postsholder .outterbox3 .toppart .names .name {
             font-size: 30px;
-            font-family: "Fauna One", serif; }
+            font-family: "Fauna One", serif;
+            transform: translateX(-15px);
+            margin-bottom: 7px;
+            margin-top: -4px; }
           .papa .postsholder .outterbox3 .toppart .names .handle {
             margin-left: 5px;
             color: #4A7C59; }
@@ -494,10 +509,11 @@ h1 {
         .papa .postsholder .outterbox3 .bottompart .gutsimage {
           margin-right: 10px; }
           .papa .postsholder .outterbox3 .bottompart .gutsimage img {
-            height: 100px;
+            height: 140px;
             width: 200px;
             float: right;
-            border-radius: 5px; }
+            border-radius: 5px;
+            transform: translateY(-17px); }
     .papa .postsholder .outterbox4 {
       height: 180px;
       width: 47%;
@@ -526,7 +542,10 @@ h1 {
           margin-left: 5px; }
           .papa .postsholder .outterbox4 .toppart .names .name {
             font-size: 30px;
-            font-family: "Fauna One", serif; }
+            font-family: "Fauna One", serif;
+            transform: translateX(-15px);
+            margin-bottom: 7px;
+            margin-top: 15px; }
           .papa .postsholder .outterbox4 .toppart .names .handle {
             margin-left: 5px;
             color: #4A7C59; }
@@ -581,7 +600,10 @@ h1 {
           margin-left: 5px; }
           .papa .postsholder .outterbox5 .toppart .names .name {
             font-size: 30px;
-            font-family: "Fauna One", serif; }
+            font-family: "Fauna One", serif;
+            transform: translateX(-15px);
+            margin-bottom: 7px;
+            margin-top: 15px; }
           .papa .postsholder .outterbox5 .toppart .names .handle {
             margin-left: 5px;
             color: #4A7C59; }
@@ -636,7 +658,10 @@ h1 {
           margin-left: 5px; }
           .papa .postsholder .outterbox6 .toppart .names .name {
             font-size: 30px;
-            font-family: "Fauna One", serif; }
+            font-family: "Fauna One", serif;
+            transform: translateX(-15px);
+            margin-bottom: 7px;
+            margin-top: -4px; }
           .papa .postsholder .outterbox6 .toppart .names .handle {
             margin-left: 5px;
             color: #4A7C59; }
@@ -657,10 +682,11 @@ h1 {
         .papa .postsholder .outterbox6 .bottompart .gutsimage {
           margin-right: 10px; }
           .papa .postsholder .outterbox6 .bottompart .gutsimage img {
-            height: 100px;
-            width: 170px;
+            height: 130px;
+            width: 190px;
             float: right;
-            border-radius: 5px; }
+            border-radius: 5px;
+            transform: translateY(-10px); }
     .papa .postsholder .outterbox7 {
       height: 180px;
       width: 30%;
@@ -689,7 +715,10 @@ h1 {
           margin-left: 5px; }
           .papa .postsholder .outterbox7 .toppart .names .name {
             font-size: 30px;
-            font-family: "Fauna One", serif; }
+            font-family: "Fauna One", serif;
+            transform: translateX(-15px);
+            margin-bottom: 7px;
+            margin-top: -4px; }
           .papa .postsholder .outterbox7 .toppart .names .handle {
             margin-left: 5px;
             color: #4A7C59; }
@@ -710,10 +739,11 @@ h1 {
         .papa .postsholder .outterbox7 .bottompart .gutsimage {
           margin-right: 10px; }
           .papa .postsholder .outterbox7 .bottompart .gutsimage img {
-            height: 100px;
-            width: 170px;
+            height: 130px;
+            width: 190px;
             float: right;
-            border-radius: 5px; }
+            border-radius: 5px;
+            transform: translateY(-10px); }
     .papa .postsholder .outterbox8 {
       height: 180px;
       width: 30%;
@@ -742,7 +772,10 @@ h1 {
           margin-left: 5px; }
           .papa .postsholder .outterbox8 .toppart .names .name {
             font-size: 30px;
-            font-family: "Fauna One", serif; }
+            font-family: "Fauna One", serif;
+            transform: translateX(-15px);
+            margin-bottom: 7px;
+            margin-top: -4px; }
           .papa .postsholder .outterbox8 .toppart .names .handle {
             margin-left: 5px;
             color: #4A7C59; }
@@ -763,10 +796,11 @@ h1 {
         .papa .postsholder .outterbox8 .bottompart .gutsimage {
           margin-right: 10px; }
           .papa .postsholder .outterbox8 .bottompart .gutsimage img {
-            height: 100px;
-            width: 170px;
+            height: 130px;
+            width: 190px;
             float: right;
-            border-radius: 5px; }
+            border-radius: 5px;
+            transform: translateY(-10px); }
   .papa .fixedbox {
     position: absolute;
     height: 250px;
@@ -790,7 +824,8 @@ h1 {
         font-size: 40px;
         margin-bottom: 10px;
         font-weight: bold;
-        font-family: "Fauna One", serif; }
+        font-family: "Fauna One", serif;
+        padding: 0; }
       .papa .fixedbox .wordsholder .subtitle {
         font-size: 20px;
         transform: translateY(10px); }

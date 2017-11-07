@@ -43,6 +43,9 @@
                     .name{
                         font-size: 30px;
                         font-family: $primaryfont;
+                        transform: translateX(-15px);
+                        margin-bottom: 7px;
+                        margin-top: -4px;
                     }
                     .handle{
                         margin-left: 5px;
@@ -69,10 +72,11 @@
                 .gutsimage{
                     margin-right: 10px;
                     img{
-                        height:100px;
+                        height:140px;
                         width:200px;
                         float: right;
                         border-radius: 5px;
+                        transform: translateY(-17px);
                     }
                 }
             }
@@ -109,6 +113,9 @@
                     .name{
                         font-size: 30px;
                         font-family: $primaryfont;
+                        transform: translateX(-15px);
+                        margin-bottom: 7px;
+                        margin-top: 12px;
                     }
                     .handle{
                         margin-left: 5px;
@@ -134,10 +141,12 @@
                     margin-top: 15px;
                 }
                 .gutsimage{
+                    display: flex;
+                    justify-content: flex-end;
                     margin-right: 10px;
                     img{
-                        height:180px;
-                        width:320px;
+                        max-height:180px;
+                        width:auto;
                         float: right;
                         transform: translateY(-30px);
                         border-radius: 5px;
@@ -177,6 +186,9 @@
                     .name{
                         font-size: 30px;
                         font-family: $primaryfont;
+                        transform: translateX(-15px);
+                        margin-bottom: 7px;
+                        margin-top: 15px;
                     }
                     .handle{
                         margin-left: 5px;
@@ -245,6 +257,9 @@
                     .name{
                         font-size: 30px;
                         font-family: $primaryfont;
+                        transform: translateX(-15px);
+                        margin-bottom: 7px;
+                        margin-top: -4px;
                     }
                     .handle{
                         margin-left: 5px;
@@ -271,10 +286,11 @@
                 .gutsimage{
                     margin-right: 10px;
                     img{
-                        height:100px;
+                        height:140px;
                         width:200px;
                         float: right;
                         border-radius: 5px;
+                        transform: translateY(-17px);
                     }
                 }
             }
@@ -311,6 +327,9 @@
                     .name{
                         font-size: 30px;
                         font-family: $primaryfont;
+                        transform: translateX(-15px);
+                        margin-bottom: 7px;
+                        margin-top: 15px;
                     }
                     .handle{
                         margin-left: 5px;
@@ -379,6 +398,9 @@
                     .name{
                         font-size: 30px;
                         font-family: $primaryfont;
+                        transform: translateX(-15px);
+                        margin-bottom: 7px;
+                        margin-top: 15px;
                     }
                     .handle{
                         margin-left: 5px;
@@ -447,6 +469,9 @@
                     .name{
                         font-size: 30px;
                         font-family: $primaryfont;
+                        transform: translateX(-15px);
+                        margin-bottom: 7px;
+                        margin-top: -4px;
                     }
                     .handle{
                         margin-left: 5px;
@@ -473,10 +498,11 @@
                 .gutsimage{
                     margin-right: 10px;
                     img{
-                        height:100px;
-                        width:170px;
+                        height:130px;
+                        width:190px;
                         float: right;
                         border-radius: 5px;
+                        transform: translateY(-10px)
                     }
                 }
             }
@@ -513,6 +539,9 @@
                     .name{
                         font-size: 30px;
                         font-family: $primaryfont;
+                        transform: translateX(-15px);
+                        margin-bottom: 7px;
+                        margin-top: -4px;
                     }
                     .handle{
                         margin-left: 5px;
@@ -539,10 +568,11 @@
                 .gutsimage{
                     margin-right: 10px;
                     img{
-                        height:100px;
-                        width:170px;
+                        height:130px;
+                        width:190px;
                         float: right;
                         border-radius: 5px;
+                        transform: translateY(-10px)
                     }
                 }
             }
@@ -579,6 +609,9 @@
                     .name{
                         font-size: 30px;
                         font-family: $primaryfont;
+                        transform: translateX(-15px);
+                        margin-bottom: 7px;
+                        margin-top: -4px;
                     }
                     .handle{
                         margin-left: 5px;
@@ -605,10 +638,11 @@
                 .gutsimage{
                     margin-right: 10px;
                     img{
-                        height:100px;
-                        width:170px;
+                        height:130px;
+                        width:190px;
                         float: right;
                         border-radius: 5px;
+                        transform: translateY(-10px);
                     }
                 }
             }
@@ -637,7 +671,8 @@
                 font-size: 40px;
                 margin-bottom: 10px;
                 font-weight: bold;
-                font-family: $primaryfont
+                font-family: $primaryfont;
+                padding: 0;
             }
             .subtitle{
                 font-size: 20px;

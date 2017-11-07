@@ -151,6 +151,14 @@ module.exports = {
                 res.status(200).json(response);
             })
         },
+        getPostsLanding(req,res){
+            const db = req.app.get('db');
+            const {handle} = req.body;
+            db.get_posts_landing()
+            .then(response => {
+                res.status(200).json(response);
+            })
+        },
         getFollowing(req, res){
             const db = req.app.get('db');
             const{id} = req.body;
