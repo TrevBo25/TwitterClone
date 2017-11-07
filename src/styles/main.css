@@ -48,7 +48,7 @@ table {
   height: 70px;
   position: fixed;
   color: #14171a;
-  background: -webkit-linear-gradient(white, #FAF3DD);
+  background: -webkit-linear-gradient(white, #f9fff2);
   border-bottom: 1px solid #a0a0a0;
   display: flex;
   justify-content: space-between;
@@ -130,7 +130,7 @@ input[type="text"]:focus {
   outline: none; }
 
 .sidebar {
-  background-color: #C8D5B9;
+  background-color: #eaf2e2;
   width: 25%;
   height: 100vh; }
 
@@ -138,7 +138,7 @@ img {
   width: 100%; }
 
 .main-content {
-  background-color: #C8D5B9;
+  background-color: #eaf2e2;
   width: 80%;
   height: calc(100vh);
   overflow: auto; }

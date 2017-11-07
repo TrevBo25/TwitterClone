@@ -4,7 +4,7 @@
     height: 70px;
     position: fixed;
     color: #14171a;
-    background: -webkit-linear-gradient(white, $color5);
+    background: -webkit-linear-gradient(white, rgb(249, 255, 242));
     border-bottom: 1px solid rgb(160, 160, 160);
     @include flexSetUp(space-between, center, row);
     z-index: 2;
