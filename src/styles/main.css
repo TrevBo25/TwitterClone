@@ -49,7 +49,7 @@ table {
   position: fixed;
   color: #14171a;
   background: -webkit-linear-gradient(white, #FAF3DD);
-  border-bottom: 2px solid #4A7C59;
+  border-bottom: 1px solid #a0a0a0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -103,7 +103,7 @@ input {
   background: white;
   display: block;
   font-size: 17px;
-  font-family: 'Rozha One', serif;
+  font-family: 'Roboto';
   letter-spacing: 1px;
   width: 360px;
   margin: 2px auto;
@@ -120,7 +120,7 @@ input:focus {
   opacity: .7;
   color: black;
   border: 1px solid #C8D5B9;
-  box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.25), inset 0px 3px 6px rgba(0, 0, 0, 0.25); }
+  box-shadow: 2px 2px 2px #161925; }
 
 input[type="text"]:focus {
   box-shadow: inset 0 1px 2px #8FC0A9, 0px 1px 15px #C8D5B9;
@@ -216,6 +216,45 @@ a {
 
 .composing {
   background-color: white; }
+
+body {
+  max-width: 20%; }
+
+.btn-group {
+  background-color: #4CAF50;
+  /* Green background */
+  border: 1px solid green;
+  /* Green border */
+  color: white;
+  /* White text */
+  padding: 10px 24px;
+  /* Some padding */
+  cursor: pointer;
+  /* Pointer/hand icon */
+  width: 100%;
+  /* Set a width if needed */
+  display: block;
+  /* Make the buttons appear below each other */
+  margin: 10px; }
+
+#save {
+  width: 33.333%; }
+
+/* Add a background color on hover */
+.btn-group:hover {
+  background-color: #3e8e41; }
+
+input[type=text], [type=password], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 10px 10px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; }
+
+h1 {
+  padding-left: 20px; }
 
 .settings-body {
   width: 100%;
