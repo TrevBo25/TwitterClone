@@ -24,7 +24,6 @@ class Nav extends Component {
                             <a href={`/#/${this.props.user.handle}`}>{this.props.user.name}</a><br/>
                             <a href={`/#/${this.props.user.handle}`}>{this.props.user.handle}</a>
                         </li>
-                        {/* <li className="handle"><a href={`/#/${this.props.user.handle}`}>{this.props.user.handle}</a></li> */}
                         <li><a href="#">Settings</a></li>
                         <li><a href="#">Logout</a></li>
                       </ul>
