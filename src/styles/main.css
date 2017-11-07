@@ -43,21 +43,17 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-.nav-container {
-  width: 100vw;
-  height: 200px;
-  background: #68B0AB; }
-
 .nav {
   width: 100vw;
   height: 70px;
   position: fixed;
   color: #14171a;
-  background: -webkit-linear-gradient(white, #fdfbef);
+  background: -webkit-linear-gradient(white, #FAF3DD);
   border-bottom: 1px solid #a0a0a0;
   display: flex;
   justify-content: space-between;
-  align-items: center; }
+  align-items: center;
+  z-index: 2; }
 
 .nav-logo {
   margin-left: 7%;
@@ -116,7 +112,7 @@ input {
   padding: 5px 10px 5px 10px;
   border-radius: 5px;
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.8), 0px 1px 1px rgba(255, 255, 255, 0.8);
-  border: 1px solid #fdfbef; }
+  border: 1px solid #FAF3DD; }
 
 input {
   opacity: 0.9; }
@@ -134,21 +130,22 @@ input[type="text"]:focus {
   outline: none; }
 
 .sidebar {
-  background-color: blue;
-  width: 20%; }
+  background-color: #C8D5B9;
+  width: 25%;
+  height: 100vh; }
 
 img {
   width: 100%; }
 
 .main-content {
-  background-color: greenyellow;
-  width: 80%; }
+  background-color: #C8D5B9;
+  width: 80%;
+  height: calc(100vh);
+  overflow: auto; }
 
 .frame {
-  height: 90vh;
-  width: 100vw;
-  margin-left: 30px;
-  background-color: #717171;
+  height: 100%;
+  background-color: #FAF3DD;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -156,48 +153,63 @@ img {
   align-items: stretch;
   align-content: stretch; }
 
-.post {
-  height: 200px;
-  width: 80%;
-  background-color: #CD8C32;
-  padding-top: 15px;
-  padding-left: 10px;
-  margin: 1px;
+.postsholder {
+  margin-top: 20px; }
+
+a {
+  text-decoration: none; }
+
+.outterbox1 {
+  width: 65%;
+  border: 1px darkgray solid;
+  padding: 7px;
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: stretch;
-  align-content: stretch; }
-
-.post img {
-  height: 100%; }
-
-.one {
-  height: 100%;
-  width: 80px;
-  background-color: #2F78FF; }
-
-.one .avatar {
-  width: 55px;
-  height: 55px;
-  margin-left: 10px;
-  border-radius: 50%; }
-
-.two {
-  height: 100%;
-  width: 90%;
-  background-color: peachpuff; }
-
-.two .title {
-  height: 30px;
-  text-decoration: none;
-  background-color: turquoise; }
-
-#link {
-  text-decoration: none;
-  color: black;
-  font-weight: bold; }
+  flex-direction: column;
+  background-color: white;
+  margin-left: 1%;
+  color: #161925; }
+  .outterbox1 .toppart {
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px; }
+    .outterbox1 .toppart .avatarholder img {
+      height: 55px;
+      width: 55px;
+      border-radius: 5px;
+      margin-right: 5px; }
+    .outterbox1 .toppart .names {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 5px; }
+      .outterbox1 .toppart .names .name {
+        font-size: 20px;
+        font-family: "Fauna One", serif;
+        color: #161925; }
+      .outterbox1 .toppart .names .handle {
+        margin-left: 5px;
+        color: #4A7C59; }
+  .outterbox1 .middlepart .guts {
+    word-wrap: break-word;
+    width: 85%;
+    font-size: 17px;
+    margin-left: 80px; }
+  .outterbox1 .bottompart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px; }
+    .outterbox1 .bottompart .gutsimage {
+      display: flex;
+      justify-content: flex-start;
+      margin-left: 65px; }
+      .outterbox1 .bottompart .gutsimage img {
+        max-width: 80%;
+        height: 100%;
+        border-radius: 5px; }
 
 .compose-empty {
   height: 20px;
@@ -206,6 +218,42 @@ img {
 
 .composing {
   background-color: white; }
+
+.btn-group {
+  background-color: #4CAF50;
+  /* Green background */
+  border: 1px solid green;
+  /* Green border */
+  color: white;
+  /* White text */
+  padding: 10px 24px;
+  /* Some padding */
+  cursor: pointer;
+  /* Pointer/hand icon */
+  width: 100%;
+  /* Set a width if needed */
+  display: block;
+  /* Make the buttons appear below each other */
+  margin: 10px; }
+
+#save {
+  width: 33.333%; }
+
+/* Add a background color on hover */
+.btn-group:hover {
+  background-color: #3e8e41; }
+
+input[type=text], [type=password], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 10px 10px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; }
+
+h1 {
+  padding-left: 20px; }
 
 .settings-body {
   width: 100%;
@@ -226,7 +274,7 @@ img {
 .papa {
   width: 100%;
   height: 100%;
-  background-color: #fdfbef;
+  background-color: #FAF3DD;
   position: relative;
   font-family: "Roboto", sans-serif; }
   .papa .postsholder {
@@ -264,7 +312,10 @@ img {
           margin-left: 5px; }
           .papa .postsholder .outterbox0 .toppart .names .name {
             font-size: 30px;
-            font-family: "Fauna One", serif; }
+            font-family: "Fauna One", serif;
+            transform: translateX(-15px);
+            margin-bottom: 7px;
+            margin-top: -4px; }
           .papa .postsholder .outterbox0 .toppart .names .handle {
             margin-left: 5px;
             color: #4A7C59; }
@@ -285,10 +336,11 @@ img {
         .papa .postsholder .outterbox0 .bottompart .gutsimage {
           margin-right: 10px; }
           .papa .postsholder .outterbox0 .bottompart .gutsimage img {
-            height: 100px;
+            height: 140px;
             width: 200px;
             float: right;
-            border-radius: 5px; }
+            border-radius: 5px;
+            transform: translateY(-17px); }
     .papa .postsholder .outterbox1 {
       height: 180px;
       width: 62%;
@@ -317,7 +369,10 @@ img {
           margin-left: 5px; }
           .papa .postsholder .outterbox1 .toppart .names .name {
             font-size: 30px;
-            font-family: "Fauna One", serif; }
+            font-family: "Fauna One", serif;
+            transform: translateX(-15px);
+            margin-bottom: 7px;
+            margin-top: 12px; }
           .papa .postsholder .outterbox1 .toppart .names .handle {
             margin-left: 5px;
             color: #4A7C59; }
@@ -337,10 +392,12 @@ img {
           font-size: 25px;
           margin-top: 15px; }
         .papa .postsholder .outterbox1 .bottompart .gutsimage {
+          display: flex;
+          justify-content: flex-end;
           margin-right: 10px; }
           .papa .postsholder .outterbox1 .bottompart .gutsimage img {
-            height: 180px;
-            width: 320px;
+            max-height: 180px;
+            width: auto;
             float: right;
             transform: translateY(-30px);
             border-radius: 5px; }
@@ -372,7 +429,10 @@ img {
           margin-left: 5px; }
           .papa .postsholder .outterbox2 .toppart .names .name {
             font-size: 30px;
-            font-family: "Fauna One", serif; }
+            font-family: "Fauna One", serif;
+            transform: translateX(-15px);
+            margin-bottom: 7px;
+            margin-top: 15px; }
           .papa .postsholder .outterbox2 .toppart .names .handle {
             margin-left: 5px;
             color: #4A7C59; }
@@ -427,7 +487,10 @@ img {
           margin-left: 5px; }
           .papa .postsholder .outterbox3 .toppart .names .name {
             font-size: 30px;
-            font-family: "Fauna One", serif; }
+            font-family: "Fauna One", serif;
+            transform: translateX(-15px);
+            margin-bottom: 7px;
+            margin-top: -4px; }
           .papa .postsholder .outterbox3 .toppart .names .handle {
             margin-left: 5px;
             color: #4A7C59; }
@@ -448,10 +511,11 @@ img {
         .papa .postsholder .outterbox3 .bottompart .gutsimage {
           margin-right: 10px; }
           .papa .postsholder .outterbox3 .bottompart .gutsimage img {
-            height: 100px;
+            height: 140px;
             width: 200px;
             float: right;
-            border-radius: 5px; }
+            border-radius: 5px;
+            transform: translateY(-17px); }
     .papa .postsholder .outterbox4 {
       height: 180px;
       width: 47%;
@@ -480,7 +544,10 @@ img {
           margin-left: 5px; }
           .papa .postsholder .outterbox4 .toppart .names .name {
             font-size: 30px;
-            font-family: "Fauna One", serif; }
+            font-family: "Fauna One", serif;
+            transform: translateX(-15px);
+            margin-bottom: 7px;
+            margin-top: 15px; }
           .papa .postsholder .outterbox4 .toppart .names .handle {
             margin-left: 5px;
             color: #4A7C59; }
@@ -535,7 +602,10 @@ img {
           margin-left: 5px; }
           .papa .postsholder .outterbox5 .toppart .names .name {
             font-size: 30px;
-            font-family: "Fauna One", serif; }
+            font-family: "Fauna One", serif;
+            transform: translateX(-15px);
+            margin-bottom: 7px;
+            margin-top: 15px; }
           .papa .postsholder .outterbox5 .toppart .names .handle {
             margin-left: 5px;
             color: #4A7C59; }
@@ -590,7 +660,10 @@ img {
           margin-left: 5px; }
           .papa .postsholder .outterbox6 .toppart .names .name {
             font-size: 30px;
-            font-family: "Fauna One", serif; }
+            font-family: "Fauna One", serif;
+            transform: translateX(-15px);
+            margin-bottom: 7px;
+            margin-top: -4px; }
           .papa .postsholder .outterbox6 .toppart .names .handle {
             margin-left: 5px;
             color: #4A7C59; }
@@ -611,10 +684,11 @@ img {
         .papa .postsholder .outterbox6 .bottompart .gutsimage {
           margin-right: 10px; }
           .papa .postsholder .outterbox6 .bottompart .gutsimage img {
-            height: 100px;
-            width: 170px;
+            height: 130px;
+            width: 190px;
             float: right;
-            border-radius: 5px; }
+            border-radius: 5px;
+            transform: translateY(-10px); }
     .papa .postsholder .outterbox7 {
       height: 180px;
       width: 30%;
@@ -643,7 +717,10 @@ img {
           margin-left: 5px; }
           .papa .postsholder .outterbox7 .toppart .names .name {
             font-size: 30px;
-            font-family: "Fauna One", serif; }
+            font-family: "Fauna One", serif;
+            transform: translateX(-15px);
+            margin-bottom: 7px;
+            margin-top: -4px; }
           .papa .postsholder .outterbox7 .toppart .names .handle {
             margin-left: 5px;
             color: #4A7C59; }
@@ -664,10 +741,11 @@ img {
         .papa .postsholder .outterbox7 .bottompart .gutsimage {
           margin-right: 10px; }
           .papa .postsholder .outterbox7 .bottompart .gutsimage img {
-            height: 100px;
-            width: 170px;
+            height: 130px;
+            width: 190px;
             float: right;
-            border-radius: 5px; }
+            border-radius: 5px;
+            transform: translateY(-10px); }
     .papa .postsholder .outterbox8 {
       height: 180px;
       width: 30%;
@@ -696,7 +774,10 @@ img {
           margin-left: 5px; }
           .papa .postsholder .outterbox8 .toppart .names .name {
             font-size: 30px;
-            font-family: "Fauna One", serif; }
+            font-family: "Fauna One", serif;
+            transform: translateX(-15px);
+            margin-bottom: 7px;
+            margin-top: -4px; }
           .papa .postsholder .outterbox8 .toppart .names .handle {
             margin-left: 5px;
             color: #4A7C59; }
@@ -717,10 +798,11 @@ img {
         .papa .postsholder .outterbox8 .bottompart .gutsimage {
           margin-right: 10px; }
           .papa .postsholder .outterbox8 .bottompart .gutsimage img {
-            height: 100px;
-            width: 170px;
+            height: 130px;
+            width: 190px;
             float: right;
-            border-radius: 5px; }
+            border-radius: 5px;
+            transform: translateY(-10px); }
   .papa .fixedbox {
     position: absolute;
     height: 250px;
@@ -744,7 +826,8 @@ img {
         font-size: 40px;
         margin-bottom: 10px;
         font-weight: bold;
-        font-family: "Fauna One", serif; }
+        font-family: "Fauna One", serif;
+        padding: 0; }
       .papa .fixedbox .wordsholder .subtitle {
         font-size: 20px;
         transform: translateY(10px); }
@@ -883,9 +966,12 @@ img {
       font-size: 20px; }
 
 .identity-card {
-  margin-top: 20px;
-  background-color: skyblue;
-  height: 200px; }
+  margin-top: 80px;
+  margin-left: 40px;
+  background-color: white;
+  height: 260px;
+  color: #161925;
+  font-family: "Fauna One", serif; }
 
 .cover {
   height: 50%;
@@ -909,36 +995,45 @@ img {
   flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: stretch;
-  align-content: stretch; }
+  align-content: stretch;
+  margin-left: 10px;
+  margin-top: 5px; }
 
 .avatar img {
   height: 70px;
   width: 70px;
   border-radius: 50%;
-  margin-top: -20px;
-  margin-left: 10px; }
+  margin-top: -25px;
+  margin-left: 10px;
+  border: 3px white solid; }
 
 .avatar #name {
   font-weight: bold;
-  font-size: 20px; }
+  font-size: 20px;
+  margin-bottom: 3px; }
+
+.avatar #handle {
+  color: #4A7C59;
+  font-family: "Roboto", sans-serif; }
 
 .sime {
-  width: 100%;
-  height: 40px;
-  background-color: chocolate;
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: stretch;
-  align-content: stretch; }
+  width: 100%;
+  height: 100px;
+  justify-content: space-around;
+  align-items: center; }
 
-#cosd {
-  background: pink;
-  margin-left: 40px;
+.numberlabel {
   display: flex;
   flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: stretch;
-  align-content: stretch; }
+  justify-content: space-around;
+  align-items: center;
+  color: #68B0AB;
+  font-size: 15px; }
+
+.number {
+  margin-top: 7px;
+  align-self: flex-start;
+  font-family: "Roboto", sans-serif;
+  font-size: 22px;
+  color: #4A7C59; }

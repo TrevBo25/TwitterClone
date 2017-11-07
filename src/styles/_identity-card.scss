@@ -1,7 +1,10 @@
 .identity-card {
-    margin-top: 20px;
-    background-color: skyblue;
-    height: 200px;
+    margin-top: 80px;
+    margin-left: 40px;
+    background-color: white;
+    height: 260px;
+    color: $color0;
+    font-family: $primaryfont;
 }
 
 .cover {
@@ -26,39 +29,47 @@
 	flex-wrap: nowrap;
 	justify-content: flex-start;
 	align-items: stretch;
-	align-content: stretch;
+    align-content: stretch;
+    margin-left: 10px;
+    margin-top: 5px;
 }
+
 .avatar img {
     height: 70px;
     width: 70px;
     border-radius: 50%;
-    margin-top: -20px;
+    margin-top: -25px;
     margin-left: 10px;
+    border: 3px white solid;
 }
 .avatar #name {
     font-weight: bold;
     font-size: 20px;
+    margin-bottom: 3px;
 }
-
-.sime {
+.avatar #handle{
+    color: $color1;
+    font-family: $secondaryfont;
+}
+.sime{
+    display: flex;
     width: 100%;
-    height: 40px;
-    background-color: chocolate;
-    display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: flex-start;
-	align-items: stretch;
-	align-content: stretch;
+    height: 100px;
+    justify-content: space-around;
+    align-items: center;
 }
-
-#cosd {
-    background: pink;
-    margin-left: 40px;
+.numberlabel{
     display: flex;
-	flex-direction: column;
-	flex-wrap: nowrap;
-	justify-content: flex-start;
-	align-items: stretch;
-	align-content: stretch;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: $color2;
+    font-size: 15px;
+}
+.number{
+    margin-top: 7px;
+    align-self: flex-start;
+    font-family: $secondaryfont;
+    font-size: 22px;
+    color: $color1
 }

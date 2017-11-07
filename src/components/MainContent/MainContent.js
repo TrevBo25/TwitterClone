@@ -22,7 +22,7 @@ class MainContent extends Component {
     
 
     getPosts() {
-        axios.get('api/getposts').then((response) => {
+        axios.get('api/getposts', 'peter').then((response) => {
             console.log('Getting posts... ', response)
             this.setState({posts: response.data})
         })

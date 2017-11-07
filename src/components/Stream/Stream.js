@@ -34,9 +34,6 @@ class Stream extends Component {
                     <Sidebar />
                     <MainContent />
                 </div>
-
-                <span>Stream</span>
-
             </div>
         );
     }
