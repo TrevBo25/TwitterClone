@@ -5,7 +5,7 @@ const initialState = {
     user: {
         id: 13,
         name: 'Limone Resqueza',
-        handle: '',
+        handle: 'fastgirl222',
         email: 'l.resquesa@gmail.com',
         avatar: 'https://randomuser.me/api/portraits/women/43.jpg',
         bio: 'I love long walks on the beach and turtles.',
@@ -39,8 +39,8 @@ export function updateUser(userData) {
 }
 
 export function updatePageData(handle) {
-        
-        var request = axios.post('/api/alluserdata', {handle:"peter"})
+        console.log(handle)
+        var request = axios.post('/api/alluserdata', {handle})
         .then( response => {
             console.log('thishthisthist', response.data);
             return response.data

@@ -145,6 +145,7 @@ module.exports = {
         },
         getPosts(req,res){
             const db = req.app.get('db');
+            const {handle} = req.body;
             db.get_posts()
             .then(response => {
                 res.status(200).json(response);
@@ -261,6 +262,7 @@ module.exports = {
             console.log('getting all user data')
             const db = req.app.get('db');
             const {handle} = req.body;
+            console.log(req.body)
             var userData = db.get_user([handle])
             .then(
                  userData => {
@@ -283,12 +285,21 @@ module.exports = {
                 }
             
             )
-            Promise.all([userData, followers, following]).then(values => {
+            var posts = db.get_user_posts([handle])
+            .then(
+                posts => {
+                    console.log(posts)
+                    return posts
+                }
+            
+            )
+            Promise.all([userData, followers, following, posts]).then(values => {
                 console.log(values)
                 var stuff = {
                     userData: values[0][0],
                     followers: values[1],
-                    following: values[2]
+                    following: values[2],
+                    posts: values[3]
                 }
                 console.log(stuff)
                 res.status(200).send(stuff)

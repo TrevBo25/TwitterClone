@@ -36,20 +36,15 @@ class IdentityCard extends Component {
 
                         <div id="cosd">
                             <span>Posts</span>
+                            <span>{this.props.pageData.posts.length}</span>
                         </div >
 
 
                     </div>
                 </div>
-                {/* {this.props.pageData.name}
-                {this.props.pageData.handle}
-                <img src={this.props.pageData.cover} />
-                <img src={this.props.pageData.avatar} />
-                {this.props.pageData.bio}
-                {this.props.pageData.location} */}
             </div>
                     </div>
-                    : <div></div>
+                    : <div>{this.props.user.handle}</div>
                 }
             </div>
             
