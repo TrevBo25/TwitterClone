@@ -36,13 +36,13 @@ class FollowingComp extends Component {
                                         <div className="favatar">
                                             <img src={e.avatar} />
                                             <div className="fline">
-                                                <p id="name">{e.name}</p>
-                                                <p id="handle">  {'@' + e.handle}</p>
+                                            <p id="name"><Link id="link" to={e.handle}>{e.name}</Link></p>
+                                            <p id="handle"><Link id="link" to={e.handle}>  {'@' + e.handle}</Link></p>
                                             </div>
                                         </div>
                                         <div className="fsime">
-                                            <div className="fbio">
-                                                <h1>{e.bio}</h1>
+                                            <div>
+                                                <h1 className="fbio">{e.bio}</h1>
                                             </div>
                                         </div>
                                     </div>

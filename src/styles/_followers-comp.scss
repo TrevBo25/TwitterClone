@@ -1,3 +1,5 @@
+a{text-decoration: none; color: $color0}
+
 .followcardholders{
     display: flex;
     flex-wrap: wrap;
@@ -61,6 +63,11 @@
                 height: 100px;
                 justify-content: space-around;
                 align-items: center;
+                text-align: center;
+                font-size: 12px;
+                .fbio{
+                    margin: 3px;
+                }
             }
         }
     }   

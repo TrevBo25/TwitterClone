@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { updateUser, updatePageData } from './../../../ducks/reducer'
+import { updateUser, updatePageData } from './../../../ducks/reducer';
+import { Link } from 'react-router-dom';
 
 class IdentityCard extends Component {
     render() {
@@ -17,8 +18,8 @@ class IdentityCard extends Component {
                 <div className="avatar">
                     <img src={this.props.user.avatar} />
                     <div className="line">
-                        <span id="name">{this.props.user.name}</span>
-                        <span id="handle">  {'@' + this.props.user.handle}</span>
+                        <span id="name"><Link id="link" to={this.props.user.handle}>{this.props.user.name}</Link></span>
+                        <span id="handle">  <Link id="link" to={this.props.user.handle}>{'@' + this.props.user.handle}</Link></span>
                     </div>
                 </div>
                 <div className="sime">
@@ -38,12 +39,6 @@ class IdentityCard extends Component {
                         <h1 className="number">0</h1>
                     </div >
                 </div>
-                {/* {this.props.pageData.name}
-                {this.props.pageData.handle}
-                <img src={this.props.pageData.cover} />
-                <img src={this.props.pageData.avatar} />
-                {this.props.pageData.bio}
-                {this.props.pageData.location} */}
                 </div>
                     </div>
                     : <div>{this.props.user.handle}</div>
