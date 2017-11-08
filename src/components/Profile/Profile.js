@@ -19,14 +19,18 @@ class Profile extends Component {
     }
 
     componentWillMount(){
-        if(this.props.match) {
-                this.props.updatePageData(this.props.match.params.handle)
-        }
-        this.props.viewProfile(true);
+        this.doItBrother();
     }
 
     changeProfileView(view){
         this.props.changeProView(view);
+    }
+
+    doItBrother(){
+        if(this.props.match) {
+            this.props.updatePageData(this.props.match.params.handle)
+    }
+    this.props.viewProfile(true);
     }
 
     render() {
