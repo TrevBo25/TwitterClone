@@ -115,7 +115,7 @@ export default class Settings extends Component {
 
                         <div className="input-field">
                             <h1>Update Bio</h1>
-                            <textarea className="input-field" rows="4" cols="50" wrap="hard" id="bio" placeholder="This is my bio!" onChange={(e) => {this.userInput(e.target.value, 'bio')}} />
+                            <textarea rows="4" cols="50" wrap="hard" id="bio" placeholder="This is my bio!" onChange={(e) => {this.userInput(e.target.value, 'bio')}} />
                         </div>
 
                         <div className="input-field">
