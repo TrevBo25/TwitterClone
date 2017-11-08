@@ -4,13 +4,15 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { updateUser, updatePageData } from './../../ducks/reducer';
 
-class FollowComp extends Component {
+class FollowersComp extends Component {
     constructor(props){
         super(props)
 
         this.state = {
             users: [],
         }
+
+        this.refresh = this.refresh.bind(this)
     }
 
     
@@ -18,6 +20,10 @@ class FollowComp extends Component {
             this.setState({
                 users: this.props.pageData.followers
             })
+    }
+
+    refresh(){
+        window.location.reload();
     }
 
     render() {
@@ -59,4 +65,4 @@ class FollowComp extends Component {
 function mapStateToProps( state ) {
     return { user: state.user, pageData: state.pageData, profile: state.profile, profileView: state.profileView  }
 }
-export default connect(mapStateToProps, {updateUser, updatePageData})(FollowComp);
+export default connect(mapStateToProps, {updateUser, updatePageData})(FollowersComp);

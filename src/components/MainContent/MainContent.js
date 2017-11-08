@@ -40,8 +40,9 @@ class MainContent extends Component {
                 <Link to={this.props.user.handle}
                 >{this.props.user.handle}
                 </Link>
-                <Roll />
-                {/* <Settings /> */}
+                {!this.props.showSettings ?
+                <Roll /> :
+                <Settings />}
             </div>
         );
     }
@@ -49,7 +50,7 @@ class MainContent extends Component {
 
 function mapStateToProps( state ) {
     console.log(state)
-    return { user: state.user}
+    return { user: state.user, showSettings: state.showSettings}
 }
 
 export default connect(mapStateToProps, {updateUser, viewProfile})(MainContent);
