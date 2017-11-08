@@ -66,6 +66,12 @@ class Register extends Component {
             }
         })
     }
+        handleFileUpload(event){  
+        console.log(event.target.files)
+        const file = event.target.files[0]
+        console.log('file', file)    
+        axios.post('/profile', file)
+    }
 
     render() {
         return (
@@ -105,7 +111,9 @@ class Register extends Component {
                     {/* <span>{this.state.emailInvalid + ''}</span>
                     <span>{this.state.handleInvalid + ''}</span> */}
                 </div>
-
+                <div>
+                        <input  type='file' name='userImage' onChange={this.handleFileUpload} />
+                </div>
             </div>
         );
     }
