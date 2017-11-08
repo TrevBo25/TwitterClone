@@ -64,13 +64,47 @@ table {
   -webkit-transform: rotate(-15deg);
   transform: rotate(-15deg); }
 
+@-webkit-keyframes nav-logo {
+  50% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg); }
+  100% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg); } }
+
+@keyframes nav-logo {
+  50% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg); }
+  100% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg); } }
+
+.nav-logo {
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent; }
+
+.nav-logo:hover, .nav-logo:focus, .nav-logo:active {
+  -webkit-animation-name: nav-logo;
+  animation-name: nav-logo;
+  -webkit-animation-duration: 0.25s;
+  animation-duration: 0.25s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite; }
+
 .dropdown {
   margin-top: 1%;
   margin-right: 7%;
-  height: 100%;
-  width: 60px; }
+  height: 100%; }
 
 .dropdown img {
+  position: absolute;
+  height: 60px;
+  width: 60px;
   border-radius: 50%; }
 
 .dropdown-container {
@@ -80,8 +114,6 @@ table {
   display: block; }
 
 .dropdown-content {
-  width: relative;
-  height: relative;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -108,7 +140,7 @@ textarea {
   font-family: 'Roboto';
   letter-spacing: 1px;
   width: 400px;
-  margin-top: 25px;
+  margin-top: 0px;
   padding: 5px 10px 5px 10px;
   border-radius: 5px;
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.8), 0px 1px 1px rgba(255, 255, 255, 0.8);
@@ -127,7 +159,7 @@ textarea:focus {
   color: black;
   border: 1px solid #C8D5B9;
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.8);
-  margin-top: 76px;
+  margin-top: 56px;
   padding-bottom: 62px; }
 
 textarea[type="text"]:focus {
@@ -152,7 +184,8 @@ img {
   background-color: #eaf2e2;
   width: 80%;
   height: calc(100vh);
-  overflow: auto; }
+  overflow: auto;
+  height: 100%; }
 
 .frame {
   height: 100%;
@@ -162,15 +195,16 @@ img {
   flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: stretch;
-  align-content: stretch; }
+  align-content: stretch;
+  background-color: #eaf2e2; }
 
-.postsholder {
+.postsholders {
   margin-top: 20px; }
 
 a {
   text-decoration: none; }
 
-.outterbox1 {
+.out {
   width: 65%;
   border: 1px darkgray solid;
   padding: 7px;
@@ -179,45 +213,45 @@ a {
   background-color: white;
   margin-left: 1%;
   color: #161925; }
-  .outterbox1 .toppart {
+  .out .toppart {
     display: flex;
     justify-content: flex-start;
     padding-top: 10px;
     padding-left: 10px;
     padding-right: 10px; }
-    .outterbox1 .toppart .avatarholder img {
+    .out .toppart .avatarholder img {
       height: 55px;
       width: 55px;
       border-radius: 5px;
       margin-right: 5px; }
-    .outterbox1 .toppart .names {
+    .out .toppart .names {
       display: flex;
       align-items: center;
       justify-content: center;
       margin-left: 5px; }
-      .outterbox1 .toppart .names .name {
+      .out .toppart .names .name {
         font-size: 20px;
         font-family: "Fauna One", serif;
         color: #161925; }
-      .outterbox1 .toppart .names .handle {
+      .out .toppart .names .handle {
         margin-left: 5px;
         color: #4A7C59; }
-  .outterbox1 .middlepart .guts {
+  .out .middlepart .guts {
     word-wrap: break-word;
     width: 85%;
     font-size: 17px;
     margin-left: 80px; }
-  .outterbox1 .bottompart {
+  .out .bottompart {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     padding: 10px; }
-    .outterbox1 .bottompart .gutsimage {
+    .out .bottompart .gutsimage {
       display: flex;
       justify-content: flex-start;
       margin-left: 65px; }
-      .outterbox1 .bottompart .gutsimage img {
+      .out .bottompart .gutsimage img {
         max-width: 80%;
         height: 100%;
         border-radius: 5px; }
@@ -286,7 +320,7 @@ a {
 .papa {
   width: 100%;
   height: 100%;
-  background-color: #FAF3DD;
+  background-color: #eaf2e2;
   position: relative;
   font-family: "Roboto", sans-serif; }
   .papa .postsholder {
@@ -977,6 +1011,10 @@ a {
       width: 304px;
       font-size: 20px; }
 
+a {
+  text-decoration: none;
+  color: #161925; }
+
 .identity-card {
   margin-top: 80px;
   margin-left: 40px;
@@ -1057,40 +1095,247 @@ a {
   color: #161925;
   position: relative;
   font-family: "Fauna One", serif; }
-  .profiledad .papa {
+  .profiledad .papaa {
     background-color: #eaf2e2;
     width: 100%;
     top: 0; }
-    .profiledad .papa .top {
+    .profiledad .papaa .topp {
       width: 100%;
       height: 400px;
       overflow: hidden; }
-      .profiledad .papa .top .coverimg {
-        transform: translateY(10px);
-        height: 430px;
-        width: 100%;
+      .profiledad .papaa .topp .coverimg {
+        max-width: 100%;
+        height: auto;
         background-size: 100% 100%;
         position: relative;
         background-attachment: fixed;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover; }
-    .profiledad .papa .bottombar {
+    .profiledad .papaa .bottombar {
       display: flex;
       justify-content: flex-end;
       align-items: center;
       background-color: white;
       border-bottom: 1px #4A7C59 solid;
-      box-shadow: 5px 5px 5px darkgray; }
-      .profiledad .papa .bottombar .holderthing {
+      box-shadow: 5px 5px 5px darkgray;
+      font-family: "Fauna One", serif; }
+      .profiledad .papaa .bottombar .holderthing {
         width: 75%;
-        height: 60px;
+        height: 70px;
         display: flex;
         justify-content: flex-start; }
-        .profiledad .papa .bottombar .holderthing .posts {
-          margin-left: 25px;
-          margin-right: 25px;
+        .profiledad .papaa .bottombar .holderthing .posts {
+          padding-left: 25px;
+          padding-right: 25px;
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: center; }
+          .profiledad .papaa .bottombar .holderthing .posts .postsnumber {
+            font-size: 20px;
+            margin-top: 5px;
+            color: #4A7C59; }
+        .profiledad .papaa .bottombar .holderthing .postsselected {
+          padding-left: 25px;
+          padding-right: 25px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          background-color: lightgray; }
+          .profiledad .papaa .bottombar .holderthing .postsselected .postsnumber {
+            font-size: 20px;
+            margin-top: 5px;
+            color: #4A7C59; }
+    .profiledad .papaa .frame {
+      height: 100%;
+      background-color: #FAF3DD;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: stretch;
+      align-content: stretch;
+      background-color: #eaf2e2; }
+      .profiledad .papaa .frame .main-contentp {
+        background-color: #eaf2e2;
+        width: 80%;
+        height: calc(100vh);
+        height: 100%; }
+
+.procard {
+  background-color: #eaf2e2;
+  margin-left: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: "Fauna One", serif;
+  color: #161925; }
+  .procard .proavatarholder {
+    height: 220px;
+    width: 220px;
+    transform: translateY(-200px);
+    overflow: hidden;
+    border-radius: 50%;
+    border: 4px white solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center; }
+    .procard .proavatarholder .proavatar {
+      max-width: 100%;
+      height: 100%;
+      background-size: 100% 100%;
+      position: relative;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+  .procard .prowords {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    transform: translateY(-170px); }
+    .procard .prowords .proname {
+      font-size: 35px; }
+    .procard .prowords .prohandle {
+      margin-top: 5px;
+      font-size: 18px;
+      color: #4A7C59; }
+    .procard .prowords .probio {
+      margin-top: 20px;
+      font-family: "Roboto", sans-serif;
+      font-size: 15px; }
+
+a {
+  text-decoration: none;
+  color: #161925; }
+
+.followcardholders {
+  display: flex;
+  flex-wrap: wrap; }
+  .followcardholders .fcardholder {
+    width: 30%; }
+    .followcardholders .fcardholder .follow-card {
+      margin-top: 80px;
+      margin-left: 40px;
+      background-color: white;
+      height: 260px;
+      color: #161925;
+      font-family: "Fauna One", serif; }
+      .followcardholders .fcardholder .follow-card .fcover {
+        height: 50%;
+        background-color: salmon;
+        overflow: hidden; }
+        .followcardholders .fcardholder .follow-card .fcover img {
+          position: center;
+          height: 100%;
+          width: 100; }
+      .followcardholders .fcardholder .follow-card .favatar {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: stretch;
+        align-content: stretch; }
+        .followcardholders .fcardholder .follow-card .favatar img {
+          height: 70px;
+          width: 70px;
+          border-radius: 50%;
+          margin-top: -25px;
+          margin-left: 10px;
+          border: 3px white solid; }
+        .followcardholders .fcardholder .follow-card .favatar .fline {
+          display: flex;
+          flex-direction: column;
+          flex-wrap: nowrap;
+          justify-content: flex-start;
+          align-items: stretch;
+          align-content: stretch;
+          margin-left: 10px;
+          margin-top: 5px; }
+        .followcardholders .fcardholder .follow-card .favatar #name {
+          font-weight: bold;
+          font-size: 20px;
+          margin-bottom: 3px; }
+        .followcardholders .fcardholder .follow-card .favatar #handle {
+          color: #4A7C59;
+          font-family: "Roboto", sans-serif; }
+      .followcardholders .fcardholder .follow-card .fsime {
+        display: flex;
+        width: 100%;
+        height: 100px;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+        font-size: 12px; }
+        .followcardholders .fcardholder .follow-card .fsime .fbio {
+          margin: 3px; }
+
+a {
+  text-decoration: none;
+  color: #161925; }
+
+.followcardholders {
+  display: flex;
+  flex-wrap: wrap; }
+  .followcardholders .fcardholder {
+    width: 30%; }
+    .followcardholders .fcardholder .follow-card {
+      margin-top: 80px;
+      margin-left: 40px;
+      background-color: white;
+      height: 260px;
+      color: #161925;
+      font-family: "Fauna One", serif; }
+      .followcardholders .fcardholder .follow-card .fcover {
+        height: 50%;
+        background-color: salmon;
+        overflow: hidden; }
+        .followcardholders .fcardholder .follow-card .fcover img {
+          position: center;
+          height: 100%;
+          width: 100; }
+      .followcardholders .fcardholder .follow-card .favatar {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: stretch;
+        align-content: stretch; }
+        .followcardholders .fcardholder .follow-card .favatar img {
+          height: 70px;
+          width: 70px;
+          border-radius: 50%;
+          margin-top: -25px;
+          margin-left: 10px;
+          border: 3px white solid; }
+        .followcardholders .fcardholder .follow-card .favatar .fline {
+          display: flex;
+          flex-direction: column;
+          flex-wrap: nowrap;
+          justify-content: flex-start;
+          align-items: stretch;
+          align-content: stretch;
+          margin-left: 10px;
+          margin-top: 5px; }
+        .followcardholders .fcardholder .follow-card .favatar #name {
+          font-weight: bold;
+          font-size: 20px;
+          margin-bottom: 3px; }
+        .followcardholders .fcardholder .follow-card .favatar #handle {
+          color: #4A7C59;
+          font-family: "Roboto", sans-serif; }
+      .followcardholders .fcardholder .follow-card .fsime {
+        display: flex;
+        width: 100%;
+        height: 100px;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+        font-size: 12px; }
+        .followcardholders .fcardholder .follow-card .fsime .fbio {
+          margin: 3px; }

@@ -32,10 +32,10 @@ class Roll extends Component {
         console.log('The posts:', this.state.posts)
         return (
             <div>
-                <ul className="postsholder">
+                <ul className="postsholders">
                 {this.state.posts.map(function(post, i){
         return (
-            <div key={i} className={`outterbox1`}>
+            <div key={i} className="out">
                 <div className="toppart">
                     <div className="avatarholder">
                         <img alt="" src={post.avatar} />
