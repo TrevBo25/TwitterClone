@@ -14,12 +14,14 @@ const initialState = {
         cover: "https://cdn.theculturetrip.com/wp-content/uploads/2017/06/smhldn9-1024x695.jpg"
     },
     pageData: {},
-    profile: false
+    profile: false,
+    profileView: "roll"
 }
 
 const UPDATE_USER = "UPDATE_USER";
 const UPDATE_PAGE_DATA = "UPDATE_PAGE_DATA";
 const VIEW_PROFILE = "VIEW_PROFILE";
+const CHANGE_PRO_VIEW = "CHANGE_PRO_VIEW";
 
 export default
 function reducer(state=initialState, action) {
@@ -31,6 +33,8 @@ function reducer(state=initialState, action) {
             return Object.assign({}, state , {pageData: action.payload})
         case VIEW_PROFILE:
             return Object.assign({}, state, {profile: action.payload})
+        case CHANGE_PRO_VIEW:
+            return Object.assign({}, state, {profileView: action.payload})
         default:
         return state
     }
@@ -44,10 +48,8 @@ export function updateUser(userData) {
 }
 
 export function updatePageData(handle) {
-        console.log(handle)
         var request = axios.post('/api/alluserdata', {handle})
         .then( response => {
-            console.log('thishthisthist', response.data);
             return response.data
         })
 
@@ -61,5 +63,12 @@ export function viewProfile(bool){
     return{
         type: VIEW_PROFILE,
         payload: bool
+    }
+}
+
+export function changeProView(view){
+    return{
+        type: CHANGE_PRO_VIEW,
+        payload: view
     }
 }

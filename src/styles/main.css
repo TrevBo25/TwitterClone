@@ -1117,13 +1117,25 @@ a {
         display: flex;
         justify-content: flex-start; }
         .profiledad .papaa .bottombar .holderthing .posts {
-          margin-left: 25px;
-          margin-right: 25px;
+          padding-left: 25px;
+          padding-right: 25px;
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: center; }
           .profiledad .papaa .bottombar .holderthing .posts .postsnumber {
+            font-size: 20px;
+            margin-top: 5px;
+            color: #4A7C59; }
+        .profiledad .papaa .bottombar .holderthing .postsselected {
+          padding-left: 25px;
+          padding-right: 25px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          background-color: lightgray; }
+          .profiledad .papaa .bottombar .holderthing .postsselected .postsnumber {
             font-size: 20px;
             margin-top: 5px;
             color: #4A7C59; }
@@ -1137,7 +1149,7 @@ a {
       align-items: stretch;
       align-content: stretch;
       background-color: #eaf2e2; }
-      .profiledad .papaa .frame .main-content {
+      .profiledad .papaa .frame .main-contentp {
         background-color: #eaf2e2;
         width: 80%;
         height: calc(100vh);
@@ -1188,3 +1200,117 @@ a {
       margin-top: 20px;
       font-family: "Roboto", sans-serif;
       font-size: 15px; }
+
+.followcardholders {
+  display: flex;
+  flex-wrap: wrap; }
+  .followcardholders .fcardholder {
+    width: 30%; }
+    .followcardholders .fcardholder .follow-card {
+      margin-top: 80px;
+      margin-left: 40px;
+      background-color: white;
+      height: 260px;
+      color: #161925;
+      font-family: "Fauna One", serif; }
+      .followcardholders .fcardholder .follow-card .fcover {
+        height: 50%;
+        background-color: salmon;
+        overflow: hidden; }
+        .followcardholders .fcardholder .follow-card .fcover img {
+          position: center;
+          height: 100%;
+          width: 100; }
+      .followcardholders .fcardholder .follow-card .favatar {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: stretch;
+        align-content: stretch; }
+        .followcardholders .fcardholder .follow-card .favatar img {
+          height: 70px;
+          width: 70px;
+          border-radius: 50%;
+          margin-top: -25px;
+          margin-left: 10px;
+          border: 3px white solid; }
+        .followcardholders .fcardholder .follow-card .favatar .fline {
+          display: flex;
+          flex-direction: column;
+          flex-wrap: nowrap;
+          justify-content: flex-start;
+          align-items: stretch;
+          align-content: stretch;
+          margin-left: 10px;
+          margin-top: 5px; }
+        .followcardholders .fcardholder .follow-card .favatar #name {
+          font-weight: bold;
+          font-size: 20px;
+          margin-bottom: 3px; }
+        .followcardholders .fcardholder .follow-card .favatar #handle {
+          color: #4A7C59;
+          font-family: "Roboto", sans-serif; }
+      .followcardholders .fcardholder .follow-card .fsime {
+        display: flex;
+        width: 100%;
+        height: 100px;
+        justify-content: space-around;
+        align-items: center; }
+
+.followcardholders {
+  display: flex;
+  flex-wrap: wrap; }
+  .followcardholders .fcardholder {
+    width: 30%; }
+    .followcardholders .fcardholder .follow-card {
+      margin-top: 80px;
+      margin-left: 40px;
+      background-color: white;
+      height: 260px;
+      color: #161925;
+      font-family: "Fauna One", serif; }
+      .followcardholders .fcardholder .follow-card .fcover {
+        height: 50%;
+        background-color: salmon;
+        overflow: hidden; }
+        .followcardholders .fcardholder .follow-card .fcover img {
+          position: center;
+          height: 100%;
+          width: 100; }
+      .followcardholders .fcardholder .follow-card .favatar {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: stretch;
+        align-content: stretch; }
+        .followcardholders .fcardholder .follow-card .favatar img {
+          height: 70px;
+          width: 70px;
+          border-radius: 50%;
+          margin-top: -25px;
+          margin-left: 10px;
+          border: 3px white solid; }
+        .followcardholders .fcardholder .follow-card .favatar .fline {
+          display: flex;
+          flex-direction: column;
+          flex-wrap: nowrap;
+          justify-content: flex-start;
+          align-items: stretch;
+          align-content: stretch;
+          margin-left: 10px;
+          margin-top: 5px; }
+        .followcardholders .fcardholder .follow-card .favatar #name {
+          font-weight: bold;
+          font-size: 20px;
+          margin-bottom: 3px; }
+        .followcardholders .fcardholder .follow-card .favatar #handle {
+          color: #4A7C59;
+          font-family: "Roboto", sans-serif; }
+      .followcardholders .fcardholder .follow-card .fsime {
+        display: flex;
+        width: 100%;
+        height: 100px;
+        justify-content: space-around;
+        align-items: center; }

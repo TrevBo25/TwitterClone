@@ -30,7 +30,6 @@ class ProfileCard extends Component {
 }
 
 function mapStateToProps( state ) {
-    console.log(state)
     return { user: state.user, pageData: state.pageData  }
 }
 

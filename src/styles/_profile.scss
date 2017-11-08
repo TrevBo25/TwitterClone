@@ -39,12 +39,26 @@
                 display: flex;
                 justify-content: flex-start;
                 .posts{
-                    margin-left: 25px;
-                    margin-right: 25px;
+                    padding-left: 25px;
+                    padding-right: 25px;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
+                    .postsnumber{
+                        font-size: 20px;
+                        margin-top: 5px;
+                        color: $color1;
+                    }
+                }
+                .postsselected{
+                    padding-left: 25px;
+                    padding-right: 25px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: lightgray;
                     .postsnumber{
                         font-size: 20px;
                         margin-top: 5px;
@@ -63,7 +77,7 @@
             align-items: stretch;
             align-content: stretch;
             background-color: rgb(234, 242, 226);
-            .main-content{
+            .main-contentp{
                 background-color: rgb(234, 242, 226);
                 width: 80%;
                 height: calc(100vh) ;
