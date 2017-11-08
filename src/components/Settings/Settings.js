@@ -100,9 +100,7 @@ export default class Settings extends Component {
       render() {
         return (
             <div>
-                <Nav />
             <div className="settingsdad">
-                <Sidebar />
                 <div className="settings-body">
                 <div className="settings-form">
 
