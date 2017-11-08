@@ -13,14 +13,13 @@ class Stream extends Component {
     componentDidMount(){
         console.log('Stream component did mount!')
 
-        console.log('I like pizza');
-        
         console.log(this.props.pageData)
         if(this.props.match) {
                 console.log(this.props.match.params.handle)
                 this.props.updatePageData(this.props.match.params.handle)
             }
         }
+
         
         render() {
         return (
@@ -28,12 +27,19 @@ class Stream extends Component {
                 <div>
                     <Nav />
                 </div>
-     
+                {
+                    (this.props.pageData)
+                    ? <div className="frame">
+                        <Sidebar test={this.props.pageData}/>
+                        <MainContent test={this.props.pageData}/>
+                    </div>
 
-                <div className="frame">
-                    <Sidebar />
-                    <MainContent />
-                </div>
+                    : <div className="frame">
+                        <Sidebar />
+                        <MainContent />
+                    </div>
+                }
+
             </div>
         );
     }

@@ -33,7 +33,7 @@ app.post('/api/getfollowing', controller.getFollowing);
 app.post('/api/getfollowers', controller.getFollowers);
 app.post('/api/follow', controller.follow);
 app.post('/api/unfollow', controller.unfollow);
-app.get('/api/getposts', controller.getPosts);
+app.post('/api/getposts', controller.getPosts);
 app.post('/api/fposts', controller.getFollowersPosts);
 app.post('/api/getuserfromhandle', controller.getUserFromHandle);
 app.post('/api/changehandle', controller.changeHandle);
@@ -54,13 +54,20 @@ const storage = multer.diskStorage({
  // const profile = multer({storage});
  var type = upload.single('file')
 
- app.post('/profile', type, (req, res, next) => {
-         console.log(req.body, 'Body')
-         console.log(req.file.originalname)
-         res.json(req.file)
-         
-         
- });
+//  app.post('/profile', type, (req, res, next) => {
+//          console.log(req.body, 'Body')
+//          console.log(req.file.originalname)
+//          res.json(req.file)
+//  });
+
+app.post('/profile', upload.single('avatar'), function (req, res, next) {
+    // req.file is the `avatar` file
+    // req.body will hold the text fields, if there were any
+    console.log(req)
+  })
+  
+
+
 
 //  uploadSuccess({data}){
 //     console.log('response data' ,data)

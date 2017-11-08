@@ -74,6 +74,7 @@ class Landing extends Component {
             
             return (
                 <div key={i} className={`outterbox${id}`}>
+                    
                     <div className="toppart">
                         <div className="avatarholder">
                             <img alt="" src={e.avatar} />
@@ -123,7 +124,7 @@ class Landing extends Component {
                     <Register />
                     <div className="gobackbutton" onClick={this.selectStart}><h1>Go Back</h1></div>
                 </div> : null}
-
+                
             </div>
         );
     }

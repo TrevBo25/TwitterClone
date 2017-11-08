@@ -3,14 +3,14 @@ import axios from 'axios'
 const initialState = {
 
     user: {
-        id: 13,
-        name: 'Limone Resqueza',
-        handle: 'fastgirl222',
-        email: 'l.resquesa@gmail.com',
-        avatar: 'https://randomuser.me/api/portraits/women/43.jpg',
-        bio: 'I love long walks on the beach and turtles.',
-        location: 'Honolulu, Hawaii',
-        cover: 'https://fb-hoverboard.s3.amazonaws.com/uploads/crazy-cover-photo-122113.jpg'
+        id: '',
+        name: '',
+        handle: '',
+        email: '',
+        avatar: '',
+        bio: '',
+        location: '',
+        cover: ''
     },
     pageData: {}
 }
@@ -42,7 +42,6 @@ export function updatePageData(handle) {
         console.log(handle)
         var request = axios.post('/api/alluserdata', {handle})
         .then( response => {
-            console.log('thishthisthist', response.data);
             return response.data
         })
 

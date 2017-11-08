@@ -22,13 +22,17 @@ class MainContent extends Component {
     
 
     getPosts() {
-        axios.get('api/getposts', 'peter').then((response) => {
-            console.log('Getting posts... ', response)
-            this.setState({posts: response.data})
-        })
+        
+        if(this.props.user){
+            console.log('viewing current user')
+            axios.post('api/getposts', {handle:this.props.user.handle}).then((response) => {
+                console.log('Getting posts... ', response)
+                this.setState({posts: response.data})
+            })
 
-    }
+        }
 
+        }
     
     render() {
 
