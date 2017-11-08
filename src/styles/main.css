@@ -97,23 +97,26 @@ table {
   animation-iteration-count: infinite; }
 
 .dropdown {
-  margin-top: 1%;
+  margin-top: .5%;
   margin-right: 7%;
   height: 100%; }
 
 .dropdown img {
-  position: absolute;
   height: 60px;
   width: 60px;
   border-radius: 50%; }
 
 .dropdown-container {
-  display: none; }
+  display: none;
+  right: 4%; }
 
 .dropdown:hover .dropdown-container {
-  display: block; }
+  display: block;
+  align-content: center;
+  position: absolute; }
 
 .dropdown-content {
+  font-family: "Roboto", sans-serif;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -123,20 +126,24 @@ table {
 
 .dropdown-content li {
   text-decoration: none;
-  text-align: center;
-  width: 100px;
+  text-align: left;
+  width: 153px;
   background: #f9fff2;
-  padding: 12px 16px 12px 16px;
+  padding: 18px 16px 18px 16px;
   border: 1px solid #68B0AB; }
+
+.dropdown-content li:hover {
+  cursor: pointer; }
 
 .dropdown-content a {
   text-decoration: none;
   color: #161925; }
 
-textarea {
+.talko-box {
   background: white;
   display: block;
   font-size: 20px;
+  line-height: 23px;
   font-family: 'Roboto';
   letter-spacing: 1px;
   width: 400px;
@@ -149,12 +156,12 @@ textarea {
   -moz-transition: all .5s ease;
   transition: all .5s ease; }
 
-textarea {
+.talko-box {
   resize: none;
   opacity: 1; }
 
-textarea:hover,
-textarea:focus {
+.talko-box:hover,
+.talko-box:focus {
   opacity: 1;
   color: black;
   border: 1px solid #C8D5B9;
@@ -162,15 +169,19 @@ textarea:focus {
   margin-top: 56px;
   padding-bottom: 62px; }
 
-textarea[type="text"]:focus {
+.talko-box[type="text"]:focus {
   box-shadow: inset 0 1px 2px #161925, 0px 1px 15px #C8D5B9;
   border: 1px solid #C8D5B9;
   outline: none; }
 
-textarea.break {
+.talko-box.break {
   word-wrap: break-word;
   word-break: break-all;
   height: 62px; }
+
+.usernname {
+  font-weight: bold;
+  font-size: 20px; }
 
 .sidebar {
   background-color: #eaf2e2;
@@ -265,7 +276,12 @@ a {
   background-color: white; }
 
 .settingsdad {
-  max-width: 20%;
+  max-width: 100%;
+  display: flex;
+  background-color: white;
+  width: 65%;
+  margin-left: 15px;
+  margin-top: 23px;
   /* Add a background color on hover */ }
   .settingsdad .btn-group {
     background-color: #4CAF50;
@@ -284,9 +300,11 @@ a {
     /* Make the buttons appear below each other */
     margin: 10px; }
   .settingsdad #save {
-    width: 33.333%; }
+    width: 140px; }
   .settingsdad .btn-group:hover {
     background-color: #3e8e41; }
+  .settingsdad .settings-body {
+    padding: 60px 40px; }
   .settingsdad input[type=text], .settingsdad [type=password], .settingsdad select {
     width: 100%;
     padding: 12px 20px;
@@ -294,23 +312,25 @@ a {
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
-    box-sizing: border-box; }
-  .settingsdad h1 {
-    padding-left: 20px; }
-  .settingsdad .settings-body {
-    width: 100%;
-    background: #68B0AB;
-    align-items: center;
-    height: 100vh; }
-  .settingsdad .settings-form {
-    transform: translate(-50%, -50%);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 50%;
-    height: 500px;
-    border: 2px solid black;
-    text-align: center; }
+    box-sizing: border-box;
+    font-size: 12px;
+    font-size: 20px;
+    height: 40px;
+    width: 400px; }
+  .settingsdad .input-field {
+    margin: 50px 0px; }
+    .settingsdad .input-field h1 {
+      font-family: Roboto;
+      font-weight: 600;
+      padding-left: 20px; }
+  .settingsdad .cool-line {
+    width: 900px;
+    border: 0;
+    height: 1px;
+    background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0); }
 
 .papa {
   width: 100%;
@@ -1126,7 +1146,8 @@ a {
           display: flex;
           flex-direction: column;
           justify-content: center;
-          align-items: center; }
+          align-items: center;
+          cursor: crosshair; }
           .profiledad .papaa .bottombar .holderthing .posts .postsnumber {
             font-size: 20px;
             margin-top: 5px;
@@ -1138,7 +1159,8 @@ a {
           flex-direction: column;
           justify-content: center;
           align-items: center;
-          background-color: lightgray; }
+          background-color: lightgray;
+          cursor: default; }
           .profiledad .papaa .bottombar .holderthing .postsselected .postsnumber {
             font-size: 20px;
             margin-top: 5px;

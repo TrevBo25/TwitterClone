@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import Roll from './../Roll/Roll'
 import Compose from './../Compose/Compose'
 import { updateUser, viewProfile } from '../../ducks/reducer';
+import Settings from "../Settings/Settings"
 
 import axios from 'axios';
 import { Link } from 'react-router-dom';
@@ -41,6 +42,7 @@ class MainContent extends Component {
                 >{this.props.user.handle}
                 </Link>
                 <Roll />
+                {/* <Settings /> */}
             </div>
         );
     }
