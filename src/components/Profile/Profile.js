@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { updatePageData, viewProfile } from '../../ducks/reducer';
 import Nav from '../Nav/Nav';
 import Roll from '../Roll/Roll';
-import Sidebar from '../Sidebar/Sidebar'
+import Sidebar from '../Sidebar/Sidebar';
 
 class Profile extends Component {
     constructor() {
@@ -64,7 +64,7 @@ class Profile extends Component {
                         </div>
                     </div>
                 </div>
-                : <div>LOADING</div>}
+                : <div>loading...</div>}
             </div>
         );
     }

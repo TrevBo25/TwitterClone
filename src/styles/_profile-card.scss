@@ -1,0 +1,52 @@
+.procard{
+    background-color: rgb(234, 242, 226);
+    margin-left: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: $primaryfont;
+    color: $color0;
+    .proavatarholder{
+        height: 220px;
+        width: 220px;
+        transform: translateY(-200px);
+        overflow: hidden;
+        border-radius: 50%;
+        border: 4px white solid;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        .proavatar{
+            max-width: 100%;
+            height: 100%;
+            background-size: 100% 100%;
+            position:relative;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+    .prowords{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        transform: translateY(-170px);
+        .proname{
+            font-size: 35px;
+        }
+        .prohandle{
+            margin-top: 5px;
+            font-size: 18px;
+            color: $color1
+        }
+        .probio{
+            margin-top: 20px;
+            font-family: $secondaryfont;
+            font-size: 15px;
+        }
+    }
+}

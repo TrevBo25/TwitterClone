@@ -3,15 +3,15 @@ import axios from 'axios'
 const initialState = {
 
     user: {
-        id: 68,
-        name: 'superman',
-        handle: 'clark',
-        email: 'clark@kent.com',
-        password: 'lois',
-        avatar: 'https://s-media-cache-ak0.pinimg.com/236x/b2/d7/73/b2d7733f586b8d56d2e48e30978f341b--batman-fan-art-superman-artwork.jpg',
-        bio: 'faster than a speeding bullet',
-        location: 'metropolis',
-        cover: 'http://batmangothamcity.net/wp-content/uploads/2013/08/smallville-metropolis.png'
+        id: 66,
+        name: "spiderman",
+        handle: "peter",
+        email: "peter@parker.com",
+        password: "maryjane",
+        avatar: "https://i.pinimg.com/736x/1a/50/65/1a50655c5e33b6a680aeafcb55bb3fed--black-spider-spider-man.jpg",
+        bio: "bit by a spider",
+        location: "forest hills, NY",
+        cover: "https://cdn.theculturetrip.com/wp-content/uploads/2017/06/smhldn9-1024x695.jpg"
     },
     pageData: {},
     profile: false

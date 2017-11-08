@@ -14,8 +14,8 @@ export default function() {
         <Switch>
             <Route component={ Primary } exact path="/"/>
             <Route component={ Register } path="/register"/>
-            <Route component={ Profile } path='/:handle' />
             <Route component={ Settings } path='/settings'/>
+            <Route component={ Profile } path='/:handle' />
         </Switch>
     )
 }

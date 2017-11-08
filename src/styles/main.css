@@ -315,7 +315,7 @@ a {
 .papa {
   width: 100%;
   height: 100%;
-  background-color: #FAF3DD;
+  background-color: #eaf2e2;
   position: relative;
   font-family: "Roboto", sans-serif; }
   .papa .postsholder {
@@ -1142,3 +1142,49 @@ a {
         width: 80%;
         height: calc(100vh);
         height: 100%; }
+
+.procard {
+  background-color: #eaf2e2;
+  margin-left: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: "Fauna One", serif;
+  color: #161925; }
+  .procard .proavatarholder {
+    height: 220px;
+    width: 220px;
+    transform: translateY(-200px);
+    overflow: hidden;
+    border-radius: 50%;
+    border: 4px white solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center; }
+    .procard .proavatarholder .proavatar {
+      max-width: 100%;
+      height: 100%;
+      background-size: 100% 100%;
+      position: relative;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+  .procard .prowords {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    transform: translateY(-170px); }
+    .procard .prowords .proname {
+      font-size: 35px; }
+    .procard .prowords .prohandle {
+      margin-top: 5px;
+      font-size: 18px;
+      color: #4A7C59; }
+    .procard .prowords .probio {
+      margin-top: 20px;
+      font-family: "Roboto", sans-serif;
+      font-size: 15px; }
