@@ -14,11 +14,7 @@ class Nav extends Component {
             //-- Work in Progress, added over weekend -- //
             <div className="nav-container">
                 <div className="nav">
-<<<<<<< HEAD
                     <div className="nav-logo"><a href="/"><img src={logo}/></a></div>
-=======
-                <div className="nav-logo"><Link id="link" to=""><img src={logo}/></Link></div>
->>>>>>> 99b3ac044ab19a33564c57f073f45541f4376bf6
                     <div className="input-container">
                         <textarea rows="1" cols="30" wrap="hard" maxlength="80" type="text" placeholder="Let's Talko Bout It"/>
                     </div>

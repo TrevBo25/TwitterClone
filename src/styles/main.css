@@ -1131,7 +1131,8 @@ a {
           display: flex;
           flex-direction: column;
           justify-content: center;
-          align-items: center; }
+          align-items: center;
+          cursor: crosshair; }
           .profiledad .papaa .bottombar .holderthing .posts .postsnumber {
             font-size: 20px;
             margin-top: 5px;
@@ -1143,7 +1144,8 @@ a {
           flex-direction: column;
           justify-content: center;
           align-items: center;
-          background-color: lightgray; }
+          background-color: lightgray;
+          cursor: default; }
           .profiledad .papaa .bottombar .holderthing .postsselected .postsnumber {
             font-size: 20px;
             margin-top: 5px;
