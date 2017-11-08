@@ -28,7 +28,7 @@ class Landing extends Component {
     }
 
     componentWillMount(){
-        axios.get('http://localhost:8008/api/getposts')
+        axios.get('http://localhost:8008/api/getpostslanding')
         .then( response => {
         console.log(response.data)
         this.setState({

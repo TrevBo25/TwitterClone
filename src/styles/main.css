@@ -48,7 +48,7 @@ table {
   height: 70px;
   position: fixed;
   color: #14171a;
-  background: -webkit-linear-gradient(white, #FAF3DD);
+  background: -webkit-linear-gradient(white, #f9fff2);
   border-bottom: 1px solid #a0a0a0;
   display: flex;
   justify-content: space-between;
@@ -64,13 +64,47 @@ table {
   -webkit-transform: rotate(-15deg);
   transform: rotate(-15deg); }
 
+@-webkit-keyframes nav-logo {
+  50% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg); }
+  100% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg); } }
+
+@keyframes nav-logo {
+  50% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg); }
+  100% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg); } }
+
+.nav-logo {
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent; }
+
+.nav-logo:hover, .nav-logo:focus, .nav-logo:active {
+  -webkit-animation-name: nav-logo;
+  animation-name: nav-logo;
+  -webkit-animation-duration: 0.25s;
+  animation-duration: 0.25s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite; }
+
 .dropdown {
   margin-top: 1%;
   margin-right: 7%;
-  height: 100%;
-  width: 60px; }
+  height: 100%; }
 
 .dropdown img {
+  position: absolute;
+  height: 60px;
+  width: 60px;
   border-radius: 50%; }
 
 .dropdown-container {
@@ -91,44 +125,55 @@ table {
   text-decoration: none;
   text-align: center;
   width: 100px;
-  background: white;
-  border-bottom: 1px solid black;
+  background: #f9fff2;
   padding: 12px 16px 12px 16px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.9); }
+  border: 1px solid #68B0AB; }
 
 .dropdown-content a {
-  text-decoration: none; }
+  text-decoration: none;
+  color: #161925; }
 
-input {
+textarea {
   background: white;
   display: block;
-  font-size: 17px;
+  font-size: 20px;
   font-family: 'Roboto';
   letter-spacing: 1px;
-  width: 360px;
-  margin: 2px auto;
+  width: 400px;
+  margin-top: 0px;
   padding: 5px 10px 5px 10px;
   border-radius: 5px;
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.8), 0px 1px 1px rgba(255, 255, 255, 0.8);
-  border: 1px solid #FAF3DD; }
+  border: 1px solid #FAF3DD;
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  transition: all .5s ease; }
 
-input {
-  opacity: 0.9; }
+textarea {
+  resize: none;
+  opacity: 1; }
 
-input:hover,
-input:focus {
-  opacity: .7;
+textarea:hover,
+textarea:focus {
+  opacity: 1;
   color: black;
   border: 1px solid #C8D5B9;
-  box-shadow: 2px 2px 2px #161925; }
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.8);
+  margin-top: 56px;
+  padding-bottom: 62px; }
 
-input[type="text"]:focus {
-  box-shadow: inset 0 1px 2px #8FC0A9, 0px 1px 15px #C8D5B9;
+textarea[type="text"]:focus {
+  box-shadow: inset 0 1px 2px #161925, 0px 1px 15px #C8D5B9;
   border: 1px solid #C8D5B9;
   outline: none; }
 
+textarea.break {
+  word-wrap: break-word;
+  word-break: break-all;
+  height: 62px; }
+
 .sidebar {
-  background-color: #C8D5B9;
+  background-color: #eaf2e2;
   width: 25%;
   height: 100vh; }
 
@@ -136,10 +181,11 @@ img {
   width: 100%; }
 
 .main-content {
-  background-color: #C8D5B9;
+  background-color: #eaf2e2;
   width: 80%;
   height: calc(100vh);
-  overflow: auto; }
+  overflow: auto;
+  height: 100%; }
 
 .frame {
   height: 100%;
@@ -149,15 +195,16 @@ img {
   flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: stretch;
-  align-content: stretch; }
+  align-content: stretch;
+  background-color: #eaf2e2; }
 
-.postsholder {
+.postsholders {
   margin-top: 20px; }
 
 a {
   text-decoration: none; }
 
-.outterbox1 {
+.out {
   width: 65%;
   border: 1px darkgray solid;
   padding: 7px;
@@ -166,45 +213,45 @@ a {
   background-color: white;
   margin-left: 1%;
   color: #161925; }
-  .outterbox1 .toppart {
+  .out .toppart {
     display: flex;
     justify-content: flex-start;
     padding-top: 10px;
     padding-left: 10px;
     padding-right: 10px; }
-    .outterbox1 .toppart .avatarholder img {
+    .out .toppart .avatarholder img {
       height: 55px;
       width: 55px;
       border-radius: 5px;
       margin-right: 5px; }
-    .outterbox1 .toppart .names {
+    .out .toppart .names {
       display: flex;
       align-items: center;
       justify-content: center;
       margin-left: 5px; }
-      .outterbox1 .toppart .names .name {
+      .out .toppart .names .name {
         font-size: 20px;
         font-family: "Fauna One", serif;
         color: #161925; }
-      .outterbox1 .toppart .names .handle {
+      .out .toppart .names .handle {
         margin-left: 5px;
         color: #4A7C59; }
-  .outterbox1 .middlepart .guts {
+  .out .middlepart .guts {
     word-wrap: break-word;
     width: 85%;
     font-size: 17px;
     margin-left: 80px; }
-  .outterbox1 .bottompart {
+  .out .bottompart {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     padding: 10px; }
-    .outterbox1 .bottompart .gutsimage {
+    .out .bottompart .gutsimage {
       display: flex;
       justify-content: flex-start;
       margin-left: 65px; }
-      .outterbox1 .bottompart .gutsimage img {
+      .out .bottompart .gutsimage img {
         max-width: 80%;
         height: 100%;
         border-radius: 5px; }
@@ -217,62 +264,58 @@ a {
 .composing {
   background-color: white; }
 
-.btn-group {
-  background-color: #4CAF50;
-  /* Green background */
-  border: 1px solid green;
-  /* Green border */
-  color: white;
-  /* White text */
-  padding: 10px 24px;
-  /* Some padding */
-  cursor: pointer;
-  /* Pointer/hand icon */
-  width: 100%;
-  /* Set a width if needed */
-  display: block;
-  /* Make the buttons appear below each other */
-  margin: 10px; }
-
-#save {
-  width: 33.333%; }
-
-/* Add a background color on hover */
-.btn-group:hover {
-  background-color: #3e8e41; }
-
-input[type=text], [type=password], select {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 10px 10px;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box; }
-
-h1 {
-  padding-left: 20px; }
-
-.settings-body {
-  width: 100%;
-  background: #68B0AB;
-  align-items: center;
-  height: 100vh; }
-
-.settings-form {
-  transform: translate(-50%, -50%);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 50%;
-  height: 500px;
-  border: 2px solid black;
-  text-align: center; }
+.settingsdad {
+  max-width: 20%;
+  /* Add a background color on hover */ }
+  .settingsdad .btn-group {
+    background-color: #4CAF50;
+    /* Green background */
+    border: 1px solid green;
+    /* Green border */
+    color: white;
+    /* White text */
+    padding: 10px 24px;
+    /* Some padding */
+    cursor: pointer;
+    /* Pointer/hand icon */
+    width: 100%;
+    /* Set a width if needed */
+    display: block;
+    /* Make the buttons appear below each other */
+    margin: 10px; }
+  .settingsdad #save {
+    width: 33.333%; }
+  .settingsdad .btn-group:hover {
+    background-color: #3e8e41; }
+  .settingsdad input[type=text], .settingsdad [type=password], .settingsdad select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 10px 10px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; }
+  .settingsdad h1 {
+    padding-left: 20px; }
+  .settingsdad .settings-body {
+    width: 100%;
+    background: #68B0AB;
+    align-items: center;
+    height: 100vh; }
+  .settingsdad .settings-form {
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    height: 500px;
+    border: 2px solid black;
+    text-align: center; }
 
 .papa {
   width: 100%;
   height: 100%;
-  background-color: #FAF3DD;
+  background-color: #eaf2e2;
   position: relative;
   font-family: "Roboto", sans-serif; }
   .papa .postsholder {
@@ -310,7 +353,10 @@ h1 {
           margin-left: 5px; }
           .papa .postsholder .outterbox0 .toppart .names .name {
             font-size: 30px;
-            font-family: "Fauna One", serif; }
+            font-family: "Fauna One", serif;
+            transform: translateX(-15px);
+            margin-bottom: 7px;
+            margin-top: -4px; }
           .papa .postsholder .outterbox0 .toppart .names .handle {
             margin-left: 5px;
             color: #4A7C59; }
@@ -331,10 +377,11 @@ h1 {
         .papa .postsholder .outterbox0 .bottompart .gutsimage {
           margin-right: 10px; }
           .papa .postsholder .outterbox0 .bottompart .gutsimage img {
-            height: 100px;
+            height: 140px;
             width: 200px;
             float: right;
-            border-radius: 5px; }
+            border-radius: 5px;
+            transform: translateY(-17px); }
     .papa .postsholder .outterbox1 {
       height: 180px;
       width: 62%;
@@ -363,7 +410,10 @@ h1 {
           margin-left: 5px; }
           .papa .postsholder .outterbox1 .toppart .names .name {
             font-size: 30px;
-            font-family: "Fauna One", serif; }
+            font-family: "Fauna One", serif;
+            transform: translateX(-15px);
+            margin-bottom: 7px;
+            margin-top: 12px; }
           .papa .postsholder .outterbox1 .toppart .names .handle {
             margin-left: 5px;
             color: #4A7C59; }
@@ -383,10 +433,12 @@ h1 {
           font-size: 25px;
           margin-top: 15px; }
         .papa .postsholder .outterbox1 .bottompart .gutsimage {
+          display: flex;
+          justify-content: flex-end;
           margin-right: 10px; }
           .papa .postsholder .outterbox1 .bottompart .gutsimage img {
-            height: 180px;
-            width: 320px;
+            max-height: 180px;
+            width: auto;
             float: right;
             transform: translateY(-30px);
             border-radius: 5px; }
@@ -418,7 +470,10 @@ h1 {
           margin-left: 5px; }
           .papa .postsholder .outterbox2 .toppart .names .name {
             font-size: 30px;
-            font-family: "Fauna One", serif; }
+            font-family: "Fauna One", serif;
+            transform: translateX(-15px);
+            margin-bottom: 7px;
+            margin-top: 15px; }
           .papa .postsholder .outterbox2 .toppart .names .handle {
             margin-left: 5px;
             color: #4A7C59; }
@@ -473,7 +528,10 @@ h1 {
           margin-left: 5px; }
           .papa .postsholder .outterbox3 .toppart .names .name {
             font-size: 30px;
-            font-family: "Fauna One", serif; }
+            font-family: "Fauna One", serif;
+            transform: translateX(-15px);
+            margin-bottom: 7px;
+            margin-top: -4px; }
           .papa .postsholder .outterbox3 .toppart .names .handle {
             margin-left: 5px;
             color: #4A7C59; }
@@ -494,10 +552,11 @@ h1 {
         .papa .postsholder .outterbox3 .bottompart .gutsimage {
           margin-right: 10px; }
           .papa .postsholder .outterbox3 .bottompart .gutsimage img {
-            height: 100px;
+            height: 140px;
             width: 200px;
             float: right;
-            border-radius: 5px; }
+            border-radius: 5px;
+            transform: translateY(-17px); }
     .papa .postsholder .outterbox4 {
       height: 180px;
       width: 47%;
@@ -526,7 +585,10 @@ h1 {
           margin-left: 5px; }
           .papa .postsholder .outterbox4 .toppart .names .name {
             font-size: 30px;
-            font-family: "Fauna One", serif; }
+            font-family: "Fauna One", serif;
+            transform: translateX(-15px);
+            margin-bottom: 7px;
+            margin-top: 15px; }
           .papa .postsholder .outterbox4 .toppart .names .handle {
             margin-left: 5px;
             color: #4A7C59; }
@@ -581,7 +643,10 @@ h1 {
           margin-left: 5px; }
           .papa .postsholder .outterbox5 .toppart .names .name {
             font-size: 30px;
-            font-family: "Fauna One", serif; }
+            font-family: "Fauna One", serif;
+            transform: translateX(-15px);
+            margin-bottom: 7px;
+            margin-top: 15px; }
           .papa .postsholder .outterbox5 .toppart .names .handle {
             margin-left: 5px;
             color: #4A7C59; }
@@ -636,7 +701,10 @@ h1 {
           margin-left: 5px; }
           .papa .postsholder .outterbox6 .toppart .names .name {
             font-size: 30px;
-            font-family: "Fauna One", serif; }
+            font-family: "Fauna One", serif;
+            transform: translateX(-15px);
+            margin-bottom: 7px;
+            margin-top: -4px; }
           .papa .postsholder .outterbox6 .toppart .names .handle {
             margin-left: 5px;
             color: #4A7C59; }
@@ -657,10 +725,11 @@ h1 {
         .papa .postsholder .outterbox6 .bottompart .gutsimage {
           margin-right: 10px; }
           .papa .postsholder .outterbox6 .bottompart .gutsimage img {
-            height: 100px;
-            width: 170px;
+            height: 130px;
+            width: 190px;
             float: right;
-            border-radius: 5px; }
+            border-radius: 5px;
+            transform: translateY(-10px); }
     .papa .postsholder .outterbox7 {
       height: 180px;
       width: 30%;
@@ -689,7 +758,10 @@ h1 {
           margin-left: 5px; }
           .papa .postsholder .outterbox7 .toppart .names .name {
             font-size: 30px;
-            font-family: "Fauna One", serif; }
+            font-family: "Fauna One", serif;
+            transform: translateX(-15px);
+            margin-bottom: 7px;
+            margin-top: -4px; }
           .papa .postsholder .outterbox7 .toppart .names .handle {
             margin-left: 5px;
             color: #4A7C59; }
@@ -710,10 +782,11 @@ h1 {
         .papa .postsholder .outterbox7 .bottompart .gutsimage {
           margin-right: 10px; }
           .papa .postsholder .outterbox7 .bottompart .gutsimage img {
-            height: 100px;
-            width: 170px;
+            height: 130px;
+            width: 190px;
             float: right;
-            border-radius: 5px; }
+            border-radius: 5px;
+            transform: translateY(-10px); }
     .papa .postsholder .outterbox8 {
       height: 180px;
       width: 30%;
@@ -742,7 +815,10 @@ h1 {
           margin-left: 5px; }
           .papa .postsholder .outterbox8 .toppart .names .name {
             font-size: 30px;
-            font-family: "Fauna One", serif; }
+            font-family: "Fauna One", serif;
+            transform: translateX(-15px);
+            margin-bottom: 7px;
+            margin-top: -4px; }
           .papa .postsholder .outterbox8 .toppart .names .handle {
             margin-left: 5px;
             color: #4A7C59; }
@@ -763,10 +839,11 @@ h1 {
         .papa .postsholder .outterbox8 .bottompart .gutsimage {
           margin-right: 10px; }
           .papa .postsholder .outterbox8 .bottompart .gutsimage img {
-            height: 100px;
-            width: 170px;
+            height: 130px;
+            width: 190px;
             float: right;
-            border-radius: 5px; }
+            border-radius: 5px;
+            transform: translateY(-10px); }
   .papa .fixedbox {
     position: absolute;
     height: 250px;
@@ -790,7 +867,8 @@ h1 {
         font-size: 40px;
         margin-bottom: 10px;
         font-weight: bold;
-        font-family: "Fauna One", serif; }
+        font-family: "Fauna One", serif;
+        padding: 0; }
       .papa .fixedbox .wordsholder .subtitle {
         font-size: 20px;
         transform: translateY(10px); }
@@ -928,6 +1006,10 @@ h1 {
       width: 304px;
       font-size: 20px; }
 
+a {
+  text-decoration: none;
+  color: #161925; }
+
 .identity-card {
   margin-top: 80px;
   margin-left: 40px;
@@ -1000,3 +1082,255 @@ h1 {
   font-family: "Roboto", sans-serif;
   font-size: 22px;
   color: #4A7C59; }
+
+.profiledad {
+  background-color: #eaf2e2;
+  height: 100vh;
+  width: 100%;
+  color: #161925;
+  position: relative;
+  font-family: "Fauna One", serif; }
+  .profiledad .papaa {
+    background-color: #eaf2e2;
+    width: 100%;
+    top: 0; }
+    .profiledad .papaa .topp {
+      width: 100%;
+      height: 400px;
+      overflow: hidden; }
+      .profiledad .papaa .topp .coverimg {
+        max-width: 100%;
+        height: auto;
+        background-size: 100% 100%;
+        position: relative;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover; }
+    .profiledad .papaa .bottombar {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      background-color: white;
+      border-bottom: 1px #4A7C59 solid;
+      box-shadow: 5px 5px 5px darkgray;
+      font-family: "Fauna One", serif; }
+      .profiledad .papaa .bottombar .holderthing {
+        width: 75%;
+        height: 70px;
+        display: flex;
+        justify-content: flex-start; }
+        .profiledad .papaa .bottombar .holderthing .posts {
+          padding-left: 25px;
+          padding-right: 25px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center; }
+          .profiledad .papaa .bottombar .holderthing .posts .postsnumber {
+            font-size: 20px;
+            margin-top: 5px;
+            color: #4A7C59; }
+        .profiledad .papaa .bottombar .holderthing .postsselected {
+          padding-left: 25px;
+          padding-right: 25px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          background-color: lightgray; }
+          .profiledad .papaa .bottombar .holderthing .postsselected .postsnumber {
+            font-size: 20px;
+            margin-top: 5px;
+            color: #4A7C59; }
+    .profiledad .papaa .frame {
+      height: 100%;
+      background-color: #FAF3DD;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: stretch;
+      align-content: stretch;
+      background-color: #eaf2e2; }
+      .profiledad .papaa .frame .main-contentp {
+        background-color: #eaf2e2;
+        width: 80%;
+        height: calc(100vh);
+        height: 100%; }
+
+.procard {
+  background-color: #eaf2e2;
+  margin-left: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: "Fauna One", serif;
+  color: #161925; }
+  .procard .proavatarholder {
+    height: 220px;
+    width: 220px;
+    transform: translateY(-200px);
+    overflow: hidden;
+    border-radius: 50%;
+    border: 4px white solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center; }
+    .procard .proavatarholder .proavatar {
+      max-width: 100%;
+      height: 100%;
+      background-size: 100% 100%;
+      position: relative;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+  .procard .prowords {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    transform: translateY(-170px); }
+    .procard .prowords .proname {
+      font-size: 35px; }
+    .procard .prowords .prohandle {
+      margin-top: 5px;
+      font-size: 18px;
+      color: #4A7C59; }
+    .procard .prowords .probio {
+      margin-top: 20px;
+      font-family: "Roboto", sans-serif;
+      font-size: 15px; }
+
+a {
+  text-decoration: none;
+  color: #161925; }
+
+.followcardholders {
+  display: flex;
+  flex-wrap: wrap; }
+  .followcardholders .fcardholder {
+    width: 30%; }
+    .followcardholders .fcardholder .follow-card {
+      margin-top: 80px;
+      margin-left: 40px;
+      background-color: white;
+      height: 260px;
+      color: #161925;
+      font-family: "Fauna One", serif; }
+      .followcardholders .fcardholder .follow-card .fcover {
+        height: 50%;
+        background-color: salmon;
+        overflow: hidden; }
+        .followcardholders .fcardholder .follow-card .fcover img {
+          position: center;
+          height: 100%;
+          width: 100; }
+      .followcardholders .fcardholder .follow-card .favatar {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: stretch;
+        align-content: stretch; }
+        .followcardholders .fcardholder .follow-card .favatar img {
+          height: 70px;
+          width: 70px;
+          border-radius: 50%;
+          margin-top: -25px;
+          margin-left: 10px;
+          border: 3px white solid; }
+        .followcardholders .fcardholder .follow-card .favatar .fline {
+          display: flex;
+          flex-direction: column;
+          flex-wrap: nowrap;
+          justify-content: flex-start;
+          align-items: stretch;
+          align-content: stretch;
+          margin-left: 10px;
+          margin-top: 5px; }
+        .followcardholders .fcardholder .follow-card .favatar #name {
+          font-weight: bold;
+          font-size: 20px;
+          margin-bottom: 3px; }
+        .followcardholders .fcardholder .follow-card .favatar #handle {
+          color: #4A7C59;
+          font-family: "Roboto", sans-serif; }
+      .followcardholders .fcardholder .follow-card .fsime {
+        display: flex;
+        width: 100%;
+        height: 100px;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+        font-size: 12px; }
+        .followcardholders .fcardholder .follow-card .fsime .fbio {
+          margin: 3px; }
+
+a {
+  text-decoration: none;
+  color: #161925; }
+
+.followcardholders {
+  display: flex;
+  flex-wrap: wrap; }
+  .followcardholders .fcardholder {
+    width: 30%; }
+    .followcardholders .fcardholder .follow-card {
+      margin-top: 80px;
+      margin-left: 40px;
+      background-color: white;
+      height: 260px;
+      color: #161925;
+      font-family: "Fauna One", serif; }
+      .followcardholders .fcardholder .follow-card .fcover {
+        height: 50%;
+        background-color: salmon;
+        overflow: hidden; }
+        .followcardholders .fcardholder .follow-card .fcover img {
+          position: center;
+          height: 100%;
+          width: 100; }
+      .followcardholders .fcardholder .follow-card .favatar {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: stretch;
+        align-content: stretch; }
+        .followcardholders .fcardholder .follow-card .favatar img {
+          height: 70px;
+          width: 70px;
+          border-radius: 50%;
+          margin-top: -25px;
+          margin-left: 10px;
+          border: 3px white solid; }
+        .followcardholders .fcardholder .follow-card .favatar .fline {
+          display: flex;
+          flex-direction: column;
+          flex-wrap: nowrap;
+          justify-content: flex-start;
+          align-items: stretch;
+          align-content: stretch;
+          margin-left: 10px;
+          margin-top: 5px; }
+        .followcardholders .fcardholder .follow-card .favatar #name {
+          font-weight: bold;
+          font-size: 20px;
+          margin-bottom: 3px; }
+        .followcardholders .fcardholder .follow-card .favatar #handle {
+          color: #4A7C59;
+          font-family: "Roboto", sans-serif; }
+      .followcardholders .fcardholder .follow-card .fsime {
+        display: flex;
+        width: 100%;
+        height: 100px;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+        font-size: 12px; }
+        .followcardholders .fcardholder .follow-card .fsime .fbio {
+          margin: 3px; }
