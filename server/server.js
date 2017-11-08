@@ -55,13 +55,20 @@ const storage = multer.diskStorage({
  // const profile = multer({storage});
  var type = upload.single('file')
 
- app.post('/profile', type, (req, res, next) => {
-         console.log(req.body, 'Body')
-         console.log(req.file.originalname)
-         res.json(req.file)
-         
-         
- });
+//  app.post('/profile', type, (req, res, next) => {
+//          console.log(req.body, 'Body')
+//          console.log(req.file.originalname)
+//          res.json(req.file)
+//  });
+
+app.post('/profile', upload.single('avatar'), function (req, res, next) {
+    // req.file is the `avatar` file
+    // req.body will hold the text fields, if there were any
+    console.log(req)
+  })
+  
+
+
 
 //  uploadSuccess({data}){
 //     console.log('response data' ,data)

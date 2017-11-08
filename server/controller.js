@@ -146,8 +146,10 @@ module.exports = {
         getPosts(req,res){
             const db = req.app.get('db');
             const {handle} = req.body;
-            db.get_posts()
+            console.log(handle)
+            db.get_posts([handle])
             .then(response => {
+                console.log(response)
                 res.status(200).json(response);
             })
         },

@@ -28,8 +28,9 @@ class MainContent extends Component {
             console.log('Getting posts... ', response)
             this.setState({posts: response.data})
         })
-    }
+    
 
+        }
     
     render() {
 
