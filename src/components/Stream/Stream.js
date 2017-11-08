@@ -3,6 +3,7 @@ import Nav from './../Nav/Nav';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import Sidebar from './../Sidebar/Sidebar';
+import Settings from './../Settings/Settings'
 import MainContent from './../MainContent/MainContent'
 import { updateUser, updatePageData } from '../../ducks/reducer';
 import Profile from '../Profile/Profile'

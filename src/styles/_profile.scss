@@ -13,10 +13,9 @@
             width: 100%;
             height: 400px;
             overflow: hidden;
-            .coverimg{
-                transform: translateY(10px);
-                height: 430px; 
-                width: 100%;              
+            .coverimg{        
+                max-width: 100%;
+                height: auto;
                 background-size: 100% 100%;
                 position:relative;
                 background-attachment: fixed;
@@ -40,12 +39,28 @@
                 display: flex;
                 justify-content: flex-start;
                 .posts{
-                    margin-left: 25px;
-                    margin-right: 25px;
+                    padding-left: 25px;
+                    padding-right: 25px;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
+                    cursor: crosshair;
+                    .postsnumber{
+                        font-size: 20px;
+                        margin-top: 5px;
+                        color: $color1;
+                    }
+                }
+                .postsselected{
+                    padding-left: 25px;
+                    padding-right: 25px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: lightgray;
+                    cursor: default;
                     .postsnumber{
                         font-size: 20px;
                         margin-top: 5px;
@@ -64,7 +79,7 @@
             align-items: stretch;
             align-content: stretch;
             background-color: rgb(234, 242, 226);
-            .main-content{
+            .main-contentp{
                 background-color: rgb(234, 242, 226);
                 width: 80%;
                 height: calc(100vh) ;

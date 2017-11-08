@@ -266,7 +266,12 @@ a {
   background-color: white; }
 
 .settingsdad {
-  max-width: 20%;
+  max-width: 100%;
+  display: flex;
+  background-color: white;
+  width: 65%;
+  margin-left: 15px;
+  margin-top: 23px;
   /* Add a background color on hover */ }
   .settingsdad .btn-group {
     background-color: #4CAF50;
@@ -285,9 +290,11 @@ a {
     /* Make the buttons appear below each other */
     margin: 10px; }
   .settingsdad #save {
-    width: 33.333%; }
+    width: 140px; }
   .settingsdad .btn-group:hover {
     background-color: #3e8e41; }
+  .settingsdad .settings-body {
+    padding: 60px 40px; }
   .settingsdad input[type=text], .settingsdad [type=password], .settingsdad select {
     width: 100%;
     padding: 12px 20px;
@@ -295,28 +302,30 @@ a {
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
-    box-sizing: border-box; }
-  .settingsdad h1 {
-    padding-left: 20px; }
-  .settingsdad .settings-body {
-    width: 100%;
-    background: #68B0AB;
-    align-items: center;
-    height: 100vh; }
-  .settingsdad .settings-form {
-    transform: translate(-50%, -50%);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 50%;
-    height: 500px;
-    border: 2px solid black;
-    text-align: center; }
+    box-sizing: border-box;
+    font-size: 12px;
+    font-size: 20px;
+    height: 40px;
+    width: 400px; }
+  .settingsdad .input-field {
+    margin: 50px 0px; }
+    .settingsdad .input-field h1 {
+      font-family: Roboto;
+      font-weight: 600;
+      padding-left: 20px; }
+  .settingsdad .cool-line {
+    width: 900px;
+    border: 0;
+    height: 1px;
+    background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0); }
 
 .papa {
   width: 100%;
   height: 100%;
-  background-color: #FAF3DD;
+  background-color: #eaf2e2;
   position: relative;
   font-family: "Roboto", sans-serif; }
   .papa .postsholder {
@@ -1007,6 +1016,10 @@ a {
       width: 304px;
       font-size: 20px; }
 
+a {
+  text-decoration: none;
+  color: #161925; }
+
 .identity-card {
   margin-top: 80px;
   margin-left: 40px;
@@ -1096,9 +1109,8 @@ a {
       height: 400px;
       overflow: hidden; }
       .profiledad .papaa .topp .coverimg {
-        transform: translateY(10px);
-        height: 430px;
-        width: 100%;
+        max-width: 100%;
+        height: auto;
         background-size: 100% 100%;
         position: relative;
         background-attachment: fixed;
@@ -1119,13 +1131,27 @@ a {
         display: flex;
         justify-content: flex-start; }
         .profiledad .papaa .bottombar .holderthing .posts {
-          margin-left: 25px;
-          margin-right: 25px;
+          padding-left: 25px;
+          padding-right: 25px;
           display: flex;
           flex-direction: column;
           justify-content: center;
-          align-items: center; }
+          align-items: center;
+          cursor: crosshair; }
           .profiledad .papaa .bottombar .holderthing .posts .postsnumber {
+            font-size: 20px;
+            margin-top: 5px;
+            color: #4A7C59; }
+        .profiledad .papaa .bottombar .holderthing .postsselected {
+          padding-left: 25px;
+          padding-right: 25px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          background-color: lightgray;
+          cursor: default; }
+          .profiledad .papaa .bottombar .holderthing .postsselected .postsnumber {
             font-size: 20px;
             margin-top: 5px;
             color: #4A7C59; }
@@ -1139,8 +1165,184 @@ a {
       align-items: stretch;
       align-content: stretch;
       background-color: #eaf2e2; }
-      .profiledad .papaa .frame .main-content {
+      .profiledad .papaa .frame .main-contentp {
         background-color: #eaf2e2;
         width: 80%;
         height: calc(100vh);
         height: 100%; }
+
+.procard {
+  background-color: #eaf2e2;
+  margin-left: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: "Fauna One", serif;
+  color: #161925; }
+  .procard .proavatarholder {
+    height: 220px;
+    width: 220px;
+    transform: translateY(-200px);
+    overflow: hidden;
+    border-radius: 50%;
+    border: 4px white solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center; }
+    .procard .proavatarholder .proavatar {
+      max-width: 100%;
+      height: 100%;
+      background-size: 100% 100%;
+      position: relative;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+  .procard .prowords {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    transform: translateY(-170px); }
+    .procard .prowords .proname {
+      font-size: 35px; }
+    .procard .prowords .prohandle {
+      margin-top: 5px;
+      font-size: 18px;
+      color: #4A7C59; }
+    .procard .prowords .probio {
+      margin-top: 20px;
+      font-family: "Roboto", sans-serif;
+      font-size: 15px; }
+
+a {
+  text-decoration: none;
+  color: #161925; }
+
+.followcardholders {
+  display: flex;
+  flex-wrap: wrap; }
+  .followcardholders .fcardholder {
+    width: 30%; }
+    .followcardholders .fcardholder .follow-card {
+      margin-top: 80px;
+      margin-left: 40px;
+      background-color: white;
+      height: 260px;
+      color: #161925;
+      font-family: "Fauna One", serif; }
+      .followcardholders .fcardholder .follow-card .fcover {
+        height: 50%;
+        background-color: salmon;
+        overflow: hidden; }
+        .followcardholders .fcardholder .follow-card .fcover img {
+          position: center;
+          height: 100%;
+          width: 100; }
+      .followcardholders .fcardholder .follow-card .favatar {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: stretch;
+        align-content: stretch; }
+        .followcardholders .fcardholder .follow-card .favatar img {
+          height: 70px;
+          width: 70px;
+          border-radius: 50%;
+          margin-top: -25px;
+          margin-left: 10px;
+          border: 3px white solid; }
+        .followcardholders .fcardholder .follow-card .favatar .fline {
+          display: flex;
+          flex-direction: column;
+          flex-wrap: nowrap;
+          justify-content: flex-start;
+          align-items: stretch;
+          align-content: stretch;
+          margin-left: 10px;
+          margin-top: 5px; }
+        .followcardholders .fcardholder .follow-card .favatar #name {
+          font-weight: bold;
+          font-size: 20px;
+          margin-bottom: 3px; }
+        .followcardholders .fcardholder .follow-card .favatar #handle {
+          color: #4A7C59;
+          font-family: "Roboto", sans-serif; }
+      .followcardholders .fcardholder .follow-card .fsime {
+        display: flex;
+        width: 100%;
+        height: 100px;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+        font-size: 12px; }
+        .followcardholders .fcardholder .follow-card .fsime .fbio {
+          margin: 3px; }
+
+a {
+  text-decoration: none;
+  color: #161925; }
+
+.followcardholders {
+  display: flex;
+  flex-wrap: wrap; }
+  .followcardholders .fcardholder {
+    width: 30%; }
+    .followcardholders .fcardholder .follow-card {
+      margin-top: 80px;
+      margin-left: 40px;
+      background-color: white;
+      height: 260px;
+      color: #161925;
+      font-family: "Fauna One", serif; }
+      .followcardholders .fcardholder .follow-card .fcover {
+        height: 50%;
+        background-color: salmon;
+        overflow: hidden; }
+        .followcardholders .fcardholder .follow-card .fcover img {
+          position: center;
+          height: 100%;
+          width: 100; }
+      .followcardholders .fcardholder .follow-card .favatar {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: stretch;
+        align-content: stretch; }
+        .followcardholders .fcardholder .follow-card .favatar img {
+          height: 70px;
+          width: 70px;
+          border-radius: 50%;
+          margin-top: -25px;
+          margin-left: 10px;
+          border: 3px white solid; }
+        .followcardholders .fcardholder .follow-card .favatar .fline {
+          display: flex;
+          flex-direction: column;
+          flex-wrap: nowrap;
+          justify-content: flex-start;
+          align-items: stretch;
+          align-content: stretch;
+          margin-left: 10px;
+          margin-top: 5px; }
+        .followcardholders .fcardholder .follow-card .favatar #name {
+          font-weight: bold;
+          font-size: 20px;
+          margin-bottom: 3px; }
+        .followcardholders .fcardholder .follow-card .favatar #handle {
+          color: #4A7C59;
+          font-family: "Roboto", sans-serif; }
+      .followcardholders .fcardholder .follow-card .fsime {
+        display: flex;
+        width: 100%;
+        height: 100px;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+        font-size: 12px; }
+        .followcardholders .fcardholder .follow-card .fsime .fbio {
+          margin: 3px; }
