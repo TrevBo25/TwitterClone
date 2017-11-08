@@ -3,11 +3,9 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { updateUser, updatePageData } from './../../ducks/reducer'
-
 class Roll extends Component {
     constructor(props){
         super(props)
-
         this.state = {
             posts: []
         }
@@ -24,17 +22,12 @@ class Roll extends Component {
                 console.log("skljdfaskldjfajsdfljasdlkf")
                 console.log(response.data);
                 this.setState({
-                   
                     posts: response.data
                 })
             })
         }
     }
-
-
     
-
-
     render() {
         console.log('The posts:', this.state.posts)
         return (
