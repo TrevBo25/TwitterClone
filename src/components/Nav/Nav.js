@@ -2,9 +2,14 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {updateUser} from './../../ducks/reducer'
 import logo from '../../assets/tacoLogo/taco.svg';
+import { Link } from 'react-router-dom';
+import { goToSettings, viewProfile } from '../../ducks/reducer';
 
 class Nav extends Component {
 
+    goToSettings(bool){
+        this.props.goToSettings(bool);
+    }
     
 
     render() {
@@ -29,8 +34,8 @@ class Nav extends Component {
                             <a className="usernname" href={`/#/${this.props.user.handle}`}>{this.props.user.name}</a><br/>
                             <a href={`/#/${this.props.user.handle}`}>@{this.props.user.handle}</a>
                         </li>
-                        <li><a href="#"><i class="fa fa-cog" aria-hidden="true"></i>  Settings</a></li>
-                        <li><a href="#"><i class="fa fa-sign-out" aria-hidden="true"></i>  Logout</a></li>
+                        <li onClick={() => this.goToSettings(true)}><Link to="" >Settings</Link></li>
+                        <li><a href="#">Logout</a></li>
                       </ul>
                     </div>
                     </div>
@@ -47,4 +52,6 @@ function mapStateToProps(state) {
     return {user: state.user, profile: state.profile}
 }
 
-export default connect(mapStateToProps, {updateUser})(Nav);
+export default connect(mapStateToProps, {goToSettings, viewProfile})(Nav);
+
+

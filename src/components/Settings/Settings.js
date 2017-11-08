@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import {connect} from 'react-redux';
 import Sidebar from '../Sidebar/Sidebar';
 import Nav from '../Nav/Nav';
 
-export default class Settings extends Component {
+class Settings extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -108,12 +109,22 @@ export default class Settings extends Component {
                 {/* <button class="btn-group" onClick={this.showUsername}>Change Username</button>
                     <label style={{'display' : this.state.showUsername ? 'block' : 'none'}}> */}
                         <div className="input-field">
-                            <h1>Change Username</h1> 
-                            <input type="text" placeholder="New Username" onChange={(e) => {this.userInput(e.target.value, 'handle')}} />
+                            <h1>Change Handle</h1> 
+                            <input type="text" placeholder="New Handle" onChange={(e) => {this.userInput(e.target.value, 'handle')}} />
                         </div>
                     {/* </label> */}
 
-                    <hr className="cool-line" />
+                        <div className="input-field">
+                            <h1>Update Bio</h1>
+                            <textarea rows="4" cols="50" wrap="hard" id="bio" placeholder="This is my bio!" onChange={(e) => {this.userInput(e.target.value, 'bio')}} />
+                        </div>
+
+                        <div className="input-field">
+                            <h1>Change Location</h1> 
+                            <input type="text" placeholder="New Handle" onChange={(e) => {this.userInput(e.target.value, 'location')}} />
+                        </div>
+
+                    {/* <hr className="cool-line" /> */}
 
                 {/* <button class="btn-group" onClick={this.showEmail}>Change Email</button>
                     <label style={{'display' : this.state.showEmail ? 'block' : 'none'}} > */}
@@ -128,7 +139,7 @@ export default class Settings extends Component {
                         {/* </label> */}
                         </div>
 
-                    <hr className="cool-line" />
+                    {/* <hr className="cool-line" /> */}
                     
                 {/* <button class="btn-group" onClick={this.showPassword}>Change Password</button> */}
                     {/* <label style={{'display' : this.state.showPassword ? 'block' : 'none'}}> */}
@@ -156,3 +167,10 @@ export default class Settings extends Component {
       )
     }
   }
+
+  function mapStateToProps(state) {
+    console.log(state)
+    return {user: state.user, showSettings: state.showSettings}
+}
+
+export default connect(mapStateToProps)(Settings);

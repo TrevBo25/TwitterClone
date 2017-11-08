@@ -74,11 +74,11 @@ table {
 
 @keyframes nav-logo {
   50% {
-    -webkit-transform: translateX(3px) rotate(2deg);
-    transform: translateX(3px) rotate(2deg); }
+    -webkit-transform: translateX(3px) rotate(3deg);
+    transform: translateX(3px) rotate(3deg); }
   100% {
-    -webkit-transform: translateX(-3px) rotate(-2deg);
-    transform: translateX(-3px) rotate(-2deg); } }
+    -webkit-transform: translateX(-3px) rotate(-3deg);
+    transform: translateX(-3px) rotate(-3deg); } }
 
 .nav-logo {
   vertical-align: middle;
@@ -89,8 +89,8 @@ table {
 .nav-logo:hover, .nav-logo:focus, .nav-logo:active {
   -webkit-animation-name: nav-logo;
   animation-name: nav-logo;
-  -webkit-animation-duration: 0.25s;
-  animation-duration: 0.25s;
+  -webkit-animation-duration: 0.0025s;
+  animation-duration: 0.0025s;
   -webkit-animation-timing-function: linear;
   animation-timing-function: linear;
   -webkit-animation-iteration-count: infinite;
@@ -283,12 +283,12 @@ a {
   background-color: white;
   width: 65%;
   margin-left: 15px;
-  margin-top: 23px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   /* Add a background color on hover */ }
   .settingsdad .btn-group {
-    background-color: #4CAF50;
+    background-color: #68B0AB;
     /* Green background */
-    border: 1px solid green;
+    border: 1px solid #68B0AB;
     /* Green border */
     color: white;
     /* White text */
@@ -325,14 +325,18 @@ a {
       font-family: Roboto;
       font-weight: 600;
       padding-left: 20px; }
-  .settingsdad .cool-line {
-    width: 900px;
-    border: 0;
-    height: 1px;
-    background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
-    background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
-    background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
-    background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0); }
+    .settingsdad .input-field textarea {
+      font-family: Roboto;
+      resize: none;
+      width: 100%;
+      padding: 12px 20px;
+      margin: 10px 10px;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      font-size: 16px;
+      width: 400px; }
 
 .papa {
   width: 100%;

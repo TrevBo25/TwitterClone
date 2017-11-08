@@ -15,13 +15,15 @@ const initialState = {
     },
     pageData: {},
     profile: false,
-    profileView: "roll"
+    profileView: "roll",
+    showSettings: false
 }
 
 const UPDATE_USER = "UPDATE_USER";
 const UPDATE_PAGE_DATA = "UPDATE_PAGE_DATA";
 const VIEW_PROFILE = "VIEW_PROFILE";
 const CHANGE_PRO_VIEW = "CHANGE_PRO_VIEW";
+const GO_SETTINGS = "GO_SETTINGS";
 
 export default
 function reducer(state=initialState, action) {
@@ -35,6 +37,8 @@ function reducer(state=initialState, action) {
             return Object.assign({}, state, {profile: action.payload})
         case CHANGE_PRO_VIEW:
             return Object.assign({}, state, {profileView: action.payload})
+        case GO_SETTINGS:
+            return Object.assign({}, state, {showSettings: action.payload})
         default:
         return state
     }
@@ -70,5 +74,12 @@ export function changeProView(view){
     return{
         type: CHANGE_PRO_VIEW,
         payload: view
+    }
+}
+
+export function goToSettings(bool){
+    return{
+        type: GO_SETTINGS,
+        payload:bool
     }
 }
