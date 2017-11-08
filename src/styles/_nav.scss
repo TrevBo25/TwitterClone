@@ -33,12 +33,12 @@
   }
   @keyframes nav-logo {
     50% {
-      -webkit-transform: translateX(3px) rotate(2deg);
-      transform: translateX(3px) rotate(2deg);
+      -webkit-transform: translateX(3px) rotate(3deg);
+      transform: translateX(3px) rotate(3deg);
     }
     100% {
-      -webkit-transform: translateX(-3px) rotate(-2deg);
-      transform: translateX(-3px) rotate(-2deg);
+      -webkit-transform: translateX(-3px) rotate(-3deg);
+      transform: translateX(-3px) rotate(-3deg);
     }
   }
   .nav-logo {
@@ -51,8 +51,8 @@
   .nav-logo:hover, .nav-logo:focus, .nav-logo:active {
     -webkit-animation-name: nav-logo;
     animation-name: nav-logo;
-    -webkit-animation-duration: 0.25s;
-    animation-duration: 0.25s;
+    -webkit-animation-duration: 0.0025s;
+    animation-duration: 0.0025s;
     -webkit-animation-timing-function: linear;
     animation-timing-function: linear;
     -webkit-animation-iteration-count: infinite;

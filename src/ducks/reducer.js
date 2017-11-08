@@ -3,16 +3,6 @@ import axios from 'axios'
 const initialState = {
 
     user: {
-<<<<<<< HEAD
-        id: '',
-        name: '',
-        handle: '',
-        email: '',
-        avatar: '',
-        bio: '',
-        location: '',
-        cover: ''
-=======
         id: 66,
         name: "spiderman",
         handle: "peter",
@@ -22,7 +12,6 @@ const initialState = {
         bio: "bit by a spider",
         location: "forest hills, NY",
         cover: "https://cdn.theculturetrip.com/wp-content/uploads/2017/06/smhldn9-1024x695.jpg"
->>>>>>> 99b3ac044ab19a33564c57f073f45541f4376bf6
     },
     pageData: {},
     profile: false,
