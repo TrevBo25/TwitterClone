@@ -40,8 +40,8 @@ class MainContent extends Component {
                 <Link to={this.props.user.handle}
                 >{this.props.user.handle}
                 </Link>
-                <Roll />
-                {/* <Settings /> */}
+                {/* <Roll /> */}
+                <Settings />
             </div>
         );
     }

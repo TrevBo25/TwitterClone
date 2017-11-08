@@ -270,12 +270,12 @@ a {
   background-color: white;
   width: 65%;
   margin-left: 15px;
-  margin-top: 23px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   /* Add a background color on hover */ }
   .settingsdad .btn-group {
-    background-color: #4CAF50;
+    background-color: #68B0AB;
     /* Green background */
-    border: 1px solid green;
+    border: 1px solid #68B0AB;
     /* Green border */
     color: white;
     /* White text */
@@ -312,14 +312,6 @@ a {
       font-family: Roboto;
       font-weight: 600;
       padding-left: 20px; }
-  .settingsdad .cool-line {
-    width: 900px;
-    border: 0;
-    height: 1px;
-    background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
-    background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
-    background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
-    background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0); }
 
 .papa {
   width: 100%;
