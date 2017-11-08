@@ -26,7 +26,7 @@ class Nav extends Component {
                     <div className="dropdown-container">
                       <ul className="dropdown-content">
                         <li className="user-info">
-                            <a className="usernname" href={`/#/${this.props.user.handle}`}>{this.props.user.name}</a><br/><br/>
+                            <a className="usernname" href={`/#/${this.props.user.handle}`}>{this.props.user.name}</a><br/>
                             <a href={`/#/${this.props.user.handle}`}>@{this.props.user.handle}</a>
                         </li>
                         <li><a href="#"><i class="fa fa-cog" aria-hidden="true"></i>  Settings</a></li>
