@@ -102,7 +102,6 @@ table {
   height: 100%; }
 
 .dropdown img {
-  position: absolute;
   height: 60px;
   width: 60px;
   border-radius: 50%; }
@@ -111,7 +110,8 @@ table {
   display: none; }
 
 .dropdown:hover .dropdown-container {
-  display: block; }
+  display: block;
+  align-content: center; }
 
 .dropdown-content {
   display: flex;
@@ -137,6 +137,7 @@ textarea {
   background: white;
   display: block;
   font-size: 20px;
+  line-height: 23px;
   font-family: 'Roboto';
   letter-spacing: 1px;
   width: 400px;
