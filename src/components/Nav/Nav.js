@@ -30,7 +30,7 @@ class Nav extends Component {
                             <a href={`/#/${this.props.user.handle}`}>@{this.props.user.handle}</a>
                         </li>
                         <li><a href="#"><i class="fa fa-cog" aria-hidden="true"></i>  Settings</a></li>
-                        <li><a href="#"><i class="fa fa-sign-out" aria-hidden="true"></i>  Logout</a></li>
+                        <li onClick={() => {this.props.updateUser({})}}><a href="#"><i class="fa fa-sign-out" aria-hidden="true"></i>  Logout</a></li>
                       </ul>
                     </div>
                     </div>
