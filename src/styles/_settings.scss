@@ -7,27 +7,54 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
     .btn-group {
-        background-color: #68B0AB; /* Green background */
-        border: 1px solid #68B0AB; /* Green border */
+        background-color: #68b0ab; /* Green background */
+        border: 1px solid #68afab; /* Green border */
         color: white; /* White text */
         padding: 10px 24px; /* Some padding */
         cursor: pointer; /* Pointer/hand icon */
         width: 100%; /* Set a width if needed */
         display: block; /* Make the buttons appear below each other */
         margin: 10px;
+        font-size: 18px;
+        -webkit-transition-duration: 0.4s; /* Safari */
+        transition-duration: 0.4s;
+        text-decoration: none;
+        overflow: hidden;
+        border-radius: 20px;
+    }
+
+    .btn-group:after {
+        content: "";
+        background: #90EE90;
+        display: block;
+        position: absolute;
+        padding-top: 300%;
+        padding-left: 350%;
+        margin-left: -20px!important;
+        margin-top: -120%;
+        opacity: 0;
+        transition: all 0.8s
+    }
+    
+    .btn-group:active:after {
+        padding: 0;
+        margin: 0;
+        opacity: 1;
+        transition: 0s
+    }
+
+    .btn-group:hover {
+        background-color: hsl(176, 31%, 45%);
+        box-shadow: 0 2px 6px 0 rgba(0,0,0,0.24),0 2px 6px 0 rgba(0,0,0,0.19);        
     }
     
     #save {
         width: 140px;
     }
     
-    /* Add a background color on hover */
-    .btn-group:hover {
-        background-color: #3e8e41;
-    }
 
     .settings-body {
-        padding: 60px 40px;
+        padding: 20px 40px;
     }
     
     input[type=text], [type=password], select {
