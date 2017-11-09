@@ -17,17 +17,20 @@ class Nav extends Component {
 
             //-- Work in Progress, added over weekend -- //
             <div className="nav-body">
-
                 <div className="nav">
 
                     <div className="nav-logo"><Link to="" ><img src={logo}/></Link></div>
 
-                    <div className="input-container">
+                    <div className="talko-box-container">
                         <textarea className="talko-box" rows="1" cols="30" wrap="hard" maxlength="80" type="text" placeholder="Let's Talko Bout It"/>
                     </div>
 
+<<<<<<< HEAD
                     
                     <div className="dropdown"><img src={this.props.user.avatar} onClick={() => this.goToSettings(false)}/>
+=======
+                    <div className="dropdown"><img src={this.props.user.avatar}/>
+>>>>>>> 40385ec9e76ca7f57406cb951c7f0366d985281e
                     <div className="dropdown-container">
                       <ul className="dropdown-content">
                         <li className="user-info">
