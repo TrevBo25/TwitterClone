@@ -13,9 +13,10 @@ class Profile extends Component {
         super(props);
 
         this.state = {
-            
+            render: false
         }
 
+        this.renderer = this.renderer.bind(this)
     }
 
     componentDidMount(){
@@ -26,6 +27,11 @@ class Profile extends Component {
     //     this.doItBrother();
     // }
 
+    renderer(){
+        this.setState({
+            render: !this.state.render
+        }, this.doItBrother)
+    }
 
     changeProfileView(view){
         this.props.changeProView(view);
@@ -69,7 +75,7 @@ class Profile extends Component {
                     <div className="frame">
                         <Sidebar />
                         <div className="main-contentp">
-                            {this.props.profileView === "roll" ? <Roll /> : (this.props.profileView === "following" ? <FollowingComp /> : <FollowersComp />)}
+                            {this.props.profileView === "roll" ? <Roll /> : (this.props.profileView === "following" ? <FollowingComp renderer={this.renderer}/> : <FollowersComp renderer={this.renderer}/>)}
                         </div>
                     </div>
                 </div>

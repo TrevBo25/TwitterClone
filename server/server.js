@@ -105,4 +105,4 @@ app.post('/profile', upload.single('avatar'), function (req, res, next) {
 </div> */}
 
 const PORT = 8008;
-app.listen(PORT, () => console.log('listening on port: ', PORT));
+app.listen(PORT, () => console.log("I'm listenin' brotha' on port ", PORT));
