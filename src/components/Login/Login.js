@@ -37,8 +37,9 @@ class Login extends Component {
     submitLogin = (userSubmission) => {
         console.log( 'Submitting login with current state: ', userSubmission )
         axios.post('/api/login', userSubmission ).then((response) => {
+
             console.log(response);
-            this.props.updateUser(response.data);
+            this.props.updateUser(response.data[0]);
             console.log('User state updated!',this.props.user)
             // this.props.history.push("/");
         })

@@ -11,7 +11,6 @@ import Profile from '../Profile/Profile'
 
 class Stream extends Component {
 
-
     componentDidMount(){
         console.log('Stream component did mount!')
 
@@ -35,7 +34,7 @@ class Stream extends Component {
                 </div>
                 : <div className="frame">
                     <Sidebar />
-                    <MainContent />
+                    <MainContent renderer={this.props.renderer}/>
                 </div>}
             </div>
         );

@@ -27,7 +27,7 @@ class Nav extends Component {
                     </div>
 
                     
-                    <div className="dropdown"><img src={this.props.user.avatar}/>
+                    <div className="dropdown"><img src={this.props.user.avatar} onClick={() => this.goToSettings(false)}/>
                     <div className="dropdown-container">
                       <ul className="dropdown-content">
                         <li className="user-info">

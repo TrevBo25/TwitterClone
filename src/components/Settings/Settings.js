@@ -3,6 +3,7 @@ import axios from 'axios';
 import {connect} from 'react-redux';
 import Sidebar from '../Sidebar/Sidebar';
 import Nav from '../Nav/Nav';
+import { goToSettings } from '../../ducks/reducer';
 
 class Settings extends Component {
     constructor(props) {
@@ -95,6 +96,7 @@ class Settings extends Component {
                 return 'tubular'
             })
         }
+        this.props.renderer()
        
       }
     
@@ -173,4 +175,4 @@ class Settings extends Component {
     return {user: state.user, showSettings: state.showSettings}
 }
 
-export default connect(mapStateToProps)(Settings);
+export default connect(mapStateToProps, goToSettings)(Settings);

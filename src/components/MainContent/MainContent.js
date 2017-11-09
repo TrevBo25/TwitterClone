@@ -43,7 +43,7 @@ class MainContent extends Component {
                 </Link>
                 {!this.props.showSettings ?
                 <Roll /> :
-                <Settings />}
+                <Settings renderer={this.props.renderer}/>}
             </div>
         );
     }

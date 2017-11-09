@@ -28,25 +28,26 @@ module.exports = {
         login(req, res){
             const db = req.app.get('db');
             const {password} = req.body;
-            console.log(req.body);
-            let login = '';
+            const handle = req.body.handle || null
+            const email = req.body.email || null;
             if (req.body.handle){
-                login = req.body.handle;
-                db.login_handle([login, password])
+                db.login_handle([handle, password])
                 .then(response => {
+                    console.log(response);
                     if(response.length === 0){
                         res.status(404).send('User does not exist');
                     } else {
-                        res.status(200).json(response[0]);
+                        res.status(200).json(response);
                     }
                 }).catch( err => console.log('login_password', err))
             } else {
-                login = req.body.email;
-                db.login_email([login, password])
+                console.log(email, password);
+                db.login_email([email, password])
                 .then(response => {
                     if(response.length === 0){
                         res.status(404).send('User does not exists');
                     } else {
+                        console.log(response);
                         res.status(200).json(response);
                     }
                 }).catch( err => console.log('login_email', err))
@@ -216,7 +217,6 @@ module.exports = {
                 res.status(200).json(response[0]);
             }).catch(err => console.log('getuserfromhandle', err))
         },
-        // new stuff from Ian
         getFollowersPosts(req, res){
             console.log("hello");
             const db = req.app.get('db');

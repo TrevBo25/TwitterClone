@@ -21,6 +21,7 @@ class Profile extends Component {
 
     componentDidMount(){
         this.doItBrother();
+        this.changeProfileView("roll")
     }
 
     // componentWillReceiveProps(props){
@@ -30,7 +31,7 @@ class Profile extends Component {
     renderer(){
         this.setState({
             render: !this.state.render
-        }, this.doItBrother)
+        }, this.doItBrother, this.changeProfileView("roll"))
     }
 
     changeProfileView(view){

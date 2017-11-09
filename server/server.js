@@ -7,10 +7,12 @@ const express = require('express'),
       session = require('express-session'),
       axios = require('axios'),
       cors = require('cors'),
-      multer = require('multer')
+      multer = require('multer'),
       upload = multer({dest: 'public/uploads/'});
 
 const app = express();
+const server = require('http').Server(app);
+const io = require('socket.io')(server)
 app.use(cors());
 app.use(bodyParser.json());
 const saltRounds = 5;
@@ -105,4 +107,10 @@ app.post('/profile', upload.single('avatar'), function (req, res, next) {
 </div> */}
 
 const PORT = 8008;
-app.listen(PORT, () => console.log("I'm listenin' brotha' on port ", PORT));
+server.listen(PORT, () => console.log("I'm listenin' brotha' on port ", PORT));
+
+io.on('connection', function(socket){
+    console.log('we are connected');
+
+    
+})
