@@ -13,7 +13,7 @@
 .nav-logo {
     margin-left: 7%;
     margin-bottom: 0.5%;
-    @include width-height(60px, 60px);
+    @include width-height(65px, 65px);
     -ms-transform: rotate(-15deg);
     -webkit-transform: rotate(-15deg);
     transform: rotate(-15deg);
@@ -66,8 +66,8 @@
 }
 
 .dropdown img {
-    height: 60px;
-    width: 60px;
+    height: 65px;
+    width: 65px;
     border-radius: 50%;
 }
 
@@ -113,6 +113,18 @@
     color: $color0;
 }
 
+.talko-box-container {
+    width: 500px;
+    height: 50px;
+    background: rgb(235, 235, 235);
+    transition:height 0.25s; 
+    
+}
+
+.talko-box-container:hover {
+    height: 100px;
+    margin-top: 50px;
+}
 
 .talko-box {
     background: white;
@@ -121,15 +133,16 @@
     line-height: 23px;
     font-family: 'Roboto';
     letter-spacing: 1px;
-    width: 400px;
-    margin-top: 0px;
+    width: 80%;
+    margin-top: 7px;
+    margin-left: 8%;
     padding: 5px 10px 5px 10px;
     border-radius: 5px;
     box-shadow: inset 0 1px 2px rgba(0,0,0, .8), 0px 1px 1px rgba(255,255,255, .8);
     border: 1px solid $color5;
-    -webkit-transition: all .5s ease;
-    -moz-transition: all .5s ease;
-    transition: all .5s ease;
+    -webkit-transition: all .25 ease;
+    -moz-transition: all .25 ease;
+    transition: all .25 ease;
   }
   
   .talko-box {
@@ -138,13 +151,13 @@
     overflow: hidden;
   }
   
-  .talko-box:hover,
+ 
   .talko-box:focus {
     opacity: 1;
     color: black;
     border: 1px solid $color4;
     box-shadow: inset 0 1px 2px rgba(0,0,0, .8);
-    margin-top: 56px;
+    // margin-top: 56px;
     padding-bottom: 62px;
   }
   
