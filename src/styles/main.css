@@ -281,12 +281,11 @@ a {
   background-color: white;
   width: 65%;
   margin-left: 15px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  /* Add a background color on hover */ }
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
   .settingsdad .btn-group {
-    background-color: #68B0AB;
+    background-color: #68b0ab;
     /* Green background */
-    border: 1px solid #68B0AB;
+    border: 1px solid #68afab;
     /* Green border */
     color: white;
     /* White text */
@@ -298,13 +297,37 @@ a {
     /* Set a width if needed */
     display: block;
     /* Make the buttons appear below each other */
-    margin: 10px; }
+    margin: 10px;
+    font-size: 18px;
+    -webkit-transition-duration: 0.4s;
+    /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    border-radius: 20px; }
+  .settingsdad .btn-group:after {
+    content: "";
+    background: #90EE90;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s; }
+  .settingsdad .btn-group:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s; }
+  .settingsdad .btn-group:hover {
+    background-color: #4f9692;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.24), 0 2px 6px 0 rgba(0, 0, 0, 0.19); }
   .settingsdad #save {
     width: 140px; }
-  .settingsdad .btn-group:hover {
-    background-color: #3e8e41; }
   .settingsdad .settings-body {
-    padding: 60px 40px; }
+    padding: 20px 40px; }
   .settingsdad input[type=text], .settingsdad [type=password], .settingsdad select {
     width: 100%;
     padding: 12px 20px;
