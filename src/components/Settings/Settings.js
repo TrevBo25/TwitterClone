@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import {connect} from 'react-redux';
 import Sidebar from '../Sidebar/Sidebar';
 import Nav from '../Nav/Nav';
 
-export default class Settings extends Component {
+class Settings extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -166,3 +167,10 @@ export default class Settings extends Component {
       )
     }
   }
+
+  function mapStateToProps(state) {
+    console.log(state)
+    return {user: state.user, showSettings: state.showSettings}
+}
+
+export default connect(mapStateToProps)(Settings);

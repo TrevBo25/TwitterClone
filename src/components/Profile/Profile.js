@@ -9,8 +9,8 @@ import FollowersComp from '../FollowComp/FollowersComp';
 import FollowingComp from '../FollowComp/FollowingComp';
 
 class Profile extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
 
         this.state = {
             
@@ -18,9 +18,14 @@ class Profile extends Component {
 
     }
 
-    componentWillMount(){
+    componentDidMount(){
         this.doItBrother();
     }
+
+    // componentWillReceiveProps(props){
+    //     this.doItBrother();
+    // }
+
 
     changeProfileView(view){
         this.props.changeProView(view);
@@ -29,8 +34,8 @@ class Profile extends Component {
     doItBrother(){
         if(this.props.match) {
             this.props.updatePageData(this.props.match.params.handle)
-    }
-    this.props.viewProfile(true);
+        }
+        this.props.viewProfile(true);
     }
 
     render() {

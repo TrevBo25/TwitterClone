@@ -63,7 +63,6 @@
     margin-top: .5%;
     margin-right: 7%;
     height: 100%;
-    // width: 60px;
 }
 
 .dropdown img {
@@ -74,7 +73,8 @@
 
 .dropdown-container {
     display: none;
-    right: 4%;
+    right: 7%;
+    
 }
 
 .dropdown:hover .dropdown-container {
@@ -135,6 +135,7 @@
   .talko-box {
     resize: none;
     opacity: 1;
+    overflow: hidden;
   }
   
   .talko-box:hover,
@@ -161,6 +162,7 @@
 
 
 .usernname {
-  font-weight: bold;
+  font-weight: bolder;
   font-size: 20px;
+  line-height: 35px;
 }
