@@ -38,8 +38,8 @@ class MainContent extends Component {
             <div className="main-content">
 
                 <Compose getPosts={this.getPosts}/>
-                <Link to={this.props.user.handle}
-                >{this.props.user.handle}
+                <Link to={this.props.user.userData.handle}
+                >{this.props.user.userData.handle}
                 </Link>
                 {!this.props.showSettings ?
                 <Roll /> :

@@ -24,15 +24,15 @@ class Primary extends Component {
 
     
     render() {
-        console.log(this.props.pageData)
+        console.log(this.props.user)
         console.log(this.props.match.params.handle)
         return (
             <div>
                 <div>
                     {
-                        (this.props.user.handle)
-                        ? <div><Stream renderer={this.renderer}/></div>
-                        : <div><Landing renderer={this.renderer}/></div>
+                        (this.props.user.userData)
+                        ? <div><Stream /></div>
+                        : <div><Landing /></div>
                     }
                 </div>
             </div>
