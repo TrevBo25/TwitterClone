@@ -12,7 +12,7 @@ class Nav extends Component {
         super()
 
         this.state = {
-            guts: 'test'
+            guts: ''
         }
 
         this.handleInput = this.handleInput.bind(this)
