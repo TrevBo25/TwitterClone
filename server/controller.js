@@ -28,7 +28,7 @@ module.exports = {
         login(req, res){
             const db = req.app.get('db');
             const {password} = req.body;
-            const handle = req.body.handle || null
+            const handle = req.body.handle || null;
             const email = req.body.email || null;
             if (req.body.handle){
                 db.login_handle([handle, password])
