@@ -97,14 +97,14 @@ table {
   animation-iteration-count: infinite; }
 
 .dropdown {
-  margin-top: .5%;
   margin-right: 7%;
   height: 100%; }
 
 .dropdown img {
   height: 65px;
   width: 65px;
-  border-radius: 50%; }
+  border-radius: 50%;
+  border: 2px solid #C8D5B9; }
 
 .dropdown-container {
   display: none;
@@ -144,10 +144,6 @@ table {
   height: 50px;
   background: #ebebeb;
   transition: height 0.25s; }
-
-.talko-box-container:hover {
-  height: 100px;
-  margin-top: 50px; }
 
 .talko-box {
   background: white;
