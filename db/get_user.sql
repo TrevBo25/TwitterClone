@@ -1,6 +1,6 @@
 SELECT *
 FROM USERS
-WHERE HANDLE = $1;
+WHERE HANDLE = $1 OR EMAIL = $1;
 
 -- SELECT followers.user_id
 -- FROM USERS
