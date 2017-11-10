@@ -125,6 +125,7 @@ module.exports = {
         likePost(req, res){
             const db = req.app.get('db');
             const{id} = req.body;
+            console.log(id);
             db.get_likes([id])
             .then(response => {
                 let newLikes = response[0].likes + 1;
@@ -219,7 +220,7 @@ module.exports = {
             }).catch(err => console.log('getuserfromhandle', err))
         },
         getFollowersPosts(req, res){
-            console.log("hello");
+            // console.log("hello");
             const db = req.app.get('db');
             const {id} = req.body;
             db.get_followers_posts([id])
@@ -270,28 +271,23 @@ module.exports = {
             }).catch( err => console.log('check_password', err))
         },
         allUserData(req, res) {
-            console.log('getting all user data')
             const db = req.app.get('db');
             const {handle} = req.body;
-            console.log(req.body)
             var userData = db.get_user([handle])
             .then(
                  userData => {
-                    console.log(userData)
                     return userData
                 }
             )
             var followers = db.get_followers([handle])
             .then(
                 followers => {
-                    console.log(followers)
                     return followers
                 }
             )
             var following = db.get_following([handle])
             .then(
                 following => {
-                    console.log(following)
                     return following
                 }
             
@@ -299,51 +295,42 @@ module.exports = {
             var posts = db.get_user_posts([handle])
             .then(
                 posts => {
-                    console.log(posts)
                     return posts
                 }
             
             )
             Promise.all([userData, followers, following, posts]).then(values => {
-                console.log(values)
                 var stuff = {
                     userData: values[0][0],
                     followers: values[1],
                     following: values[2],
                     posts: values[3]
                 }
-                console.log(stuff)
                 res.status(200).send(stuff)
             })
         },
         login(req, res){
-            console.log('Request', req.body);
             const db = req.app.get('db');
             const {login, password} = req.body
             db.login_user([login]).then( 
                 user => { 
                     bcrypt.compare(password, user[0].password, function(err, pass){
                         const handle = user[0].handle
-                        console.log('the handle', handle)
-                        console.log(pass)
                         var userData = db.get_user([handle])
                         .then(
                              userData => {
-                                console.log('userData')
                                 return userData
                             }
                         )
                         var followers = db.get_followers([handle])
                         .then(
                             followers => {
-                                console.log('followers')
                                 return followers
                             }
                         )
                         var following = db.get_following([handle])
                         .then(
                             following => {
-                                console.log('following')
                                 return following
                             }
                         
@@ -351,14 +338,16 @@ module.exports = {
                         var posts = db.get_user_posts([handle])
                         .then(
                             posts => {
-                                console.log(posts)
                                 return posts
                             }
                         
                         )
 
                         Promise.all([userData, followers, following, posts]).then(values => {
-                            // console.log(values)
+                            console.log('userdata', values[0][0])
+                            console.log('followers', values[1])
+                            console.log('following', values[2])
+                            console.log('posts', values[3])
                             var stuff = {
                                 userData: values[0][0],
                                 followers: values[1],
@@ -373,6 +362,22 @@ module.exports = {
                     
             }).catch( err => {
                 console.log(err)
+            })
+        },
+        changeBio(req, res){
+            const db = req.app.get('db');
+            const {id, bio} = req.body;
+            db.change_bio([id, bio])
+            .then( response => {
+                res.status(200).send('New bio set');
+            })
+        },
+        changeLocation(req, res){
+            const db = req.app.get('db');
+            const {id, location} = req.body;
+            db.change_location([id, location])
+            .then( response => {
+                res.status(200).send('New bio location');
             })
         }
     }

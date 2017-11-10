@@ -3,7 +3,6 @@ import {connect} from 'react-redux';
 import { Link } from 'react-router-dom';
 import {updateUser} from './../../ducks/reducer'
 import logo from '../../assets/tacoLogo/taco.svg';
-import { Link } from 'react-router-dom';
 import { goToSettings, viewProfile } from '../../ducks/reducer';
 
 class Nav extends Component {

@@ -67,4 +67,21 @@ a{text-decoration: none}
             }
         }
     }
+    .votebuttons{
+        width: 50%;
+        margin-left: 3%;
+        display: flex;
+        justify-content: space-around;
+        .likebutton{
+            display: flex;
+            align-items: center;
+            .votenum{
+                margin-left: 10px;
+                font-size: 21px;
+            }
+            .fa:hover{
+                cursor: pointer;
+            }
+        }
+    }
 }
