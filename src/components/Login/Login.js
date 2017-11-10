@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { updateUser } from '../../ducks/reducer'
@@ -10,8 +11,8 @@ class Login extends Component {
         super();
 
         this.state = {
-            handle: '',
-            password: ''
+            login: 'peter',
+            password: 'maryjane'
         }
     }
 
@@ -21,7 +22,7 @@ class Login extends Component {
             
             case 'handle':
                 console.log('   Setting handle state:', input)
-                this.setState({handle: input})
+                this.setState({login: input})
                 break;
 
             case 'password':
@@ -37,13 +38,13 @@ class Login extends Component {
     submitLogin = (userSubmission) => {
         console.log( 'Submitting login with current state: ', userSubmission )
         axios.post('/api/login', userSubmission ).then((response) => {
-
-            console.log(response);
-            this.props.updateUser(response.data[0]);
+            console.log(response.data);
+            this.props.updateUser(response.data);
             console.log('User state updated!',this.props.user)
             // this.props.history.push("/");
         })
     }
+
     render() {
         return (
             <div className="bigbox">
@@ -54,7 +55,7 @@ class Login extends Component {
                     <input onChange={(e) => {this.userInput(e.target.value, 'handle')}} type="text" className="logininput" placeholder="Handle or Email"/>
 
                     <input onChange={(e) => {this.userInput(e.target.value, 'password')}} type="password" className="logininput" placeholder="Password"/>
-
+                    
                     <button onClick={() => this.submitLogin(this.state)} className="loginsubmit">Submit</button>
                     
                 </div>
