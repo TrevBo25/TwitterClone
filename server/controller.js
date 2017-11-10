@@ -27,33 +27,7 @@ module.exports = {
                 }
             }).catch(err => console.log('check_handle', err));
         },
-        // login(req, res){
-        //     const db = req.app.get('db');
-        //     const {password} = req.body;
-        //     console.log(req.body);
-        //     let login = '';
-        //     if (req.body.handle){
-        //         login = req.body.handle;
-        //         db.login_handle([login, password])
-        //         .then(response => {
-        //             if(response.length === 0){
-        //                 res.status(404).send('User does not exist');
-        //             } else {
-        //                 res.status(200).json(response[0]);
-        //             }
-        //         }).catch( err => console.log('login_password', err))
-        //     } else {
-        //         login = req.body.email;
-        //         db.login_email([login, password])
-        //         .then(response => {
-        //             if(response.length === 0){
-        //                 res.status(404).send('User does not exists');
-        //             } else {
-        //                 res.status(200).json(response);
-        //             }
-        //         }).catch( err => console.log('login_email', err))
-        //     }
-        // },
+
         updateUser(req, res){
             const db = req.app.get('db');
             const {id, name, handle, email} = req.body;
@@ -85,6 +59,7 @@ module.exports = {
         createPost(req, res){
             const findUsername = /@([a-z\d]+)/ig;
             const db = req.app.get('db');
+            console.log(req.body.guts)
             const {guts, user_id} = req.body;
             const reposts = req.body.reposts || null;
             const image = req.body.image || null;
@@ -320,8 +295,10 @@ module.exports = {
             console.log('Request', req.body);
             const db = req.app.get('db');
             const {login, password} = req.body
+            console.log(login, password)
             db.login_user([login]).then( 
                 user => { 
+                    console.log(user[0])
                     bcrypt.compare(password, user[0].password, function(err, pass){
                         const handle = user[0].handle
                         console.log('the handle', handle)

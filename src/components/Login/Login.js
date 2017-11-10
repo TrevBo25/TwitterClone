@@ -11,7 +11,7 @@ class Login extends Component {
         super();
 
         this.state = {
-            login: 'peter',
+            login: 'notpeterparker',
             password: 'maryjane'
         }
     }

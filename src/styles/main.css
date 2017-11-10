@@ -194,6 +194,15 @@ table {
   font-size: 20px;
   line-height: 35px; }
 
+#buttion {
+  font-size: 10;
+  padding: 1px;
+  background: pink;
+  color: #FF0000;
+  border-color: #FF0000;
+  border-radius: 5px;
+  box-shadow: 1px; }
+
 .sidebar {
   background-color: #eaf2e2;
   width: 25%;
