@@ -38,6 +38,20 @@ class FollowingComp extends Component {
         this.props.renderer()
     }
 
+    follow(id){
+        axios.post('/api/follow', {"id": this.props.user.userData.id, "otherid": id})
+        .then( response => {
+            return "Followed!"
+        })
+    }
+
+    unfollow(id){
+        axios.post('/api/unfollow', {"id": this.props.user.userData.id, "otherid": id})
+        .then( response => {
+            return "Unfollowed!"
+        })
+    }
+
     render() {
         return (
             <div className="followcardholders">
@@ -60,8 +74,8 @@ class FollowingComp extends Component {
                                     <div>
                                         <h1 className="fbio">{e.bio}</h1>
                                     </div>
+                                    {this.props.pageData.userData.handle === this.props.user.userData.handle ? <div className="unfollowbutton" onClick={() => this.unfollow(e.id)}>Unfollow</div> : <div className="followbutton" onClick={() => this.follow(e.id)}>Follow</div>}
                                 </div>
-                                {this.props.pageData.userData.handle === this.props.user.userData.handle ? <div className="unfollowbutton">Unfollow</div> : <div className="followbutton">Follow</div>}
                             </div>
                         </div>
                     )
