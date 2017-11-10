@@ -4,27 +4,45 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { updateUser, updatePageData } from './../../ducks/reducer';
 
-class FollowComp extends Component {
+class FollowersComp extends Component {
     constructor(props){
         super(props)
 
         this.state = {
             users: [],
+            render: false
         }
+
+        this.rendererer = this.rendererer.bind(this)
     }
 
     
     componentWillMount() {
-            this.setState({
-                users: this.props.pageData.followers
-            })
+        this.doItBrotherAgain();    
+    }
+
+    componentWillReceiveProps(nextProps){
+        this.doItBrotherAgain();
+    }
+
+    doItBrotherAgain(){
+        this.setState({
+            users: this.props.pageData.followers
+        })      
+    }
+
+    rendererer(){
+        this.setState({
+            render: !this.state.render
+        },this.doItBrotherAgain);
+        this.props.renderer()
     }
 
     render() {
         return (
             <div className="followcardholders">
                 {console.log('users', this.state.users)}
-                {this.state.users.map(function(e, i, a){
+                {this.state.users.map((e, i, a) => {
                     return (
                         <div key={i} className="fcardholder">
                             <div>
@@ -36,8 +54,8 @@ class FollowComp extends Component {
                                         <div className="favatar">
                                             <img src={e.avatar} />
                                             <div className="fline">
-                                                <p id="name"><Link id="link" to={e.handle}>{e.name}</Link></p>
-                                                <p id="handle"><Link id="link" to={e.handle}>  {'@' + e.handle}</Link></p>
+                                                <p id="name" onClick={() => this.rendererer()}><Link id="link" to={e.handle}>{e.name}</Link></p>
+                                                <p id="handle" onClick={() => this.rendererer()}><Link id="link" to={e.handle}>  {'@' + e.handle}</Link></p>
                                             </div>
                                         </div>
                                         <div className="fsime">
@@ -59,4 +77,4 @@ class FollowComp extends Component {
 function mapStateToProps( state ) {
     return { user: state.user, pageData: state.pageData, profile: state.profile, profileView: state.profileView  }
 }
-export default connect(mapStateToProps, {updateUser, updatePageData})(FollowComp);
+export default connect(mapStateToProps, {updateUser, updatePageData})(FollowersComp);

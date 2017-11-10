@@ -1,4 +1,6 @@
-import axios from 'axios'
+import axios from 'axios';
+import io from 'socket.io-client';
+const socket = io('http://localhost:8008');
 
 const initialState = {
 

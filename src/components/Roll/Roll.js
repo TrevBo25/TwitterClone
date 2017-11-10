@@ -7,11 +7,15 @@ class Roll extends Component {
     constructor(props){
         super(props)
         this.state = {
-            posts: []
+            posts: [],
+            render: false
         }
     }
     componentWillMount() {
-        console.log(this.props.profile.toString());
+        this.choose()
+    }
+
+    choose(){
         if(this.props.profile) {
             this.setState({
                 posts: this.props.pageData.posts
@@ -19,8 +23,6 @@ class Roll extends Component {
         } else {
             axios.post('/api/fposts', {"id": this.props.user.userData.id})
             .then(response => {
-                console.log("skljdfaskldjfajsdfljasdlkf")
-                console.log(response.data);
                 this.setState({
                     posts: response.data
                 })
@@ -33,7 +35,7 @@ class Roll extends Component {
         return (
             <div>
                 <ul className="postsholders">
-                {this.state.posts.map(function(post, i){
+                {this.state.posts.map((post, i) => {
         return (
             <div key={i} className="out">
                 <div className="toppart">

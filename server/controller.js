@@ -218,7 +218,6 @@ module.exports = {
                 res.status(200).json(response[0]);
             }).catch(err => console.log('getuserfromhandle', err))
         },
-        // new stuff from Ian
         getFollowersPosts(req, res){
             console.log("hello");
             const db = req.app.get('db');

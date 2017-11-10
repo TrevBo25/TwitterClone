@@ -9,17 +9,29 @@ import FollowersComp from '../FollowComp/FollowersComp';
 import FollowingComp from '../FollowComp/FollowingComp';
 
 class Profile extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
 
         this.state = {
-            
+            render: false
         }
 
+        this.renderer = this.renderer.bind(this)
     }
 
-    componentWillMount(){
+    componentDidMount(){
         this.doItBrother();
+        this.changeProfileView("roll")
+    }
+
+    // componentWillReceiveProps(props){
+    //     this.doItBrother();
+    // }
+
+    renderer(){
+        this.setState({
+            render: !this.state.render
+        }, this.doItBrother, this.changeProfileView("roll"))
     }
 
     changeProfileView(view){
@@ -29,8 +41,8 @@ class Profile extends Component {
     doItBrother(){
         if(this.props.match) {
             this.props.updatePageData(this.props.match.params.handle)
-    }
-    this.props.viewProfile(true);
+        }
+        this.props.viewProfile(true);
     }
 
     render() {
@@ -64,7 +76,7 @@ class Profile extends Component {
                     <div className="frame">
                         <Sidebar />
                         <div className="main-contentp">
-                            {this.props.profileView === "roll" ? <Roll /> : (this.props.profileView === "following" ? <FollowingComp /> : <FollowersComp />)}
+                            {this.props.profileView === "roll" ? <Roll /> : (this.props.profileView === "following" ? <FollowingComp renderer={this.renderer}/> : <FollowersComp renderer={this.renderer}/>)}
                         </div>
                     </div>
                 </div>

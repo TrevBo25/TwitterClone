@@ -58,8 +58,8 @@ table {
 .nav-logo {
   margin-left: 7%;
   margin-bottom: 0.5%;
-  width: 60px;
-  height: 60px;
+  width: 65px;
+  height: 65px;
   -ms-transform: rotate(-15deg);
   -webkit-transform: rotate(-15deg);
   transform: rotate(-15deg); }
@@ -102,13 +102,13 @@ table {
   height: 100%; }
 
 .dropdown img {
-  height: 60px;
-  width: 60px;
+  height: 65px;
+  width: 65px;
   border-radius: 50%; }
 
 .dropdown-container {
   display: none;
-  right: 4%; }
+  right: 7%; }
 
 .dropdown:hover .dropdown-container {
   display: block;
@@ -139,6 +139,16 @@ table {
   text-decoration: none;
   color: #161925; }
 
+.talko-box-container {
+  width: 500px;
+  height: 50px;
+  background: #ebebeb;
+  transition: height 0.25s; }
+
+.talko-box-container:hover {
+  height: 100px;
+  margin-top: 50px; }
+
 .talko-box {
   background: white;
   display: block;
@@ -146,27 +156,27 @@ table {
   line-height: 23px;
   font-family: 'Roboto';
   letter-spacing: 1px;
-  width: 400px;
-  margin-top: 0px;
+  width: 80%;
+  margin-top: 7px;
+  margin-left: 8%;
   padding: 5px 10px 5px 10px;
   border-radius: 5px;
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.8), 0px 1px 1px rgba(255, 255, 255, 0.8);
   border: 1px solid #FAF3DD;
-  -webkit-transition: all .5s ease;
-  -moz-transition: all .5s ease;
-  transition: all .5s ease; }
+  -webkit-transition: all .25 ease;
+  -moz-transition: all .25 ease;
+  transition: all .25 ease; }
 
 .talko-box {
   resize: none;
-  opacity: 1; }
+  opacity: 1;
+  overflow: hidden; }
 
-.talko-box:hover,
 .talko-box:focus {
   opacity: 1;
   color: black;
   border: 1px solid #C8D5B9;
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.8);
-  margin-top: 56px;
   padding-bottom: 62px; }
 
 .talko-box[type="text"]:focus {
@@ -180,8 +190,9 @@ table {
   height: 62px; }
 
 .usernname {
-  font-weight: bold;
-  font-size: 20px; }
+  font-weight: bolder;
+  font-size: 20px;
+  line-height: 35px; }
 
 .sidebar {
   background-color: #eaf2e2;
@@ -281,12 +292,11 @@ a {
   background-color: white;
   width: 65%;
   margin-left: 15px;
-  margin-top: 23px;
-  /* Add a background color on hover */ }
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
   .settingsdad .btn-group {
-    background-color: #4CAF50;
+    background-color: #68b0ab;
     /* Green background */
-    border: 1px solid green;
+    border: 1px solid #68afab;
     /* Green border */
     color: white;
     /* White text */
@@ -298,13 +308,37 @@ a {
     /* Set a width if needed */
     display: block;
     /* Make the buttons appear below each other */
-    margin: 10px; }
+    margin: 10px;
+    font-size: 18px;
+    -webkit-transition-duration: 0.4s;
+    /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    border-radius: 20px; }
+  .settingsdad .btn-group:after {
+    content: "";
+    background: #90EE90;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s; }
+  .settingsdad .btn-group:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s; }
+  .settingsdad .btn-group:hover {
+    background-color: #4f9692;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.24), 0 2px 6px 0 rgba(0, 0, 0, 0.19); }
   .settingsdad #save {
     width: 140px; }
-  .settingsdad .btn-group:hover {
-    background-color: #3e8e41; }
   .settingsdad .settings-body {
-    padding: 60px 40px; }
+    padding: 20px 40px; }
   .settingsdad input[type=text], .settingsdad [type=password], .settingsdad select {
     width: 100%;
     padding: 12px 20px;
@@ -323,14 +357,18 @@ a {
       font-family: Roboto;
       font-weight: 600;
       padding-left: 20px; }
-  .settingsdad .cool-line {
-    width: 900px;
-    border: 0;
-    height: 1px;
-    background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
-    background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
-    background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
-    background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0); }
+    .settingsdad .input-field textarea {
+      font-family: Roboto;
+      resize: none;
+      width: 100%;
+      padding: 12px 20px;
+      margin: 10px 10px;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      font-size: 16px;
+      width: 400px; }
 
 .papa {
   width: 100%;
@@ -372,11 +410,12 @@ a {
           justify-content: center;
           margin-left: 5px; }
           .papa .postsholder .outterbox0 .toppart .names .name {
-            font-size: 30px;
+            font-size: 26px;
             font-family: "Fauna One", serif;
             transform: translateX(-15px);
             margin-bottom: 7px;
-            margin-top: -4px; }
+            margin-top: 10px;
+            margin-left: 23%; }
           .papa .postsholder .outterbox0 .toppart .names .handle {
             margin-left: 5px;
             color: #4A7C59; }
@@ -429,11 +468,12 @@ a {
           justify-content: center;
           margin-left: 5px; }
           .papa .postsholder .outterbox1 .toppart .names .name {
-            font-size: 30px;
+            font-size: 26px;
             font-family: "Fauna One", serif;
             transform: translateX(-15px);
             margin-bottom: 7px;
-            margin-top: 12px; }
+            margin-top: -12px;
+            margin-left: 23%; }
           .papa .postsholder .outterbox1 .toppart .names .handle {
             margin-left: 5px;
             color: #4A7C59; }
@@ -489,11 +529,12 @@ a {
           justify-content: center;
           margin-left: 5px; }
           .papa .postsholder .outterbox2 .toppart .names .name {
-            font-size: 30px;
+            font-size: 26px;
             font-family: "Fauna One", serif;
             transform: translateX(-15px);
             margin-bottom: 7px;
-            margin-top: 15px; }
+            margin-top: 15px;
+            margin-left: 23%; }
           .papa .postsholder .outterbox2 .toppart .names .handle {
             margin-left: 5px;
             color: #4A7C59; }
@@ -547,11 +588,12 @@ a {
           justify-content: center;
           margin-left: 5px; }
           .papa .postsholder .outterbox3 .toppart .names .name {
-            font-size: 30px;
+            font-size: 26px;
             font-family: "Fauna One", serif;
             transform: translateX(-15px);
             margin-bottom: 7px;
-            margin-top: -4px; }
+            margin-top: 7px;
+            margin-left: 23%; }
           .papa .postsholder .outterbox3 .toppart .names .handle {
             margin-left: 5px;
             color: #4A7C59; }
@@ -572,7 +614,7 @@ a {
         .papa .postsholder .outterbox3 .bottompart .gutsimage {
           margin-right: 10px; }
           .papa .postsholder .outterbox3 .bottompart .gutsimage img {
-            height: 140px;
+            height: 120px;
             width: 200px;
             float: right;
             border-radius: 5px;
@@ -604,11 +646,12 @@ a {
           justify-content: center;
           margin-left: 5px; }
           .papa .postsholder .outterbox4 .toppart .names .name {
-            font-size: 30px;
+            font-size: 26px;
             font-family: "Fauna One", serif;
             transform: translateX(-15px);
             margin-bottom: 7px;
-            margin-top: 15px; }
+            margin-top: 20px;
+            margin-left: 23%; }
           .papa .postsholder .outterbox4 .toppart .names .handle {
             margin-left: 5px;
             color: #4A7C59; }
@@ -662,11 +705,12 @@ a {
           justify-content: center;
           margin-left: 5px; }
           .papa .postsholder .outterbox5 .toppart .names .name {
-            font-size: 30px;
+            font-size: 26px;
             font-family: "Fauna One", serif;
             transform: translateX(-15px);
             margin-bottom: 7px;
-            margin-top: 15px; }
+            margin-top: 18px;
+            margin-left: 23%; }
           .papa .postsholder .outterbox5 .toppart .names .handle {
             margin-left: 5px;
             color: #4A7C59; }
@@ -720,11 +764,12 @@ a {
           justify-content: center;
           margin-left: 5px; }
           .papa .postsholder .outterbox6 .toppart .names .name {
-            font-size: 30px;
+            font-size: 26px;
             font-family: "Fauna One", serif;
             transform: translateX(-15px);
             margin-bottom: 7px;
-            margin-top: -4px; }
+            margin-top: 10px;
+            margin-left: 23%; }
           .papa .postsholder .outterbox6 .toppart .names .handle {
             margin-left: 5px;
             color: #4A7C59; }
@@ -777,11 +822,12 @@ a {
           justify-content: center;
           margin-left: 5px; }
           .papa .postsholder .outterbox7 .toppart .names .name {
-            font-size: 30px;
+            font-size: 26px;
             font-family: "Fauna One", serif;
             transform: translateX(-15px);
             margin-bottom: 7px;
-            margin-top: -4px; }
+            margin-top: 10px;
+            margin-left: 23%; }
           .papa .postsholder .outterbox7 .toppart .names .handle {
             margin-left: 5px;
             color: #4A7C59; }
@@ -834,11 +880,12 @@ a {
           justify-content: center;
           margin-left: 5px; }
           .papa .postsholder .outterbox8 .toppart .names .name {
-            font-size: 30px;
+            font-size: 26px;
             font-family: "Fauna One", serif;
             transform: translateX(-15px);
             margin-bottom: 7px;
-            margin-top: -4px; }
+            margin-top: 10px;
+            margin-left: 23%; }
           .papa .postsholder .outterbox8 .toppart .names .handle {
             margin-left: 5px;
             color: #4A7C59; }

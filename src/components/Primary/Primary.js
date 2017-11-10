@@ -8,7 +8,19 @@ import { updateUser, updatePageData } from '../../ducks/reducer';
 
 
 class Primary extends Component {
+    constructor(props){
+        super(props)
 
+        this.state = {
+            render: false
+        }
+    }
+
+    renderer(){
+        this.setState({
+            render: !this.state.render
+        })
+    }
 
     
     render() {

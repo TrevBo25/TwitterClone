@@ -16,6 +16,7 @@ class ProfileCard extends Component {
                         <div className="prowords">
                                 <h1 className="proname">{this.props.pageData.userData.name}</h1>
                                 <h1 className="prohandle">@{this.props.pageData.userData.handle}</h1>
+                                <h1 className="probio"><i class="fa fa-map-marker" aria-hidden="true"></i>  {this.props.pageData.userData.location}</h1>
                                 <p className="probio">{this.props.pageData.userData.bio}</p>
                         </div>
                     </div>
