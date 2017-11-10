@@ -57,7 +57,6 @@ class Nav extends Component {
                         ♥ 💋 Please touch me 💋 ♥ 
                         </button>
                     </div>
-
                     
                     <div className="dropdown"><img src={this.props.user.userData.avatar} onClick={() => this.goToSettings(false)}/>
                     <div className="dropdown-container">
