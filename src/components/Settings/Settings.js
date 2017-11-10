@@ -10,9 +10,9 @@ class Settings extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            handle: '',
-            bio: '',
-            location: '',
+            handle: this.props.user.userData.handle,
+            bio: this.props.user.userData.bio,
+            location: this.props.user.userData.location,
             email: '',
             newEmail: '',
             password: '',
