@@ -92,31 +92,31 @@ class Settings extends Component {
     
       handleSubmit() {
         if(this.state.handle != this.props.user.userData.handle){
-            axios.post('/api/changehandle', {"id": this.props.user.id, "newHandle": this.state.handle})
+            axios.post('/api/changehandle', {"id": this.props.user.userData.id, "newHandle": this.state.handle})
             .then(response => {
                 return "cool"
             })
         }
         if(this.state.email != this.props.user.userData.email && this.state.newEmail != ""){
-            axios.post('/api/changeemail', {"id": this.props.user.id, "email": this.state.email, "newEmail": this.state.newEmail})
+            axios.post('/api/changeemail', {"id": this.props.user.userData.id, "email": this.state.email, "newEmail": this.state.newEmail})
             .then( response => {
                 return 'radical'
             })
         }
         if(this.state.password != this.props.user.userData.password && this.state.newPassword1 != "" && this.state.newPassword2 != ""){
-            axios.post('/api/changepassword', {"id": this.props.user.id, "password": this.state.password, "newPass1": this.state.newPassword1, "newPass2": this.state.newPassword2})
+            axios.post('/api/changepassword', {"id": this.props.user.userData.id, "password": this.state.password, "newPass1": this.state.newPassword1, "newPass2": this.state.newPassword2})
             .then( response => {
                 return 'tubular'
             })
         }
         if(this.state.bio != this.props.user.userData.bio){
-            axios.post('/api/changebio', {"id": this.props.user.id, "bio": this.state.bio})
+            axios.post('/api/changebio', {"id": this.props.user.userData.id, "bio": this.state.bio})
             .then(response => {
                 return 'suuuuuuuuuuper bitchin'
             })
         }
         if(this.state.location != this.props.user.userData.location){
-            axios.post('/api/changelocation', {"id": this.props.user.id, "location": this.state.location})
+            axios.post('/api/changelocation', {"id": this.props.user.userData.id, "location": this.state.location})
             .then(response => {
                 return 'boggles'
             })
@@ -138,18 +138,18 @@ class Settings extends Component {
                     <label style={{'display' : this.state.showUsername ? 'block' : 'none'}}> */}
                         <div className="input-field">
                             <h1>Change Handle</h1> 
-                            <input type="text" defaultValue={this.props.user.handle} onChange={(e) => {this.userInput(e.target.value, 'handle')}} />
+                            <input type="text" defaultValue={this.props.user.userData.handle} onChange={(e) => {this.userInput(e.target.value, 'handle')}} />
                         </div>
                     {/* </label> */}
 
                         <div className="input-field">
                             <h1>Update Bio</h1>
-                            <textarea rows="4" cols="50" wrap="hard" id="bio" defaultValue={this.props.user.bio} onChange={(e) => {this.userInput(e.target.value, 'bio')}} />
+                            <textarea rows="4" cols="50" wrap="hard" id="bio" defaultValue={this.props.user.userData.bio} onChange={(e) => {this.userInput(e.target.value, 'bio')}} />
                         </div>
 
                         <div className="input-field">
                             <h1>Change Location</h1> 
-                            <input type="text" defaultValue={this.props.user.location} onChange={(e) => {this.userInput(e.target.value, 'location')}} />
+                            <input type="text" defaultValue={this.props.user.userData.location} onChange={(e) => {this.userInput(e.target.value, 'location')}} />
                         </div>
 
                     {/* <hr className="cool-line" /> */}

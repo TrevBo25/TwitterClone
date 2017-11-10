@@ -245,6 +245,14 @@ module.exports = {
                 }
             }).catch( err => console.log('check_password', err))
         },
+        changeBio(req, res){
+            const db = req.app.get('db');
+            const {id, bio} = req.body;
+            db.change_bio([id, bio])
+            .then( response => {
+                res.status(200).send('New bio set');
+            })
+        },
         allUserData(req, res) {
             const db = req.app.get('db');
             const {handle} = req.body;
@@ -341,14 +349,7 @@ module.exports = {
                 console.log(err)
             })
         },
-        changeBio(req, res){
-            const db = req.app.get('db');
-            const {id, bio} = req.body;
-            db.change_bio([id, bio])
-            .then( response => {
-                res.status(200).send('New bio set');
-            })
-        },
+
         changeLocation(req, res){
             const db = req.app.get('db');
             const {id, location} = req.body;
