@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 import Sidebar from '../Sidebar/Sidebar';
 import Nav from '../Nav/Nav';
 import { goToSettings } from '../../ducks/reducer';
+import { Link } from 'react-router-dom';
 
 class Settings extends Component {
     constructor(props) {
@@ -77,7 +78,7 @@ class Settings extends Component {
           }
       }
     
-      handleSubmit(event) {
+      handleSubmit() {
         if(this.state.handle != ""){
             axios.post('/api/changehandle', {"id": this.props.user.id, "newHandle": this.state.handle})
             .then(response => {
@@ -96,7 +97,7 @@ class Settings extends Component {
                 return 'tubular'
             })
         }
-        this.props.renderer()
+        // this.props.renderer()
        
       }
     
@@ -159,13 +160,13 @@ class Settings extends Component {
                     {/* </label> */}
                     </div>
 
-                <input class="btn-group" id="save" type="submit" value="Save" onClick={this.handleSubmit}/>
+                <Link to="/"><input class="btn-group" id="save" type="submit" value="Save" onClick={this.handleSubmit}/></Link>
 
                 </form>
                 </div>
              </div>
            </div>
-                    </div>
+        </div>
       )
     }
   }
