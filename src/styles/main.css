@@ -97,14 +97,14 @@ table {
   animation-iteration-count: infinite; }
 
 .dropdown {
-  margin-top: .5%;
   margin-right: 7%;
   height: 100%; }
 
 .dropdown img {
   height: 65px;
   width: 65px;
-  border-radius: 50%; }
+  border-radius: 50%;
+  border: 2px solid #C8D5B9; }
 
 .dropdown-container {
   display: none;
@@ -144,10 +144,6 @@ table {
   height: 50px;
   background: #ebebeb;
   transition: height 0.25s; }
-
-.talko-box-container:hover {
-  height: 100px;
-  margin-top: 50px; }
 
 .talko-box {
   background: white;
@@ -193,6 +189,15 @@ table {
   font-weight: bolder;
   font-size: 20px;
   line-height: 35px; }
+
+#buttion {
+  font-size: 10;
+  padding: 1px;
+  background: pink;
+  color: #FF0000;
+  border-color: #FF0000;
+  border-radius: 5px;
+  box-shadow: 1px; }
 
 .sidebar {
   background-color: #eaf2e2;
@@ -277,6 +282,19 @@ a {
         max-width: 80%;
         height: 100%;
         border-radius: 5px; }
+  .out .votebuttons {
+    width: 50%;
+    margin-left: 3%;
+    display: flex;
+    justify-content: space-around; }
+    .out .votebuttons .likebutton {
+      display: flex;
+      align-items: center; }
+      .out .votebuttons .likebutton .votenum {
+        margin-left: 10px;
+        font-size: 21px; }
+      .out .votebuttons .likebutton .fa:hover {
+        cursor: pointer; }
 
 .compose-empty {
   height: 20px;
