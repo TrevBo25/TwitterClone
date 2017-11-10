@@ -44,6 +44,7 @@ app.post('/api/changeemail', controller.changeEmail);
 app.post('/api/changepassword', controller.changePassword);
 app.post('/api/changebio', controller.changeBio);
 app.post('/api/changelocation', controller.changeLocation);
+app.post('/api/changename', controller.changeName);
 
 app.post('/api/alluserdata', controller.allUserData)
 

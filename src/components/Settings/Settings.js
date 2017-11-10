@@ -13,6 +13,7 @@ class Settings extends Component {
             handle: this.props.user.userData.handle,
             bio: this.props.user.userData.bio,
             location: this.props.user.userData.location,
+            name: this.props.user.userData.name,
             email: '',
             newEmail: '',
             password: '',
@@ -87,6 +88,11 @@ class Settings extends Component {
                   console.log('   Setting location state:', input)
                   this.setState({location: input})
                   break;
+
+              case 'name':
+                  console.log('   Setting location name:', input)
+                  this.setState({name: input})
+                  break;
           }
       }
     
@@ -121,9 +127,12 @@ class Settings extends Component {
                 return 'boggles'
             })
         }
-
-        // this.props.renderer()
-       
+        if(this.state.name != this.props.user.userData.name){
+            axios.post('/api/changename', {"id": this.props.user.userData.id, "name": this.state.name})
+            .then(response => {
+                return 'hi how r u =)'
+            })
+        }
       }
     
       render() {
@@ -136,6 +145,11 @@ class Settings extends Component {
             <form onSubmit={this.handleSubmit}>
                 {/* <button class="btn-group" onClick={this.showUsername}>Change Username</button>
                     <label style={{'display' : this.state.showUsername ? 'block' : 'none'}}> */}
+                        <div className="input-field">
+                            <h1>Change Name</h1> 
+                            <input type="text" defaultValue={this.props.user.userData.name} onChange={(e) => {this.userInput(e.target.value, 'name')}} />
+                        </div>
+
                         <div className="input-field">
                             <h1>Change Handle</h1> 
                             <input type="text" defaultValue={this.props.user.userData.handle} onChange={(e) => {this.userInput(e.target.value, 'handle')}} />
