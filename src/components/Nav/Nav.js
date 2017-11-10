@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import axios from 'axios';
 import { Link } from 'react-router-dom';
 import {updateUser} from './../../ducks/reducer'
 import logo from '../../assets/tacoLogo/taco.svg';
@@ -7,6 +8,28 @@ import { goToSettings, viewProfile } from '../../ducks/reducer';
 
 class Nav extends Component {
 
+    constructor() {
+        super()
+
+        this.state = {
+            guts: 'test'
+        }
+
+        this.handleInput = this.handleInput.bind(this)
+    }
+
+    handleInput(input) {
+        this.setState({
+            guts: input
+        })
+    }
+
+    submitPost = (post) => {
+        console.log(post)
+        axios.post('/api/createpost', post).then((response) => {
+            console.log(response.data);
+        })
+    }
 
     goToSettings(bool){
         this.props.goToSettings(bool);
@@ -23,7 +46,12 @@ class Nav extends Component {
                     <div className="nav-logo"><Link to="" ><img src={logo}/></Link></div>
 
                     <div className="talko-box-container">
-                        <textarea className="talko-box" rows="1" cols="30" wrap="hard" maxLength="80" type="text" placeholder="Let's Talko Bout It"/>
+                        <textarea value={this.state.guts} className="talko-box" rows="1" cols="30" wrap="hard" mength="80" type="text" placeholder="Let's Talko Bout It"
+                        onChange={(e) => {this.handleInput(e.target.value)}}
+                        />
+                        <button id="buttion" onClick={() => {this.submitPost(this.state)}}>
+                        ♥ 💋 Please touch me 💋 ♥ 
+                        </button>
                     </div>
                     
                     <div className="dropdown"><img src={this.props.user.userData.avatar} onClick={() => this.goToSettings(false)}/>
