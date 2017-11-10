@@ -44,27 +44,24 @@ class FollowingComp extends Component {
                 {console.log('users', this.state.users)}
                 {this.state.users.map((e, i, a) => {
                     return (
-                        <div key={i} className="fcardholder">
-                            <div>
-                                <div>
-                                    <div className="follow-card">
-                                        <div className="fcover">
-                                            <img src={e.cover} />
-                                        </div>
-                                        <div className="favatar">
-                                            <img src={e.avatar} />
-                                            <div className="fline">
-                                                <p id="name" onClick={() => this.rendererer()}><Link id="link" to={e.handle}>{e.name}</Link></p>
-                                                <p id="handle" onClick={() => this.rendererer()}><Link id="link" to={e.handle}>  {'@' + e.handle}</Link></p>
-                                            </div>
-                                        </div>
-                                        <div className="fsime">
-                                            <div>
-                                                <h1 className="fbio">{e.bio}</h1>
-                                            </div>
-                                        </div>
+                        <div key={i} className="fcardholder">     
+                            <div className="follow-card">
+                                <div className="fcover">
+                                    <img src={e.cover} />
+                                </div>
+                                <div className="favatar">
+                                    <img src={e.avatar} />
+                                    <div className="fline">
+                                        <p id="name" onClick={() => this.rendererer()}><Link id="link" to={e.handle}>{e.name}</Link></p>
+                                        <p id="handle" onClick={() => this.rendererer()}><Link id="link" to={e.handle}>  {'@' + e.handle}</Link></p>
                                     </div>
                                 </div>
+                                <div className="fsime">
+                                    <div>
+                                        <h1 className="fbio">{e.bio}</h1>
+                                    </div>
+                                </div>
+                                {this.props.pageData.userData.handle === this.props.user.userData.handle ? <div className="unfollowbutton">Unfollow</div> : <div className="followbutton">Follow</div>}
                             </div>
                         </div>
                     )

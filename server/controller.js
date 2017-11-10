@@ -166,13 +166,20 @@ module.exports = {
         follow(req, res){
             const db = req.app.get('db');
             const{id, otherid} = req.body;
-            db.follow([id, otherid])
-            .then( response => {
-                db.send_notification([id, otherid, 'follow', null])
-                .then( response => {
-                    res.status(200).send("followed and notified")
-                })
-            }).catch( err => { console.log("follow", err);})
+            db.check_follow([id, otherid])
+            .then (user => {
+                if(user.length === 0){
+                    db.follow([id, otherid])
+                    .then( response => {
+                        db.send_notification([id, otherid, 'follow', null])
+                        .then( response => {
+                            res.status(200).send("followed and notified")
+                        })
+                    }).catch( err => { console.log("follow", err);})
+                } else {
+                    res.status(200).send("You already follow them, you silly goose!")
+                }
+            }).catch( err => { console.log("checkfollow", err);})
         },
         unfollow(req, res){
             const db = req.app.get('db');
