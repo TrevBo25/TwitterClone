@@ -17,7 +17,7 @@ class Roll extends Component {
                 posts: this.props.pageData.posts
             })
         } else {
-            axios.post('/api/fposts', {"id": this.props.user.id})
+            axios.post('/api/fposts', {"id": this.props.user.userData.id})
             .then(response => {
                 console.log("skljdfaskldjfajsdfljasdlkf")
                 console.log(response.data);

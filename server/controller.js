@@ -1,3 +1,5 @@
+const bcrypt = require('bcrypt')
+
 module.exports = {
     
         registerUser(req, res){
@@ -25,33 +27,33 @@ module.exports = {
                 }
             }).catch(err => console.log('check_handle', err));
         },
-        login(req, res){
-            const db = req.app.get('db');
-            const {password} = req.body;
-            console.log(req.body);
-            let login = '';
-            if (req.body.handle){
-                login = req.body.handle;
-                db.login_handle([login, password])
-                .then(response => {
-                    if(response.length === 0){
-                        res.status(404).send('User does not exist');
-                    } else {
-                        res.status(200).json(response[0]);
-                    }
-                }).catch( err => console.log('login_password', err))
-            } else {
-                login = req.body.email;
-                db.login_email([login, password])
-                .then(response => {
-                    if(response.length === 0){
-                        res.status(404).send('User does not exists');
-                    } else {
-                        res.status(200).json(response);
-                    }
-                }).catch( err => console.log('login_email', err))
-            }
-        },
+        // login(req, res){
+        //     const db = req.app.get('db');
+        //     const {password} = req.body;
+        //     console.log(req.body);
+        //     let login = '';
+        //     if (req.body.handle){
+        //         login = req.body.handle;
+        //         db.login_handle([login, password])
+        //         .then(response => {
+        //             if(response.length === 0){
+        //                 res.status(404).send('User does not exist');
+        //             } else {
+        //                 res.status(200).json(response[0]);
+        //             }
+        //         }).catch( err => console.log('login_password', err))
+        //     } else {
+        //         login = req.body.email;
+        //         db.login_email([login, password])
+        //         .then(response => {
+        //             if(response.length === 0){
+        //                 res.status(404).send('User does not exists');
+        //             } else {
+        //                 res.status(200).json(response);
+        //             }
+        //         }).catch( err => console.log('login_email', err))
+        //     }
+        // },
         updateUser(req, res){
             const db = req.app.get('db');
             const {id, name, handle, email} = req.body;
@@ -314,6 +316,64 @@ module.exports = {
                 console.log(stuff)
                 res.status(200).send(stuff)
             })
-            
+        },
+        login(req, res){
+            console.log('Request', req.body);
+            const db = req.app.get('db');
+            const {login, password} = req.body
+            db.login_user([login]).then( 
+                user => { 
+                    bcrypt.compare(password, user[0].password, function(err, pass){
+                        const handle = user[0].handle
+                        console.log('the handle', handle)
+                        console.log(pass)
+                        var userData = db.get_user([handle])
+                        .then(
+                             userData => {
+                                console.log('userData')
+                                return userData
+                            }
+                        )
+                        var followers = db.get_followers([handle])
+                        .then(
+                            followers => {
+                                console.log('followers')
+                                return followers
+                            }
+                        )
+                        var following = db.get_following([handle])
+                        .then(
+                            following => {
+                                console.log('following')
+                                return following
+                            }
+                        
+                        )
+                        var posts = db.get_user_posts([handle])
+                        .then(
+                            posts => {
+                                console.log(posts)
+                                return posts
+                            }
+                        
+                        )
+
+                        Promise.all([userData, followers, following, posts]).then(values => {
+                            // console.log(values)
+                            var stuff = {
+                                userData: values[0][0],
+                                followers: values[1],
+                                following: values[2],
+                                posts: values[3].length
+                            }
+                            // console.log('the stuff', stuff)
+                            res.status(200).send(stuff)
+                        })
+
+                    })
+                    
+            }).catch( err => {
+                console.log(err)
+            })
         }
     }

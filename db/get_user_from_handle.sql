@@ -1,6 +1,7 @@
 SELECT *
 FROM USERS
-WHERE HANDLE = $1;
+WHERE HANDLE = $1
+LIMIT 1;
 
 -- SELECT followers.user_id
 -- FROM USERS

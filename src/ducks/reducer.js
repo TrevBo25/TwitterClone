@@ -2,26 +2,18 @@ import axios from 'axios'
 
 const initialState = {
 
-    user: {
-        id: 66,
-        name: "spiderman",
-        handle: "peter",
-        email: "peter@parker.com",
-        password: "maryjane",
-        avatar: "https://i.pinimg.com/736x/1a/50/65/1a50655c5e33b6a680aeafcb55bb3fed--black-spider-spider-man.jpg",
-        bio: "bit by a spider",
-        location: "forest hills, NY",
-        cover: "https://cdn.theculturetrip.com/wp-content/uploads/2017/06/smhldn9-1024x695.jpg"
-    },
+    user: {},
     pageData: {},
     profile: false,
-    profileView: "roll"
+    profileView: "roll",
+    showSettings: false
 }
 
 const UPDATE_USER = "UPDATE_USER";
 const UPDATE_PAGE_DATA = "UPDATE_PAGE_DATA";
 const VIEW_PROFILE = "VIEW_PROFILE";
 const CHANGE_PRO_VIEW = "CHANGE_PRO_VIEW";
+const GO_SETTINGS = "GO_SETTINGS";
 
 export default
 function reducer(state=initialState, action) {
@@ -35,6 +27,8 @@ function reducer(state=initialState, action) {
             return Object.assign({}, state, {profile: action.payload})
         case CHANGE_PRO_VIEW:
             return Object.assign({}, state, {profileView: action.payload})
+        case GO_SETTINGS:
+            return Object.assign({}, state, {showSettings: action.payload})
         default:
         return state
     }
@@ -70,5 +64,12 @@ export function changeProView(view){
     return{
         type: CHANGE_PRO_VIEW,
         payload: view
+    }
+}
+
+export function goToSettings(bool){
+    return{
+        type: GO_SETTINGS,
+        payload:bool
     }
 }
