@@ -260,6 +260,22 @@ module.exports = {
                 res.status(200).send('New bio set');
             })
         },
+        changeLocation(req, res){
+            const db = req.app.get('db');
+            const {id, location} = req.body;
+            db.change_location([id, location])
+            .then( response => {
+                res.status(200).send('New bio location');
+            })
+        },
+        changeName(req, res) {
+            const db = req.app.get('db');
+            const {id, name} = req.body;
+            db.change_name([id, name])
+            .then(response=> {
+                res.status(200).send('New name set');
+            })
+        },
         allUserData(req, res) {
             const db = req.app.get('db');
             const {handle} = req.body;
