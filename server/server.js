@@ -42,6 +42,9 @@ app.post('/api/getuserfromhandle', controller.getUserFromHandle);
 app.post('/api/changehandle', controller.changeHandle);
 app.post('/api/changeemail', controller.changeEmail);
 app.post('/api/changepassword', controller.changePassword);
+app.post('/api/changebio', controller.changeBio);
+app.post('/api/changelocation', controller.changeLocation);
+
 app.post('/api/alluserdata', controller.allUserData)
 
 const storage = multer.diskStorage({
