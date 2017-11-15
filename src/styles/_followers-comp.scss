@@ -68,6 +68,26 @@ a{text-decoration: none; color: $color0}
                 .fbio{
                     margin: 3px;
                 }
+                .followbutton{
+                    font-size: 17px;
+                    padding: 8px 12px 8px 12px;
+                    background-color: $color3;
+                    border-radius: 3px;
+                }
+                .followbutton:hover{
+                    background-color: $color2;
+                    cursor: pointer;
+                }
+                .unfollowbutton{
+                    font-size: 17px;
+                    padding: 8px 12px 8px 12px;
+                    background-color: $color2;
+                    border-radius: 3px;
+                }
+                .unfollowbutton:hover{
+                    background-color: $color3;
+                    cursor: pointer;
+                }
             }
         }
     }   

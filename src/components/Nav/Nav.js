@@ -34,8 +34,12 @@ class Nav extends Component {
         })
     }
 
-    submitPost = (post) => {
-        console.log(post)
+    submitPost = (guts) => {
+        var post = {
+            guts,
+            user_id: this.props.user.userData.id
+        }
+
         axios.post('/api/createpost', post).then((response) => {
             console.log(response.data);
         })
@@ -61,8 +65,8 @@ class Nav extends Component {
                         <textarea className={`row ${this.state.expandedTalko ? 'expanded-talko-box' : 'normal-talko-box'}`} onFocus={this.toggleExpandedTalko} value={this.state.guts} rows="1" cols="30" wrap="hard" mength="80" type="text" placeholder="Let's Talko Bout It"
                         onChange={(e) => {this.handleInput(e.target.value)}}
                         />
-                        <button id="buttion" onClick={() => {this.submitPost(this.state)}}>
-                       Talko Time
+                        <button id="buttion" onClick={() => {this.submitPost(this.state.guts)}}>
+                        ♥ 💋 Please touch me 💋 ♥ 
                         </button>
                     </div>
                     

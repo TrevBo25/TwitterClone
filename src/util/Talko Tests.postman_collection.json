@@ -1,0 +1,172 @@
+{
+	"id": "5b00faa6-0c1b-0779-f57c-a3fb3173bc4f",
+	"name": "Talko Tests",
+	"description": "",
+	"order": [
+		"832de9cf-aa56-7574-16dd-fedf27bc9423",
+		"4b33aa65-ed69-a368-2ce9-5a03d7a978ff",
+		"550e84b2-a6e1-2649-92ce-039f206812a8",
+		"12c88c8b-e5f4-e83d-9ff6-f6a8c15a8f8e",
+		"092d5fc0-84dd-b2dc-1eb7-d3ef1ef07b6d"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1510687573603,
+	"owner": "2676050",
+	"public": false,
+	"requests": [
+		{
+			"id": "092d5fc0-84dd-b2dc-1eb7-d3ef1ef07b6d",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8008/api/fposts",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "5b00faa6-0c1b-0779-f57c-a3fb3173bc4f",
+			"data": [],
+			"dataMode": "raw",
+			"name": "http://localhost:8008/api/fposts",
+			"description": "makes sure the posts on the main stream has the correct information",
+			"descriptionFormat": "html",
+			"time": 1510695482404,
+			"version": 2,
+			"responses": [],
+			"tests": "var jsonData = JSON.parse(responseBody);\ntests[\"Status code is 200\"] = responseCode.code === 200;\ntests[\"returned posts\"] = jsonData.length !== 0;\ntests[\"returned post has id\"] = jsonData[0].hasOwnProperty(\"id\");\ntests[\"returned post has guts\"] = jsonData[0].hasOwnProperty(\"guts\");\ntests[\"returned post has handle\"] = jsonData[0].hasOwnProperty(\"handle\");",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": "{\"id\": 66}"
+		},
+		{
+			"id": "12c88c8b-e5f4-e83d-9ff6-f6a8c15a8f8e",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8008/api/getuserfromhandle",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "5b00faa6-0c1b-0779-f57c-a3fb3173bc4f",
+			"data": [],
+			"dataMode": "raw",
+			"name": "http://localhost:8008/api/getuserfromhandle",
+			"description": "Makes sure you get the nessessary information to populate the profile component",
+			"descriptionFormat": "html",
+			"time": 1510694577728,
+			"version": 2,
+			"responses": [],
+			"tests": "var jsonData = JSON.parse(responseBody);\ntests[\"Status code is 200\"] = responseCode.code === 200;\ntests[\"returned name\"] = jsonData.hasOwnProperty(\"name\");\ntests[\"returned email\"] = jsonData.hasOwnProperty(\"email\");\n\n",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": "{\"handle\": \"notpeterparker\"}"
+		},
+		{
+			"id": "4b33aa65-ed69-a368-2ce9-5a03d7a978ff",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8008/api/login",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "5b00faa6-0c1b-0779-f57c-a3fb3173bc4f",
+			"data": [],
+			"dataMode": "raw",
+			"name": "http://localhost:8008/api/login",
+			"description": "Making sure the login returns the nessessary information",
+			"descriptionFormat": "html",
+			"time": 1510692583270,
+			"version": 2,
+			"responses": [],
+			"tests": "var jsonData = JSON.parse(responseBody);\ntests[\"Status code is 200\"] = responseCode.code === 200;\ntests[\"returned userData\"] = jsonData.hasOwnProperty(\"userData\");\ntests[\"returned followers\"] = jsonData.hasOwnProperty(\"followers\");\ntests[\"returned following\"] = jsonData.hasOwnProperty(\"following\");\ntests[\"returned posts\"] = jsonData.hasOwnProperty(\"posts\");\n\n",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": "{\"login\": \"notpeterparker\", \"password\": \"maryjane\"}"
+		},
+		{
+			"id": "550e84b2-a6e1-2649-92ce-039f206812a8",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8008/api/getpostslanding",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "5b00faa6-0c1b-0779-f57c-a3fb3173bc4f",
+			"data": [],
+			"dataMode": "raw",
+			"name": "http://localhost:8008/api/getpostslanding",
+			"description": "Makes sure the posts come back with the right contents",
+			"descriptionFormat": "html",
+			"time": 1510694192888,
+			"version": 2,
+			"responses": [],
+			"tests": "var jsonData = JSON.parse(responseBody);\ntests[\"Status code is 200\"] = responseCode.code === 200;\ntests[\"returned posts\"] = jsonData.length !== 0;\ntests[\"posts has guts\"] = jsonData[0].hasOwnProperty(\"guts\");\ntests[\"posts has name\"] = jsonData[0].hasOwnProperty(\"name\");\ntests[\"posts has handle\"] = jsonData[0].hasOwnProperty(\"handle\");\ntests[\"posts has id\"] = jsonData[0].hasOwnProperty(\"id\");\n\n\n",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": "{\"login\": \"notpeterparker\", \"password\": \"maryjane\"}"
+		},
+		{
+			"id": "832de9cf-aa56-7574-16dd-fedf27bc9423",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8008/api/register",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": "tests[\"Body matches string\"] = responseBody.has(\"Email already exists\");\ntests[\"Status code is 200\"] = responseCode.code === 200;",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1510692043647,
+			"name": "http://localhost:8008/api/register",
+			"description": "testing to make sure it rejects dual account creation",
+			"collectionId": "5b00faa6-0c1b-0779-f57c-a3fb3173bc4f",
+			"responses": [],
+			"rawModeData": "{\"name\": \"spoderman\", \"handle\": \"notpeterparker\", \"email\": \"peter@parker.com\", \"password\": \"maryjane\"}"
+		}
+	]
+}

@@ -3,6 +3,7 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { updateUser, updatePageData } from './../../ducks/reducer'
+
 class Roll extends Component {
     constructor(props){
         super(props)
@@ -29,6 +30,21 @@ class Roll extends Component {
             })
         }
     }
+
+    like(id){
+        console.log(id);
+        axios.post('/api/likepost', {"id": id})
+        .then( response => {
+            return 'liked'
+        }).catch( err => console.log('likepost', err))
+    }
+
+    dislike(id){
+        axios.post('/api/dislikepost', {"id": id})
+        .then( response => {
+            return 'disliked'
+        }).catch( err => console.log('dislikepost', err))
+    }
     
     render() {
         console.log('The posts:', this.state.posts)
@@ -54,7 +70,15 @@ class Roll extends Component {
                 <div className="bottompart">
                     {post.image ? <div className="gutsimage">
                         <img alt="" src={post.image} />
-                    </div> : <div>loading...</div>}
+                    </div> : <div></div>}
+                </div>
+                <div className="votebuttons">
+                    <div className="likebutton">
+                        <i class="fa fa-thumbs-o-up fa-2x" aria-hidden="true" onClick={() => this.like(post.id)}></i><p className="votenum">{post.likes}</p>
+                    </div>
+                    <div className="likebutton">
+                        <i class="fa fa-thumbs-o-down fa-2x" aria-hidden="true" onClick={() => this.dislike(post.id)}></i><p className="votenum">{post.dislikes}</p>
+                    </div>
                 </div>
             </div>
         )

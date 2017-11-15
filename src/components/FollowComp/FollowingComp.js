@@ -38,32 +38,43 @@ class FollowingComp extends Component {
         this.props.renderer()
     }
 
+    follow(id){
+        axios.post('/api/follow', {"id": this.props.user.userData.id, "otherid": id})
+        .then( response => {
+            return "Followed!"
+        })
+    }
+
+    unfollow(id){
+        axios.post('/api/unfollow', {"id": this.props.user.userData.id, "otherid": id})
+        .then( response => {
+            return "Unfollowed!"
+        })
+    }
+
     render() {
         return (
             <div className="followcardholders">
                 {console.log('users', this.state.users)}
                 {this.state.users.map((e, i, a) => {
                     return (
-                        <div key={i} className="fcardholder">
-                            <div>
-                                <div>
-                                    <div className="follow-card">
-                                        <div className="fcover">
-                                            <img src={e.cover} />
-                                        </div>
-                                        <div className="favatar">
-                                            <img src={e.avatar} />
-                                            <div className="fline">
-                                                <p id="name" onClick={() => this.rendererer()}><Link id="link" to={e.handle}>{e.name}</Link></p>
-                                                <p id="handle" onClick={() => this.rendererer()}><Link id="link" to={e.handle}>  {'@' + e.handle}</Link></p>
-                                            </div>
-                                        </div>
-                                        <div className="fsime">
-                                            <div>
-                                                <h1 className="fbio">{e.bio}</h1>
-                                            </div>
-                                        </div>
+                        <div key={i} className="fcardholder">     
+                            <div className="follow-card">
+                                <div className="fcover">
+                                    <img src={e.cover} />
+                                </div>
+                                <div className="favatar">
+                                    <img src={e.avatar} />
+                                    <div className="fline">
+                                        <p id="name" onClick={() => this.rendererer()}><Link id="link" to={e.handle}>{e.name}</Link></p>
+                                        <p id="handle" onClick={() => this.rendererer()}><Link id="link" to={e.handle}>  {'@' + e.handle}</Link></p>
                                     </div>
+                                </div>
+                                <div className="fsime">
+                                    <div>
+                                        <h1 className="fbio">{e.bio}</h1>
+                                    </div>
+                                    {this.props.pageData.userData.handle === this.props.user.userData.handle ? <div className="unfollowbutton" onClick={() => this.unfollow(e.id)}>Unfollow</div> : <div className="followbutton" onClick={() => this.follow(e.id)}>Follow</div>}
                                 </div>
                             </div>
                         </div>
