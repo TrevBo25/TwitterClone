@@ -162,7 +162,7 @@ table {
   font-family: 'Roboto';
   letter-spacing: 1px;
   width: 400px;
-  margin-top: 7px;
+  margin-top: 15px;
   margin-left: 8%;
   padding: 5px 10px 5px 10px;
   border-radius: 5px;
@@ -181,7 +181,7 @@ table {
   font-family: 'Roboto';
   letter-spacing: 1px;
   width: 400px;
-  margin-top: 7px;
+  margin-top: 15px;
   margin-left: 8%;
   padding: 5px 10px 5px 10px;
   border-radius: 5px;
@@ -204,14 +204,17 @@ table {
 #buttion {
   font-size: 10;
   padding: 7px;
-  background: #68B0AB;
+  background: #FAF3DD;
   color: #161925;
   border-color: #161925;
   border-radius: 5px;
   box-shadow: 1px;
   float: right;
   margin-right: 8%;
-  margin-top: 3px; }
+  margin-top: 10px; }
+
+#buttion:hover {
+  background: #8FC0A9; }
 
 .sidebar {
   background-color: #eaf2e2;

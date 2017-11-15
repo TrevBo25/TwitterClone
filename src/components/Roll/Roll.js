@@ -65,7 +65,7 @@ class Roll extends Component {
                     
                 </div>
                 <div className="middlepart">
-                    <div className="guts" >{post.guts} dsfasdfasdfasdfasdfasdfas</div>
+                    <div className="guts" >{post.guts}</div>
                 </div>
                 <div className="bottompart">
                     {post.image ? <div className="gutsimage">
