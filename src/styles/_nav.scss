@@ -151,7 +151,7 @@
     font-family: 'Roboto';
     letter-spacing: 1px;
     width: 400px;
-    margin-top: 7px;
+    margin-top: 15px;
     margin-left: 8%;
     padding: 5px 10px 5px 10px;
     border-radius: 5px;
@@ -179,7 +179,7 @@
     font-family: 'Roboto';
     letter-spacing: 1px;
     width: 400px;
-    margin-top: 7px;
+    margin-top: 15px;
     margin-left: 8%;
     padding: 5px 10px 5px 10px;
     border-radius: 5px;
@@ -196,11 +196,11 @@
   //   outline: none;
   // }
 
-  .expanded-talko-box.break {
+.expanded-talko-box.break {
       word-wrap: break-word;
       word-break: break-all;
       height: 62px;
-  }
+}
 
 
 .usernname {
@@ -208,15 +208,20 @@
   font-size: 20px;
   line-height: 35px;
 }
+
 #buttion {
   font-size: 10;
   padding: 7px;
-  background: $color2;
+  background: $color5;
   color: $color0;
   border-color: $color0;
   border-radius: 5px;
   box-shadow: 1px;
   float: right;
   margin-right: 8%;
-  margin-top: 3px;
+  margin-top: 10px;
+}
+
+#buttion:hover{
+  background: $color3;
 }
