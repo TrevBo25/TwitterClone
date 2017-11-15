@@ -8,15 +8,25 @@ import { goToSettings, viewProfile } from '../../ducks/reducer';
 
 class Nav extends Component {
 
-    constructor() {
-        super()
+    constructor(props) {
+        super(props)
 
         this.state = {
-            guts: 'test'
+            guts: '',
+            expandedTalko: false,
         }
 
         this.handleInput = this.handleInput.bind(this)
+        this.toggleExpandedTalko = this.toggleExpandedTalko.bind(this);
+        
     }
+
+    toggleExpandedTalko(){
+        this.setState({
+            expandedTalko: !this.state.expandedTalko,
+        });
+    }
+
 
     handleInput(input) {
         this.setState({
@@ -45,15 +55,19 @@ class Nav extends Component {
 
                     <div className="nav-logo"><Link to="" ><img src={logo}/></Link></div>
 
-                    <div className="talko-box-container">
-                        <textarea value={this.state.guts} className="talko-box" rows="1" cols="30" wrap="hard" mength="80" type="text" placeholder="Let's Talko Bout It"
+
+
+                    <div className={`row ${this.state.expandedTalko ? 'expanded-talko-container' : 'normal-talko-container'}`} onFocus={this.toggleExpandedTalko}>
+                        <textarea className={`row ${this.state.expandedTalko ? 'expanded-talko-box' : 'normal-talko-box'}`} onFocus={this.toggleExpandedTalko} value={this.state.guts} rows="1" cols="30" wrap="hard" mength="80" type="text" placeholder="Let's Talko Bout It"
                         onChange={(e) => {this.handleInput(e.target.value)}}
                         />
                         <button id="buttion" onClick={() => {this.submitPost(this.state)}}>
-                        ♥ 💋 Please touch me 💋 ♥ 
+                       Talko Time
                         </button>
                     </div>
                     
+
+
                     <div className="dropdown"><img src={this.props.user.userData.avatar} onClick={() => this.goToSettings(false)}/>
                     <div className="dropdown-container">
                       <ul className="dropdown-content">

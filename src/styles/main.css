@@ -101,9 +101,10 @@ table {
   height: 100%; }
 
 .dropdown img {
-  height: 65px;
-  width: 65px;
+  height: 55px;
+  width: 55px;
   border-radius: 50%;
+  margin-top: 10%;
   border: 2px solid #C8D5B9; }
 
 .dropdown-container {
@@ -139,20 +140,28 @@ table {
   text-decoration: none;
   color: #161925; }
 
-.talko-box-container {
+.normal-talko-container {
   width: 500px;
-  height: 50px;
+  height: 65px;
   background: #ebebeb;
-  transition: height 0.25s; }
+  transition-duration: 0.0025s;
+  border-radius: 7px; }
 
-.talko-box {
+.expanded-talko-container {
+  width: 500px;
+  height: 180px;
+  margin-top: 115px;
+  background: #ebebeb;
+  border-radius: 7px; }
+
+.normal-talko-box {
   background: white;
   display: block;
   font-size: 20px;
   line-height: 23px;
   font-family: 'Roboto';
   letter-spacing: 1px;
-  width: 80%;
+  width: 400px;
   margin-top: 7px;
   margin-left: 8%;
   padding: 5px 10px 5px 10px;
@@ -161,26 +170,28 @@ table {
   border: 1px solid #FAF3DD;
   -webkit-transition: all .25 ease;
   -moz-transition: all .25 ease;
-  transition: all .25 ease; }
+  transition: all .0025 ease; }
 
-.talko-box {
-  resize: none;
-  opacity: 1;
-  overflow: hidden; }
+.expanded-talko-box {
+  height: 100px;
+  background: white;
+  display: block;
+  font-size: 20px;
+  line-height: 23px;
+  font-family: 'Roboto';
+  letter-spacing: 1px;
+  width: 400px;
+  margin-top: 7px;
+  margin-left: 8%;
+  padding: 5px 10px 5px 10px;
+  border-radius: 5px;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.8), 0px 1px 1px rgba(255, 255, 255, 0.8);
+  border: 1px solid #FAF3DD;
+  -webkit-transition: all .25 ease;
+  -moz-transition: all .25 ease;
+  transition: all .0025 ease; }
 
-.talko-box:focus {
-  opacity: 1;
-  color: black;
-  border: 1px solid #C8D5B9;
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.8);
-  padding-bottom: 62px; }
-
-.talko-box[type="text"]:focus {
-  box-shadow: inset 0 1px 2px #161925, 0px 1px 15px #C8D5B9;
-  border: 1px solid #C8D5B9;
-  outline: none; }
-
-.talko-box.break {
+.expanded-talko-box.break {
   word-wrap: break-word;
   word-break: break-all;
   height: 62px; }
@@ -192,12 +203,15 @@ table {
 
 #buttion {
   font-size: 10;
-  padding: 1px;
-  background: pink;
-  color: #FF0000;
-  border-color: #FF0000;
+  padding: 7px;
+  background: #68B0AB;
+  color: #161925;
+  border-color: #161925;
   border-radius: 5px;
-  box-shadow: 1px; }
+  box-shadow: 1px;
+  float: right;
+  margin-right: 8%;
+  margin-top: 3px; }
 
 .sidebar {
   background-color: #eaf2e2;

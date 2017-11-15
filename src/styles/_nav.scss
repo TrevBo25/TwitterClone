@@ -73,9 +73,10 @@
 }
 
 .dropdown img {
-    height: 65px;
-    width: 65px;
+    height: 55px;
+    width: 55px;
     border-radius: 50%;
+    margin-top: 10%;
     border: 2px solid $color4;
 }
 
@@ -124,27 +125,32 @@
 
 //----TALKO BOX STUFF----//
 
-.talko-box-container {
+.normal-talko-container {
     width: 500px;
-    height: 50px;
+    height: 65px;
     background: rgb(235, 235, 235);
-    transition:height 0.25s; 
- 
+    transition-duration: 0.0025s;
+    border-radius: 7px;
+    
 }
 
-// .talko-box-container:hover {
-//     height: 100px;
-//     margin-top: 50px;
-// }
+.expanded-talko-container {
+  width: 500px;
+  height: 180px;
+  margin-top: 115px;
+  background: rgb(235, 235, 235);
+  border-radius: 7px;
+  
+}
 
-.talko-box {
+.normal-talko-box {
     background: white;
     display: block;
     font-size: 20px;
     line-height: 23px;
     font-family: 'Roboto';
     letter-spacing: 1px;
-    width: 80%;
+    width: 400px;
     margin-top: 7px;
     margin-left: 8%;
     padding: 5px 10px 5px 10px;
@@ -153,32 +159,44 @@
     border: 1px solid $color5;
     -webkit-transition: all .25 ease;
     -moz-transition: all .25 ease;
-    transition: all .25 ease;
+    transition: all .0025 ease;
   }
   
-  .talko-box {
-    resize: none;
-    opacity: 1;
-    overflow: hidden;
-  }
   
  
-  .talko-box:focus {
-    opacity: 1;
-    color: black;
-    border: 1px solid $color4;
-    box-shadow: inset 0 1px 2px rgba(0,0,0, .8);
-    // margin-top: 56px;
-    padding-bottom: 62px;
+  .expanded-talko-box {
+    // opacity: 1;
+    // color: black;
+    // border: 1px solid $color4;
+    // box-shadow: inset 0 1px 2px rgba(0,0,0, .8);
+    // // margin-top: 56px;
+    // padding-bottom: 62px;
+    height: 100px;
+    background: white;
+    display: block;
+    font-size: 20px;
+    line-height: 23px;
+    font-family: 'Roboto';
+    letter-spacing: 1px;
+    width: 400px;
+    margin-top: 7px;
+    margin-left: 8%;
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 2px rgba(0,0,0, .8), 0px 1px 1px rgba(255,255,255, .8);
+    border: 1px solid $color5;
+    -webkit-transition: all .25 ease;
+    -moz-transition: all .25 ease;
+    transition: all .0025 ease;
   }
   
-  .talko-box[type="text"]:focus {
-    box-shadow: inset 0 1px 2px $color0, 0px 1px 15px $color4;
-    border: 1px solid $color4;
-    outline: none;
-  }
+  // .talko-box[type="text"]:focus {
+  //   box-shadow: inset 0 1px 2px $color0, 0px 1px 15px $color4;
+  //   border: 1px solid $color4;
+  //   outline: none;
+  // }
 
-  .talko-box.break {
+  .expanded-talko-box.break {
       word-wrap: break-word;
       word-break: break-all;
       height: 62px;
@@ -192,10 +210,13 @@
 }
 #buttion {
   font-size: 10;
-  padding: 1px;
-  background: pink;
-  color: #FF0000;
-  border-color: #FF0000;
+  padding: 7px;
+  background: $color2;
+  color: $color0;
+  border-color: $color0;
   border-radius: 5px;
   box-shadow: 1px;
+  float: right;
+  margin-right: 8%;
+  margin-top: 3px;
 }
