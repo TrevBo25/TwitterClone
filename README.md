@@ -30,24 +30,24 @@
 
 Landing Page:
 
-![Image of Landing Page]('./src/assets/tacoLogo/Screen Shot 2017-11-16 at 8.20.03 AM.png')
+![Image of Landing Page](https://github.com/TrevBo25/TwitterClone/blob/master/src/assets/tacoLogo/Screen%20Shot%202017-11-16%20at%208.20.03%20AM.png)
 
 #### Then you go to the profiles page
 
 Profile Page:
 
-![Image of Profile Page]('./src/assets/tacoLogo/Screen Shot 2017-11-16 at 8.23.30 AM.png')
+![Image of Profile Page](https://github.com/TrevBo25/TwitterClone/blob/master/src/assets/tacoLogo/Screen%20Shot%202017-11-16%20at%208.23.30%20AM.png)
 
-![Image of Profile Page]('./src/assets/tacoLogo/Screen Shot 2017-11-16 at 10.54.40 AM.png')
+![Image of Profile Page](https://github.com/TrevBo25/TwitterClone/blob/master/src/assets/tacoLogo/Screen%20Shot%202017-11-16%20at%2010.54.40%20AM.png)
 
 #### Check some followers
 
 Followers Page:
 
-![Image of Followers View]('./src/assets/tacoLogo/Screen Shot 2017-11-16 at 10.53.13 AM.png')
+![Image of Followers View](https://github.com/TrevBo25/TwitterClone/blob/master/src/assets/tacoLogo/Screen%20Shot%202017-11-16%20at%2010.53.13%20AM.png)
 
 #### Change some settings
 
 Settings Page:
 
-![Image of Setting Page]('./src/assets/tacoLogo/Screen Shot 2017-11-16 at 10.53.43 AM.png')
+![Image of Setting Page](https://github.com/TrevBo25/TwitterClone/blob/master/src/assets/tacoLogo/Screen%20Shot%202017-11-16%20at%2010.53.43%20AM.png)
