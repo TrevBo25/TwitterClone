@@ -40,6 +40,7 @@ class Nav extends Component {
             user_id: this.props.user.userData.id
         }
 
+        
         axios.post('/api/createpost', post).then((response) => {
             console.log(response.data);
         })
