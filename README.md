@@ -12,7 +12,7 @@
 
  ##### This man cannot tell a lie, so you know it is legit.
 
- #### Other prolific users of Talko:
+ ### Other prolific users of Talko:
 
  - LeBron James
  - Captain Planet
@@ -25,6 +25,41 @@
  - James Howlett
  - Wade Wilson
  - Bruce Wayne
+
+
+### M.V.P.
+
+* Create posts
+* Display posts
+* Like posts
+* Unlike posts
+* Follow users
+* Unfollow users
+* Delete posts
+* Tag users in posts
+* Update profile info
+* Get users followers
+* Get who is following user
+* Profile View
+* Stream View
+* Setting Page
+* Vibrating taco
+* Login functionality
+
+### Tech Stack
+
+* React
+* Redux
+* JavaScript(ES6)
+* CSS
+* Sass
+* NodeJS
+* Express
+* Massive
+* PostgreSQL
+* Bcrypt
+* Axios
+* Jest
 
 #### Let me walk you through how Talko works:
 
