@@ -28,22 +28,27 @@
 
 #### Let me walk you through how Talko works:
 
-Landing Page: 
+Landing Page:
+
 ![Image of Landing Page]
 ('')
 
 Home Page/Stream:
+
 ![Image of Home Page]
 ('')
 
 Profile Page:
+
 ![Image of Profile Page]
 ('')
 
 Followers Page:
+
 ![Image of Followers View]
 ('')
 
-Settings Page
+Settings Page:
+
 ![Image of Setting Page]
 ('')
