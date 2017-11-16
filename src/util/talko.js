@@ -49,5 +49,48 @@ module.exports = {
         } else {
             return false;
         }
-    }
+    },
+    followed: function(obj) {
+        // const db = req.app.get('db');
+        // const{id, otherid} = req.body;
+        // db.check_follow([id, otherid])
+        // .then (user => {
+        //     if(user.length === 0){
+        //         db.follow([id, otherid])
+        //         .then( response => {
+        //             db.send_notification([id, otherid, 'follow', null])
+        //             .then( response => {
+        //                 res.status(200).send("followed and notified")
+        //             })
+        //         }).catch( err => { console.log("follow", err);})
+        //     } else {
+        //         res.status(200).send("You already follow them, you silly goose!")
+        //     }
+        // }).catch( err => { console.log("checkfollow", err);})
+
+        if(obj.hasOwnProperty("todd") < 0 ){
+            obj.todd = true
+        }
+        return obj.todd;
+    },
+
+    unfollowed: function(obj){
+        // const db = req.app.get('db');
+        // const{id, otherid} = req.body;
+        // db.unfollow([id, otherid])
+        // .then( response => {
+        //     db.send_notification([id, otherid, 'unfollow', null])
+        //     .then( response => {
+        //         res.status(200).send("unfollowed and notified")
+        //     })
+        // }).catch( err => { console.log("unfollow", err);})
+
+        //id will get an integer of that id's followers
+
+        if(obj.hasOwnProperty("todd") > 0 ) {
+            obj.todd = false
+        }
+        return obj.todd;
+    },
+    
 }
