@@ -8,7 +8,7 @@ test('adds dislike to total dislikes', () => {
     expect(talko.addDislike({dislike: 2})).toBe(3);
 });
 
-test('makes sure that htere are posts in the array', () => {
+test('makes sure that there are posts in the array', () => {
     expect(talko.postsNotEmpty([{handle: 'trev', guts: 'here is a post'}, {handle: 'ian', guts: 'this is a thing i said'}])).toBe(true);
 });
 

@@ -31,8 +31,8 @@ module.exports = {
         //test to see if newDislikes - id.dislike === 1
 
         var dislikes = id.dislike;
-        var newDislLikes = dislikes + 1;
-        return newDisikes;
+        var newDislikes = dislikes + 1;
+        return newDislikes;
     },
     postsNotEmpty: function(posts){
         // const db = req.app.get('db');
@@ -50,7 +50,7 @@ module.exports = {
 
         //test to see if it returns true
 
-        if(posts.lenth > 0){
+        if(posts.length > 0){
             return true
         } else {
             return false;
@@ -77,8 +77,7 @@ module.exports = {
         //tests to see if they are following if not follow them
 
         //tests to see function returns true
-
-        if(obj.hasOwnProperty("todd") < 0 ){
+        if(!obj.hasOwnProperty("todd")){
             obj.todd = true
         }
         return obj.todd;
@@ -99,7 +98,7 @@ module.exports = {
 
         // tests to see if fuction returns true
 
-        if(obj.hasOwnProperty("todd") > 0 ) {
+        if(obj.hasOwnProperty("todd")) {
             obj.todd = false
         }
         return obj.todd;
