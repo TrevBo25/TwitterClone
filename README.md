@@ -39,6 +39,8 @@ Profile Page:
 
 ![Image of Profile Page]
 ('./src/assets/tacoLogo/Screen Shot 2017-11-16 at 8.23.30 AM.png')
+
+![Image of Profile Page]
 ('./src/assets/tacoLogo/Screen Shot 2017-11-16 at 10.54.40 AM.png')
 
 #### Check some followers
